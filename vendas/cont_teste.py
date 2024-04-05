@@ -33,20 +33,11 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_cadastros_menu_pri_1", matching=0.97, waiting_time=10000):
             not_found("cont_cadastros_menu_pri_1")
         bot.click()
-        if not bot.find( "cont_selecc_opc_23", matching=0.97, waiting_time=10000):
-            not_found("cont_selecc_opc_23")
-        bot.click()
-        if not bot.find( "cont_empresas_menu_1_pri_e", matching=0.97, waiting_time=10000):
-            not_found("cont_empresas_menu_1_pri_e")
-        bot.click()
+        
+      
        
         
-        if not bot.find( "cont_selecionar_situacoes_op_23", matching=0.97, waiting_time=10000):
-            not_found("cont_selecionar_situacoes_op_23")
-        bot.click() #opcao janela grande
-        if not self.find( "cont_opcao_2_23_selec", matching=0.97, waiting_time=10000):
-            not_found("cont_opcao_2_23_selec")
-        self.click() # opcao janela pequena
+        
         
         if not bot.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
             not_found("cont_incluir_cod_fisc_impo_23")
@@ -54,9 +45,7 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_cod_fisc_busc_impos_23", matching=0.97, waiting_time=10000):
             not_found("cont_cod_fisc_busc_impos_23")
         bot.click()
-        if not bot.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
-            not_found("cont_opcao_loc_imp_23")
-        bot.click()
+        
         
         if not bot.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
             not_found("cont_confirma_incluir_cod_fisc_imp")
@@ -66,20 +55,12 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_itens_menu_tipo_do_item", matching=0.97, waiting_time=10000):
             not_found("cont_itens_menu_tipo_do_item")
         bot.click()
-        if not bot.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
-            not_found("cont_retorn_opc_23_imposto")
-        bot.click()
-     
-        if not bot.find( "cont_editar_opc_23_impostos", matching=0.97, waiting_time=10000):
-            not_found("cont_editar_opc_23_impostos")
-        bot.click()
+        
         
         if not bot.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
             not_found("cont_salvar_opc_23_plano_c")
         bot.click()
-        if not bot.find( "cont_opc_excluir_plano_contas", matching=0.97, waiting_time=10000):
-            not_found("cont_opc_excluir_plano_contas")
-        bot.click()
+        
         
         if not bot.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
             not_found("cont_incluir_opc_imposto_pres_23")
@@ -96,13 +77,8 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_lixeira_20_imp", matching=0.97, waiting_time=10000):
             not_found("cont_lixeira_20_imp")
         bot.click()
-        if not bot.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
-            not_found("cont_retorn_opc_23_imposto")
-        bot.click()
         
-        if not bot.find( "cont_btn_excluir_azul_escuro", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_excluir_azul_escuro")
-        bot.click()
+        
         if not bot.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
             not_found("cont_incluir_opc_imposto_pres_23")
         bot.click()
@@ -167,18 +143,11 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_excluir_livros_oficiais", matching=0.97, waiting_time=10000):
             not_found("cont_excluir_livros_oficiais")
         bot.click()
-        if not bot.find( "cont_botao_selec_pl_5", matching=0.97, waiting_time=10000):
-            not_found("cont_botao_selec_pl_5")
-        bot.click()
-        if not bot.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
-            not_found("cont_botao_selec_tela_maior_2")
-        bot.click()
+        
         if not bot.find( "cont_opc_editar_mov_fiscal_2", matching=0.97, waiting_time=10000):
             not_found("cont_opc_editar_mov_fiscal_2")
         bot.click()
-        if not bot.find( "cont_excluir_botao_mov_fiscal_opc5", matching=0.97, waiting_time=10000):
-            not_found("cont_excluir_botao_mov_fiscal_opc5")
-        bot.click()
+        
         
         if not bot.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
             not_found("cont_lixeira_mov_contabil_f7_2")
@@ -190,9 +159,7 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_bot_excluir_opc_3_mov_lotes", matching=0.97, waiting_time=10000):
             not_found("cont_bot_excluir_opc_3_mov_lotes")
         bot.click()
-        if not bot.find( "cont_encontrar_data_mov_ger_cont", matching=0.97, waiting_time=10000):
-            not_found("cont_encontrar_data_mov_ger_cont")
-        bot.click_relative(33, 7)
+        
         if not bot.find( "cont_contabilizacao_mov_ger_cont", matching=0.97, waiting_time=10000):
             not_found("cont_contabilizacao_mov_ger_cont")
         bot.click()
@@ -224,28 +191,9 @@ class Bot(DesktopBot) :
         bot.click()
         
         
-        if not bot.find( "cont_selecionar_documentos_fiscais_item_23", matching=0.97, waiting_time=10000):
-            not_found("cont_selecionar_documentos_fiscais_item_23")
-        bot.click()
-        if not bot.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
-            not_found("cont_opcao_loc_imp_23")
-        bot.click()
-        
-        if not bot.find( "cont_consulta_rel_localizar_selc", matching=0.97, waiting_time=10000):
-            not_found("cont_consulta_rel_localizar_selc")
-        bot.click_relative(-42, 12)
         
         
         
-        
-        
-        if not bot.find( "cont_consulta_selecionar_opc1", matching=0.97, waiting_time=10000):
-            not_found("cont_consulta_selecionar_opc1")
-        bot.click()
-        
-        if not bot.find( "cont_consulta_grade_imprimir", matching=0.97, waiting_time=10000):
-            not_found("cont_consulta_grade_imprimir")
-        bot.click()
         if not bot.find( "cont_consulta_grade_imprimir_cancel", matching=0.97, waiting_time=10000):
             not_found("cont_consulta_grade_imprimir_cancel")
         bot.click()
@@ -263,16 +211,8 @@ class Bot(DesktopBot) :
             not_found("cont_data_anterior_ano")
         bot.click()
         
-        if not bot.find( "cont_importacoes_exportacoes_menu", matching=0.97, waiting_time=10000):
-            not_found("cont_importacoes_exportacoes_menu")
-        bot.click()
-        if not bot.find( "cont_importacao_exportacao_pad_teo_ex", matching=0.97, waiting_time=10000):
-            not_found("cont_importacao_exportacao_pad_teo_ex")
-        bot.click()
         
-        if not bot.find( "cont_importacao_exportacao_data_rel", matching=0.97, waiting_time=10000):
-            not_found("cont_importacao_exportacao_data_rel")
-        bot.click_relative(28, 6)
+       
         
         
         
@@ -281,9 +221,6 @@ class Bot(DesktopBot) :
         bot.click()
         if not bot.find( "cont_importacao_exportacao_gerar", matching=0.97, waiting_time=10000):
             not_found("cont_importacao_exportacao_gerar")
-        bot.click()
-        if not bot.find( "cont_cancelar_importacao_exportacao_gerar", matching=0.97, waiting_time=10000):
-            not_found("cont_cancelar_importacao_exportacao_gerar")
         bot.click()
         
         
@@ -294,12 +231,7 @@ class Bot(DesktopBot) :
         
         
         
-        if not bot.find( "cont_botao_editar_26_02_opc", matching=0.97, waiting_time=10000):
-            not_found("cont_botao_editar_26_02_opc")
-        bot.click()
-        if not bot.find( "cont_excluir_opcao_26_02", matching=0.97, waiting_time=10000):
-            not_found("cont_excluir_opcao_26_02")
-        bot.click()
+        
         if not bot.find( "cont_cancelar_opc_26_02", matching=0.97, waiting_time=10000):
             not_found("cont_cancelar_opc_26_02")
         bot.click()
@@ -308,18 +240,7 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
             not_found("cont_opcao_loc_imp_23")
         bot.click()
-        if not bot.find( "cont_relatorios_movimento_livro_de_rel", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_movimento_livro_de_rel")
-        bot.click_relative(7, 41)
-        if not bot.find( "cont_relatorios_movimentos_fiscal_rel_imprime", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_movimentos_fiscal_rel_imprime")
-        bot.click_relative(116, -14)
-        if not bot.find( "cont_relatorios_movimento_fiscal_emi_livro_check", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_movimento_fiscal_emi_livro_check")
-        bot.click_relative(417, 10)
-        if not bot.find( "cont_relatorios_movimento_fiscal_centro_ini", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_movimento_fiscal_centro_ini")
-        bot.click_relative(178, 5)
+        
         if not bot.find( "cont_salvar_mov_btn_opc_8", matching=0.97, waiting_time=10000):
             not_found("cont_salvar_mov_btn_opc_8")
         bot.click()
@@ -335,13 +256,9 @@ class Bot(DesktopBot) :
         
         
         
-        if not bot.find( "cont_consulta_selecionar_opc1", matching=0.97, waiting_time=10000):
-            not_found("cont_consulta_selecionar_opc1")
-        bot.click()
+       
 
-        if not bot.find( "cont_btn_excluir_opc_08_03", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_excluir_opc_08_03")
-        bot.click()
+       
         
         if not bot.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
             not_found("cont_mov_select_opc_08_03")
@@ -349,6 +266,88 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_btn_excluir_movimento_presumido_opc_8", matching=0.97, waiting_time=10000):
             not_found("cont_btn_excluir_movimento_presumido_opc_8")
         bot.click()
+        
+       
+        if not bot.find( "cont_salvar_opc_rel_mov_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_rel_mov_fiscal")
+        bot.click()
+        
+        if not bot.find( "cont_rel_mov_matrical_livros_iss", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_matrical_livros_iss")
+        bot.click()
+        if not bot.find( "cont_rel_mov_fiscal_livro_iss_fechar_matrical", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fiscal_livro_iss_fechar_matrical")
+        bot.click()
+        
+        if not bot.find( "cont_rela_mov_imprimir_achar_iss", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_imprimir_achar_iss")
+        
+        if not bot.find( "cont_relatorios_mov_fis_apuracao_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fis_apuracao_imposto")
+        bot.click()
+        
+        if not bot.find( "cont_data_rela_mov_apuracao_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_data_rela_mov_apuracao_imposto")
+        bot.click_relative(27, 7)
+        if not bot.find( "cont_rel_mov_fisc_dipi_data", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fisc_dipi_data")
+        bot.click_relative(28, 8)
+        
+        
+        
+        if not bot.find( "cont_relatorios_btn_grafico_geral_opc_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_btn_grafico_geral_opc_1")
+        bot.click()
+        if not bot.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_x_geral_fechar_mat_imp")
+        bot.click()
+        if not bot.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        bot.click()
+        
+        if not bot.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_icms_imprimir")
+        bot.click()
+        
+        if not bot.find( "cont_relatorios_matrical_opc_1_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_matrical_opc_1_mov")
+        bot.click()
+        if not bot.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        bot.click()
+        
+        if not bot.find( "cont_relatorios_mov_resumo_municipio", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_resumo_municipio")
+        bot.click()
+        if not bot.find( "cont_relatorios_mov_livro_oficial_resumo_mun", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_livro_oficial_resumo_mun")
+        bot.click_relative(109, 3)
+        if not bot.find( "cont_relatorios_mov_centro_custo_resumo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_centro_custo_resumo")
+        bot.click_relative(77, 25)
+        if not bot.find( "cont_relatorios_mov_centro_custo_final_resumo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_centro_custo_final_resumo")
+        bot.click_relative(76, 24)
+        if not bot.find( "cont_mov_relatorios_data_ano_atual", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_relatorios_data_ano_atual")
+        bot.click()
+        if not bot.find( "cont_relatorios_mov_matrical_btn_ok", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_matrical_btn_ok")
+        bot.click()
+        if not bot.find( "cont_relatorios_mov_fechar_matricial_btn", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fechar_matricial_btn")
+        bot.click()
+        if not bot.find( "cont_relatorios_mov_fiscal_livro_de_iss_diario", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_livro_de_iss_diario")
+        bot.click()
+        if not bot.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_cad_btn_selec_opc_22_03")
+        bot.click()
+        if not bot.find( "cont_parametro_empresa_qa12_achar", matching=0.97, waiting_time=10000):
+            not_found("cont_parametro_empresa_qa12_achar")
+        bot.click()
+        
+        
         
       
 
@@ -361,5 +360,6 @@ def not_found(label) :
     
 if __name__ == '__main__' :
     Bot.main()
+
 
 

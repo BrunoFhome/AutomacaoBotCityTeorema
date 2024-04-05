@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        
+        """
         ######################### COMEÇO DE CONSULTAS ##########################
 
         ########################################################################
@@ -82,8 +82,8 @@ class Bot(DesktopBot) :
         self.click_relative(101, 36)
         
         self.wait(1000)
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
 
         self.wait(1000)
@@ -1639,8 +1639,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
         self.wait(1000)
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
         if not self.find( "cont_relatorio_cad_conta_inicial_busc", matching=0.97, waiting_time=10000):
@@ -1651,8 +1651,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
         self.wait(1000)
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
 
@@ -1664,8 +1664,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
         self.wait(1000)
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
 
@@ -1914,8 +1914,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
 
@@ -1954,8 +1954,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
         
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
         self.enter()
@@ -1969,8 +1969,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
         self.enter()
@@ -2089,8 +2089,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
         self.wait(1000)
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.tab()
         self.type_keys_with_interval(100,"1")
@@ -2179,8 +2179,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(2000)
 
@@ -2195,8 +2195,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(2000)
         self.enter()
@@ -2213,8 +2213,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(2000)
         self.enter()
@@ -2243,8 +2243,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(2000)
 
@@ -2355,8 +2355,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(2000)
 
@@ -2371,8 +2371,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(2000)
 
@@ -2389,8 +2389,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(2000)
 
@@ -2548,8 +2548,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
         self.wait(1000)
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
 
         self.wait(1000)
@@ -2625,8 +2625,8 @@ class Bot(DesktopBot) :
             not_found("cont_opcao_loc_imp_23")
         self.click()
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
 
         if not self.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
@@ -2702,8 +2702,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
 
@@ -2723,8 +2723,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
 
@@ -2741,8 +2741,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
-            not_found("cont_cad_btn_selec_opc_22_03")
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(1000)
 
@@ -2779,7 +2779,6 @@ class Bot(DesktopBot) :
         self.click()
 
 
-
         ###############################################################################################
         ################# RELATORIOS -> MOVIMENTO FISCAL -> LIVRO DE ISS (DIARIO)  ####################
         ###############################################################################################
@@ -2812,6 +2811,307 @@ class Bot(DesktopBot) :
         if not self.find( "cont_mov_relatorios_data_ano_atual", matching=0.97, waiting_time=10000):
             not_found("cont_mov_relatorios_data_ano_atual")
         self.click()
+
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_right()
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab() 
+        self.tab()
+        self.type_right()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_livro_iss_livro_ofc_btn", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_livro_iss_livro_ofc_btn")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_matrical_opc_1_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_matrical_opc_1_mov")
+        self.click()
+        if not self.find( "cont_relatorios_btn_matrical_ok", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_btn_matrical_ok")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_relatorios_matrical_btn_fechar", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_matrical_btn_fechar")
+        self.click()
+        self.wait(1000)
+        # BOTAO IMPRIMIR NAO ESTA FUNCIONANDO
+
+        # if not self.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
+        #     not_found("cont_relatorios_mov_fiscal_icms_imprimir")
+        # self.click()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+
+        ###############################################################################################
+        #################### RELATORIOS -> MOVIMENTO FISCAL -> PIS/COFINS LUCRO  ######################
+        ###############################################################################################
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_rel_fiscal_pis_cofins_lucro", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_fiscal_pis_cofins_lucro")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_btn_data_relatorios_pis_cofins", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_data_relatorios_pis_cofins")
+        self.click_relative(27, 8)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.type_right()
+        # BOTAO IMPRIMIR NAO ESTA FUNCIONANDO
+
+        # if not self.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
+        #     not_found("cont_relatorios_mov_fiscal_icms_imprimir")
+        # self.click()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+
+        ###############################################################################################
+        #################### RELATORIOS -> MOVIMENTO FISCAL -> PIS/COFINS LUCRO  ######################
+        ###############################################################################################
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_rel_fiscal_pis_cofins_itens_ncm", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_fiscal_pis_cofins_itens_ncm")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_btn_data_relatorios_pis_cofins", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_data_relatorios_pis_cofins")
+        self.click_relative(27, 8)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        self.wait(1000)
+
+        # IMPRIMIR NAO ESTA FUNCIONANDO
+
+        # if not self.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
+        #     not_found("cont_relatorios_mov_fiscal_icms_imprimir")
+        # self.click()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        """
+        ###############################################################################################
+        #################### RELATORIOS -> MOVIMENTO FISCAL -> PIS/COFINS LUCRO  ######################
+        ###############################################################################################
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_rel_fiscal_livros_p_cod_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_fiscal_livros_p_cod_fiscal")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_btn_data_relatorios_pis_cofins", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_data_relatorios_pis_cofins")
+        self.click_relative(27, 8)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        self.wait(1000)
+
+        self.tab()
+        self.type_right()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.tab()
+        self.type_right()
+        self.tab()
+        x = 0
+        while x < 4:
+            self.space()
+            self.type_down()
+            x += 1
+        self.wait(500)
+        self.space()
+        self.tab()
+
+        x = 0
+        while x < 5:
+            self.space()
+            self.type_down()
+            x += 1
+        self.wait(500)
+        self.space()
+        self.tab()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_centro_custo_inicial_emissao_livr", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_centro_custo_inicial_emissao_livr")
+        self.click_relative(181, 3)
+
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_rel_fiscal_emissao_livro_centro_final", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_fiscal_emissao_livro_centro_final")
+        self.click_relative(181, 6)
+        self.wait(1000)
+
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
+        self.click()
+        self.wait(1000)
+
+        self.tab()
+        self.type_right()
+        self.tab()
+        self.wait(1000)
+
+        if not self.find( "cont_rel_fiscal_emissao_livros_ofc_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_fiscal_emissao_livros_ofc_rel")
+        self.click_relative(105, 5)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_24_btn_selecionar_opc_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_24_btn_selecionar_opc_relatorios")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+
+        # mouse parando em cima de MATRICAL, apenas clicar 
+
+        #if not self.find( "cont_relatorios_matrical_opc_1_mov", matching=0.97, waiting_time=10000):
+        #    not_found("cont_relatorios_matrical_opc_1_mov")
+        self.click()
+        if not self.find( "cont_relatorios_btn_matrical_ok", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_btn_matrical_ok")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_relatorios_matrical_btn_fechar", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_matrical_btn_fechar")
+        self.click()
+        self.wait(1000)
+
+        # IMPRIMIR NAO ESTA FUNCIONANDO
+
+        # if not self.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
+        #     not_found("cont_relatorios_mov_fiscal_icms_imprimir")
+        # self.click()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        
+        ###############################################################################################
+        #################### RELATORIOS -> MOVIMENTO FISCAL -> PIS/COFINS LUCRO  ######################
+        ###############################################################################################
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_rel_fiscal_faturamento_empresa", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_fiscal_faturamento_empresa")
+        self.click()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

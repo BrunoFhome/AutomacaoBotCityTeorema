@@ -36,11 +36,11 @@ class Bot(DesktopBot) :
 
     def action(self,execution=None) :
         
-        """
+        
         #######################################################
         ############# COMEÇO CONTABIL - CADASTROS #############
         #######################################################
-        
+
         self.execute(r"C:\Teorema\bin\contabil")
         
         self.wait(6000)
@@ -1229,7 +1229,7 @@ class Bot(DesktopBot) :
         ############################################################################
         ################# CADASTROS -> EMPRESAS -> GRUPO DE EMPRESAS ###############
         ############################################################################
-        self.wait(3000) 
+        
 
         if not self.find( "cont_cad_menu_princ_opc_19_2", matching=0.97, waiting_time=10000):
             not_found("cont_cad_menu_princ_opc_19_2")
@@ -1716,8 +1716,8 @@ class Bot(DesktopBot) :
         
         self.wait(20000)
         
-        #aqui aperta para exibir lista de itens a incluir
-        
+        # aqui aperta para exibir lista de itens a incluir
+        #
         if not self.find( "cont_cad_linha_1_rel_teste", matching=0.97, waiting_time=10000):
             not_found("cont_cad_linha_1_rel_teste")
         self.click_relative(65, 8)
@@ -1800,6 +1800,11 @@ class Bot(DesktopBot) :
         self.wait(2000)
         
         self.wait(1000)
+
+        
+
+
+
 
 
         if not self.find( "cont_9_codigos_padroes", matching=0.97, waiting_time=10000):
@@ -5346,7 +5351,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
         
-        """
+        
         ################################################################################################
         ########### CADASTRO -> PLANO DE CONTAS, CUSTOS E FINCEIRO -> PLANO DE CONTAS - F4 #############
         ################################################################################################
@@ -5683,11 +5688,11 @@ class Bot(DesktopBot) :
         # mouse parou em cima de retornar, apenas clicar para voltar ao menu
         self.click()
 
-        
+
         ###########################################################################################################
         # CADASTRO -> PLANO DE CONTAS, CUSTOS E FINCEIRO -> PLANO DE CONTAS - ACERTO DE CÓD. REDUZIDOS DUPLICADOS #
         ###########################################################################################################
-        self.wait(3000)
+
         if not self.find( "cont_cadastros_men_prin_op4", matching=0.97, waiting_time=10000):
             not_found("cont_cadastros_men_prin_op4")
         self.click()
@@ -5831,9 +5836,9 @@ class Bot(DesktopBot) :
         #    not_found("cont_locali_plano_contas_23")
         #self.click()
         #if not self.find( "cont_retornar_cad_client_forn_2", matching=0.97, waiting_time=10000):
-        #    not_found("cont_retornar_cad_client_forn_2")
-        self.click()
-        self.wait(2000)
+        ##    not_found("cont_retornar_cad_client_forn_2")
+        #self.click()
+        #self.wait(2000)
         
         self.wait(3000)
         
@@ -5942,7 +5947,7 @@ class Bot(DesktopBot) :
             not_found("cont_cad_btn_selec_opc_22_03")
         self.click()
         self.wait(2000)
-        
+        self.enter()
         if not self.find( "cont_grupo_de_empresa_dre_rel", matching=0.97, waiting_time=10000):
             not_found("cont_grupo_de_empresa_dre_rel")
         self.click_relative(52, 32)
@@ -5954,8 +5959,6 @@ class Bot(DesktopBot) :
             not_found("cont_cad_btn_selec_opc_22_03")
         self.click()
         self.wait(2000)
-        
-        self.wait(1000)
         self.tab()
         self.type_keys_with_interval(100,"123123123")
         self.tab()
@@ -6266,7 +6269,6 @@ class Bot(DesktopBot) :
         # CADASTROS -> IMPOSTO PRESUMIDO ######
         #######################################
         #######################################
-
         self.wait(3000)
         if not self.find( "cont_cadastros_men_prin_op4", matching=0.97, waiting_time=10000):
             not_found("cont_cadastros_men_prin_op4")
@@ -6817,8 +6819,8 @@ class Bot(DesktopBot) :
             not_found("cont_cad_btn_selec_opc_22_03")
         self.click()
         self.wait(2000)
-        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
-            not_found("cont_salvar_opc_23_plano_c")
+        #if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+        #    not_found("cont_salvar_opc_23_plano_c")
         self.click() # botao ja esta em cima de salvar, apenas clicar
         if not self.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
             not_found("cont_incluir_cod_fisc_impo_23")
@@ -7815,36 +7817,7358 @@ class Bot(DesktopBot) :
 
 
 
+        ##########################################################################################
+        ##########################################################################################
+        ################################ COMEÇO DE MOVIMENTOS ####################################
+        ##########################################################################################
+        ##########################################################################################
+        
+        self.wait(3000)
+
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        if not self.find( "cont_movimento_fiscal_f6_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_movimento_fiscal_f6_rel")
+        self.click_relative(50, -16)
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_data_movimento_opc_3_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_data_movimento_opc_3_rel")
+        self.click_relative(30, 7)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        if not self.find( "cont_cliente_fornecedor_movimentos_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_cliente_fornecedor_movimentos_rel")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_selecionar_situacoes_op_23", matching=0.97, waiting_time=10000):
+            not_found("cont_selecionar_situacoes_op_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_notas_fiscais_normal_movimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_notas_fiscais_normal_movimentos")
+        self.click()
+        self.type_down()
+        self.type_down()
+        self.type_down()
+        if not self.find( "cont_movimentos_periodo_rel_emissao", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_periodo_rel_emissao")
+        self.click_relative(21, 24)
+        self.wait(1000)
+        self.type_right()
+        self.type_right()
+        
+        # Incluir -> Movimentação fiscal
+        self.wait(2000)
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(2000)
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        x = 0
+        while x < 20:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_down()
+        self.tab()
+        self.type_keys_with_interval(100,"12032023")
+        self.tab()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"12032023")
+        self.tab()
+        self.type_keys_with_interval(100,"12032023")
+        self.tab()
+        self.wait(1000)           
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        if not self.find( "cont_achar_operacao_bsc_movi_fisc", matching=0.97, waiting_time=10000):
+            not_found("cont_achar_operacao_bsc_movi_fisc")
+        self.click_relative(60, 21)
+        if not self.find( "cont_mov_fisc_localiza_operacao", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_fisc_localiza_operacao")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.wait(3000)
+        if not self.find( "cont_mov_fiscal_cliente_forn_bsc", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_fiscal_cliente_forn_bsc")
+        self.click_relative(202, 21)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(4000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_mov_fiscal_cfop_bsc", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_fiscal_cfop_bsc")
+        self.click_relative(62, 23)
+        if not self.find( "cont_localizar_cod_fisc_f10_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_localizar_cod_fisc_f10_mov")
+        self.click()
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.wait(1000)
+        if not self.find( "cont_centro_de_custos_bsc_mov_fisc", matching=0.97, waiting_time=10000):
+            not_found("cont_centro_de_custos_bsc_mov_fisc")
+        self.click_relative(91, 23)
+        if not self.find( "cont_mov_fisc_locali_centro_custo_f10", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_fisc_locali_centro_custo_f10")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 3:
+            self.space()
+            self.space()
+            self.tab()
+            x += 1
+        self.wait(1000)
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 8:
+            self.type_down()
+            x += 1
+
+        if not self.find( "cont_operacao_relativo_desdobramento", matching=0.97, waiting_time=10000):
+            not_found("cont_operacao_relativo_desdobramento")
+        self.click_relative(116, 25)
+        self.wait(500)
+        self.type_down()
+        self.wait(500)
+        self.enter()
+        
+        # x = 0
+        # while x < 6:
+        #     self.type_down()
+        #     x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.wait(1000)
+        self.type_down()
+        self.type_down()
+        self.enter()
+        self.wait(1000)
+        #if not self.find( "cont_lixeira_opc_23_sma", matching=0.97, waiting_time=10000):
+        #    not_found("cont_lixeira_opc_23_sma")
+        #self.click()
+        #self.wait(1000)
+        #self.enter()
+        if not self.find( "cont_contabilizacao_mov_fisc_btn", matching=0.97, waiting_time=10000):
+            not_found("cont_contabilizacao_mov_fisc_btn")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.type_down()
+        self.type_down()
+        self.enter()
+        self.wait(1000)
+        self.type_down()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.tab()
+        self.tab()
+        self.tab()
+        self.type_down()
+        self.type_down()
+        self.enter()
+        self.wait(1000)
+        self.tab()
+        self.wait(1000)
+        #if not self.find( "cont_lixeira_opc_23_sma", matching=0.97, waiting_time=10000):
+        #    not_found("cont_lixeira_opc_23_sma")
+        #self.click()
+        #self.wait(1000)
+        #self.enter()
+        if not self.find( "cont_movimento_itens_servico_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_movimento_itens_servico_fiscal")
+        self.click()
+        # possivel erro de clicar em botao incluir no topo
+        #
+
+        if not self.find( "cont_botao_incluir_movimentos_ciap", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_incluir_movimentos_ciap")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_bens_btn_loc_fornecedor", matching=0.97, waiting_time=10000):
+            not_found("cont_bens_btn_loc_fornecedor")
+        self.click()
+        self.wait(2000)
+        self.type_keys_with_interval(100,"116830")
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(4000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_btn_cfop_imposto_movimento_3", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_cfop_imposto_movimento_3")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(2000)
+        self.tab()
+        self.tab()
+        self.tab()
+        self.wait(1000)
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 7:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 7:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 7:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 7:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 7:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 15:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 15:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_documentos_referenciados_mov_fisc_23", matching=0.97, waiting_time=10000):
+            not_found("cont_documentos_referenciados_mov_fisc_23")
+        self.click()
+        if not self.find( "cont_incluir_movimentos_itens_fisc23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_movimentos_itens_fisc23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_emissao_doc_referenciado_fnd", matching=0.97, waiting_time=10000):
+            not_found("cont_emissao_doc_referenciado_fnd")
+        self.click()
+        self.wait(1000)
+        self.type_down()
+        self.type_up()
+        self.type_up()
+        self.wait(2000)
+        if not self.find( "cont_botao_data_documentos_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_data_documentos_rel")
+        self.click_relative(29, 8)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.type_down()
+        self.wait(1000)
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.type_down()
+        self.type_down()
+        x = 0
+        while x < 6:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_documento_referenciado_23_rel_2", matching=0.97, waiting_time=10000):
+            not_found("cont_documento_referenciado_23_rel_2")
+        self.click_relative(24, 45)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_dmed_beneficiarios_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_dmed_beneficiarios_mov")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_cod_fisc_impo_23")
+        self.click()
+        self.wait(1000)
+        self.type_down()
+        self.type_down()
+        self.type_down()
+        self.type_down()
+        if not self.find( "cont_rel_mov_beneficiario_dependente", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_beneficiario_dependente")
+        self.click_relative(197, 6)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_rel_mov_empresa_reembolso", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_empresa_reembolso")
+        self.click_relative(175, 4)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_achar_valor_rel_mov_23", matching=0.97, waiting_time=10000):
+            not_found("cont_achar_valor_rel_mov_23")
+        self.click_relative(50, 6)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"123")
+        self.wait(1000)
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_cancelar_referencias_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_cancelar_referencias_itens")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        #self.enter()
+        #self.wait(1000)
+        self.type_keys_with_interval(100,"12032023")
+        self.tab()
+        self.type_keys_with_interval(100,"12032023")
+        self.wait(2000)
+        self.tab()
+        self.wait(1000)
+        self.backspace()
+        self.tab()
+        self.wait(1000)
+        #MOUSE ESTA PARANDO EM CIMA DE LOCALIZAR
+        #if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+        #    not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_mov_btn_editar_opc_7", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_btn_editar_opc_7")
+        self.click()
+        if not self.find( "cont_btn_mov_excluir_opc_7", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_mov_excluir_opc_7")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        
+        ###
+        #######################################################
+        ########### MOVIMENTOS -> CONTABIL F7 ################
+        #######################################################
+        ###
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        if not self.find( "cont_contabil_f7_movimentos_23", matching=0.97, waiting_time=10000):
+            not_found("cont_contabil_f7_movimentos_23")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_data_achar_rel_cont_f7", matching=0.97, waiting_time=10000):
+            not_found("cont_data_achar_rel_cont_f7")
+        self.click_relative(29, 8)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(2000)
+        self.type_keys_with_interval(100,"12032023")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.wait(1000)
+        # na primeira vez ele da a opcao de criar o lote, depois que ja criado nao tem mais esta opcao
+        #self.enter()
+        #self.wait(1000)
+        #self.type_keys_with_interval(100,"qa12!@")
+        #self.tab()
+        #self.type_keys_with_interval(100,"123")
+        #self.tab()
+        #self.type_keys_with_interval(100,"123")
+        #self.tab()
+        #self.type_keys_with_interval(100,"123")
+        #self.wait(1000)
+        #if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+        #    not_found("cont_salvar_opc_23_plano_c")
+        #self.click()
+        #self.wait(1000)
+        #if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+        #    not_found("cont_retorn_opc_23_imposto")
+        #self.click()
+        self.wait(1000)
+        if not self.find( "cont_conta_debito_bsc_rel_1", matching=0.97, waiting_time=10000):
+            not_found("cont_conta_debito_bsc_rel_1")
+        self.click_relative(154, 4)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"1.1.02.01.0001")
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"123")
+        #
+        #
+
+        if not self.find( "cont_debito_rel_centro_custo_1", matching=0.97, waiting_time=10000):
+            not_found("cont_debito_rel_centro_custo_1")
+        self.click_relative(161, 39)
+        # aqui nao tem nenhum item para selecionar, apenas voltar com esc
+        self.wait(2000)
+        self.key_esc()
+        self.wait(1000)
+        if not self.find( "cont_historico_rel_btn_1_deb", matching=0.97, waiting_time=10000):
+            not_found("cont_historico_rel_btn_1_deb")
+        self.click_relative(163, 67)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@")
+        self.wait(1000)
+        if not self.find( "cont_conta_credito_f7_rel_bsc", matching=0.97, waiting_time=10000):
+            not_found("cont_conta_credito_f7_rel_bsc")
+        self.click_relative(153, 4)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"1.1.02.01.0001")
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"123")
+        if not self.find( "cont_credito_centro_de_custo_rel_2", matching=0.97, waiting_time=10000):
+            not_found("cont_credito_centro_de_custo_rel_2")
+        self.click_relative(164, 39)
+        # aqui nao tem nenhum item para selecionar, apenas voltar com esc
+        self.wait(2000)
+        self.key_esc()
+        self.wait(2000)
+        if not self.find( "cont_credito_mov_contabil_f7_hist", matching=0.97, waiting_time=10000):
+            not_found("cont_credito_mov_contabil_f7_hist")
+        self.click_relative(160, 64)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@")
+        self.wait(1000)
+        self.tab()
+        self.wait(1000)
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_salvar_mov_btn_opc_8", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_mov_btn_opc_8")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        self.click()
+        
+        ##################################################
+        ########### MOVIMENTOS -> LOTES  ##############
+        #################################################
+        self.wait(1000)
+
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_lotes_menu_movimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_lotes_menu_movimentos")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(2000)
+        self.type_keys_with_interval(100,"112")
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.type_keys_with_interval(100,"12032023")
+        self.tab()
+        self.type_keys_with_interval(100,"12032023")
+        self.tab()
+        self.type_keys_with_interval(100,"12032023")
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        self.wait(1000)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_editar_2_26_02", matching=0.97, waiting_time=10000):
+            not_found("cont_editar_2_26_02")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_bot_excluir_opc_3_mov_lotes", matching=0.97, waiting_time=10000):
+            not_found("cont_bot_excluir_opc_3_mov_lotes")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        self.click()
+        
+        # MOVIMENTOS -> GERAÇÃO CONTABIL
+        #
+        # 
+
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_menu_mov_geracao_contabil", matching=0.97, waiting_time=10000):
+            not_found("cont_menu_mov_geracao_contabil")
+        self.click()
+        if not self.find( "cont_encontrar_data_mov_ger_cont", matching=0.97, waiting_time=10000):
+            not_found("cont_encontrar_data_mov_ger_cont")
+        self.click_relative(33, 7)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        x = 0
+        while x < 8:
+            self.type_down()
+            x += 1
+        self.wait(1000)
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.wait(1000)
+        if not self.find( "cont_contabilizacao_mov_ger_cont", matching=0.97, waiting_time=10000):
+            not_found("cont_contabilizacao_mov_ger_cont")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        
+        
+        # MOVIMENTOS -> INVENTARIO
+        #
+        # 
+
+        
+        self.wait(2000)
+
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_inventario_menu_movimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_inventario_menu_movimentos")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.tab()
+        self.tab()
+        self.type_down()
+        self.type_up()
+        x = 0
+        while x < 5:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 5:
+            self.type_up()
+            x += 1
+        self.tab()
+        self.wait(1000)
+        self.type_down()
+        self.type_up()
+        self.wait(1000)
+        self.tab()
+        x = 0
+        while x < 5:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 3:
+            self.type_up()
+            x += 1
+        self.tab()
+        self.wait(1000)
+        if not self.find( "cont_mov_codigo_cliente_forn_bsc", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_codigo_cliente_forn_bsc")
+        self.click_relative(72, 27)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"0082955")
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_movimentos_operacao_entrada", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_operacao_entrada")
+        self.click_relative(69, 26)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_operacao_saida_movimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_operacao_saida_movimentos")
+        self.click_relative(71, 30)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_local_de_estoque_movimentos_bsc", matching=0.97, waiting_time=10000):
+            not_found("cont_local_de_estoque_movimentos_bsc")
+        self.click_relative(68, 24)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 4:
+            self.tab()
+            x += 1
+        self.type_keys_with_interval(100,"qa12!@")
+        self.wait(1000)
+        if not self.find( "cont_2_movt_dos_itens_mov_inventario", matching=0.97, waiting_time=10000):
+            not_found("cont_2_movt_dos_itens_mov_inventario")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_5_itens_botao_incluir_opc_3", matching=0.97, waiting_time=10000):
+            not_found("cont_5_itens_botao_incluir_opc_3")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_rel_f2_itens_bsc_inventario", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_f2_itens_bsc_inventario")
+        self.click_relative(9, 36)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"107026")
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_confirmar_inventario_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_confirmar_inventario_itens")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_6_itens_bloco_k_inventario", matching=0.97, waiting_time=10000):
+            not_found("cont_6_itens_bloco_k_inventario")
+        self.click()
+        if not self.find( "cont_incluir_6_itens_bloco_k", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_6_itens_bloco_k")
+        self.click()
+
+        self.wait(1000)
+        if not self.find( "cont_rel_f2_itens_bsc_inventario", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_f2_itens_bsc_inventario")
+        self.click_relative(9, 36)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"107026")
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cliente_fornecedor_rel_f2_item", matching=0.97, waiting_time=10000):
+            not_found("cont_cliente_fornecedor_rel_f2_item")
+        self.click_relative(66, 25)
+        self.wait(2000)
+        self.type_keys_with_interval(100,"0082955")
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+        if not self.find( "cont_confirmar_inventario_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_confirmar_inventario_itens")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_mov_inventario_7_contagem", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_inventario_7_contagem")
+        self.click()
+        if not self.find( "cont_mov_inventario_a_lancamento", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_inventario_a_lancamento")
+        self.click_relative(95, 46)
+        self.type_keys_with_interval(100,"107026")
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.tab()
+        self.wait(1000)
+        if not self.find( "cont_data_acumulativa_7_contagem", matching=0.97, waiting_time=10000):
+            not_found("cont_data_acumulativa_7_contagem")
+        self.click()
+        self.wait(1000)
+        self.type_down()
+        self.space()
+        self.type_down()
+        self.space()
+        if not self.find( "cont_8_geracao_do_espelho_inventario", matching=0.97, waiting_time=10000):
+            not_found("cont_8_geracao_do_espelho_inventario")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_botao_data_8_geracao_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_data_8_geracao_rel")
+        self.click_relative(30, 10)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.space()
+        self.space()
+        self.tab()
+        self.space()
+        self.space()
+        self.tab()
+        #deixa data vazia
+        self.tab()
+        x = 0
+        while x < 3:
+            self.space()
+            self.space()
+            self.tab()
+            x += 1
+        self.type_right()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.space()
+        self.space()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.wait(1000)
+        if not self.find( "cont_inventario_gerar_movimento_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_inventario_gerar_movimento_mov")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(15000)
+        self.enter()
+        self.wait(7000)
+        if not self.find( "cont_3_registros_inventario_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_3_registros_inventario_mov")
+        self.click()
+        self.wait(2000)
+        self.tab()
+        self.tab()
+        self.type_down()
+        self.tab()
+        x = 0
+        while x < 5:
+            self.type_down()
+            x += 1
+
+        self.tab()
+        self.space()
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        x = 0
+        while x < 5:
+            self.type_right()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 5:
+            self.type_right()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 5:
+            self.type_right()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 5:
+            self.type_right()
+            x += 1
+        self.tab()
+        if not self.find( "cont_4_coletor_de_dados_inventorio_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_4_coletor_de_dados_inventorio_mov")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(2000)
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_editar_mov_opc_08_3", matching=0.97, waiting_time=10000):
+            not_found("cont_editar_mov_opc_08_3")
+        self.click()
+        
+        self.wait(3000)
+        if not self.find( "cont_btn_excluir_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_excluir_opc_08_03")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"1811")
+        self.wait(1000)
+        self.enter()
+        self.wait(2000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(2000)
+        
+        # MOVIMENTOS -> REDUÇÕES Z 
+        #
+        #
+        #
+        
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_menu_mov_reducoes_z", matching=0.97, waiting_time=10000):
+            not_found("cont_menu_mov_reducoes_z")
+        self.click()
+        self.wait(2000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_achar_data_mov_reducoes_z", matching=0.97, waiting_time=10000):
+            not_found("cont_achar_data_mov_reducoes_z")
+        self.click_relative(31, 9)
+        self.wait(1000)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(2000)
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.space()
+        self.tab()
+        self.type_down()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"12:30")
+        self.tab()
+        self.space()
+        self.tab()
+        self.type_right()
+        if not self.find( "cont_mov_reducoesz_empresa_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_reducoesz_empresa_rel")
+        self.click_relative(51, 26)
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(2000)
+        self.tab()
+        self.tab()
+        self.tab()
+        #32 no total
+        #6 antes do 492
+        x = 0
+        while x < 6: 
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.type_keys_with_interval(100,"492")
+        self.tab()
+        x = 0
+        while x < 25: 
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 8:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.space()
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.space()
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 2:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.space()
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.wait(1000)
+        if not self.find( "cont_mov_reducoes_z_3_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_reducoes_z_3_itens")
+        self.click()
+        self.wait(100)
+        self.click()
+        self.wait(100)
+        self.click()
+        # 3 cliques para confirmar, pois ao apertar apenas uma vez nem sempre vai 
+        self.wait(2000)
+        if not self.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_cod_fisc_impo_23")
+        self.click()
+
+        # mensagem aparece "Esta movimentação é apenas para Modulo Contabil"
+        # Aqui vai o codigo ao aparecer item
+        # explicação = Não é mais usado este metodo Reduções Z, apenas ignorar
+        #
+        self.wait(1000)
+        self.enter()
+
+        #if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+        #    not_found("cont_salvar_opc_23_plano_c")
+        #self.click()
+        #self.wait(1000)
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_editar_opc_23_impostos", matching=0.97, waiting_time=10000):
+            not_found("cont_editar_opc_23_impostos")
+        self.click()
+        self.wait(2000)
+        # mouse esta parando em cima de exclusao
+
+        if not self.find( "cont_excluir_botao_reducoesz_2", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_botao_reducoesz_2")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        # MOVIMENTOS -> INTEGRAÇOES -> 
+        #
+        #
+        #
+
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_integracoes_menu_movimentos_23", matching=0.97, waiting_time=10000):
+            not_found("cont_integracoes_menu_movimentos_23")
+        self.click()
+        self.wait(2000)
+        x = 0
+        while x < 6:
+            self.type_right()
+            x += 1
+        
+        if not self.find( "cont_relativo_data_movimentos_integracao_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relativo_data_movimentos_integracao_1")
+        self.click_relative(221, -47) # data 1
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_rel_data_movimento_integracao_2", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_data_movimento_integracao_2")
+        self.click_relative(460, -45) # data 2 
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(2000)
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        if not self.find( "cont_contabilizacao_integracao_movimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_contabilizacao_integracao_movimentos")
+        self.click()
+        self.wait(20000)
+        self.enter()
+        
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        
+        ########################################################
+        #########    MOVIMENTOS -> INF. EXTRAS ->   ############
+        ########################################################
+        #
+        #
+        self.wait(3000)
+
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_inf_extras_gia_movimentos_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_inf_extras_gia_movimentos_menu")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 12:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"2024")
+        x= 0 
+        while x < 9:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.tab()
+        x = 0 
+        while x < 5:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_cod_fisc_impo_23")
+        self.click()
+        if not self.find( "cont_codigo_ajuste_inf_extras", matching=0.97, waiting_time=10000):
+            not_found("cont_codigo_ajuste_inf_extras")
+        self.click_relative(152, 6)
+        self.wait(500)
+        self.type_down()
+        self.enter()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        x = 0
+        while x < 5:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 20:
+            self.type_down()
+            x+= 1
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.wait(500)
+        if not self.find( "cont_confirma_inf_extras_mov_2", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_inf_extras_mov_2")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_mov_info_adicionais_inf_extras", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_info_adicionais_inf_extras")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_cod_fisc_impo_23")
+        self.click()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.wait(500)
+        if not self.find( "cont_confirma_inf_extras_mov_2", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_inf_extras_mov_2")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_obrigacoes_recolher_mov_inf_extras", matching=0.97, waiting_time=10000):
+            not_found("cont_obrigacoes_recolher_mov_inf_extras")
+        self.click()
+        if not self.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_cod_fisc_impo_23")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 5:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_down()
+        self.type_down()
+        self.tab()
+        self.type_down()
+        self.type_down()
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.wait(500)
+        if not self.find( "cont_confirma_inf_extras_mov_2", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_inf_extras_mov_2")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_botao_edit_opc_2_ver_26", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_edit_opc_2_ver_26")
+        self.click()
+        if not self.find( "cont_excluir_movimentos_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_movimentos_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        # MOVIMENTOS -> FECHAMENTOS CONTABEIS 
+        #
+        #
+        #
+
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_menu_mov_fechamentos_contabeis", matching=0.97, waiting_time=10000):
+            not_found("cont_menu_mov_fechamentos_contabeis")
+        self.click()
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        if not self.find( "cont_mov_conta_resultado_fechamento", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_conta_resultado_fechamento")
+        self.click_relative(220, 4)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+
+        if not self.find( "cont_conta_lucro_mov_f12", matching=0.97, waiting_time=10000):
+            not_found("cont_conta_lucro_mov_f12")
+        self.click_relative(195, 7)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 4:
+            self.type_up()
+            x += 1
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+
+        if not self.find( "cont_conta_prejuizo_f12_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_conta_prejuizo_f12_mov")
+        self.click_relative(208, 6)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@")
+        if not self.find( "cont_grupo_de_empresa_rel_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_grupo_de_empresa_rel_mov")
+        self.click_relative(142, 6)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_edit_opc_2_ver_26", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_edit_opc_2_ver_26")
+        self.click()
+        # mouse para em cima, entao apenas clicar
+        #if not self.find( "cont_excluir_movimentos_apuracao_imp", matching=0.97, waiting_time=10000):
+        #    not_found("cont_excluir_movimentos_apuracao_imp")
+        #self.click()
+        self.wait(1000)
+        self.click()
+        self.wait(800)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+
+        # MOVIMENTOS -> REGISTROS MENSAIS EFD -> REGISTRO 2050
+        #
+        #
+        #
+
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_registros_mensais_efd_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_registros_mensais_efd_menu")
+        self.click()
+        if not self.find( "cont_registros_2050_mensais", matching=0.97, waiting_time=10000):
+            not_found("cont_registros_2050_mensais")
+        self.click()
+
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"012024")
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 13:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        if not self.find( "cont_cancelar_bot_itens_23", matching=0.97, waiting_time=10000):
+            not_found("cont_cancelar_bot_itens_23")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_edit_opc_2_ver_26", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_edit_opc_2_ver_26")
+        self.click()
+        #mouse em cima 
+        #if not self.find( "cont_excluir_movimentos_apuracao_imp", matching=0.97, waiting_time=10000):
+        #    not_found("cont_excluir_movimentos_apuracao_imp")
+        #self.click()
+        self.wait(1000)
+        self.wait(800)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        
+        # MOVIMENTOS -> REGISTROS MENSAIS EFD -> REGISTRO 2060
+        #
+        #
+        #
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_registros_mensais_efd_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_registros_mensais_efd_menu")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_registro_2060_mov_contabil", matching=0.97, waiting_time=10000):
+            not_found("cont_registro_2060_mov_contabil")
+        self.click()
+        self.wait(1000)
+        self.backspace()
+
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"012024")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.wait(1000)
+        if not self.find( "cont_incluir_6_itens_bloco_k", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_6_itens_bloco_k")
+        self.click()
+        
+        x = 0
+        while x < 6:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        if not self.find( "cont_confirma_botao_claro_verde", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_botao_claro_verde")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_2060_ajustes_contribuicao_apu_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_2060_ajustes_contribuicao_apu_mov")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_incluir_6_itens_bloco_k", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_6_itens_bloco_k")
+        self.click()
+        x = 0
+        while x < 4:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        if not self.find( "cont_tipo_de_ajuste_mov_2060", matching=0.97, waiting_time=10000):
+            not_found("cont_tipo_de_ajuste_mov_2060")
+        self.click_relative(6, 28)
+        self.wait(700)
+        self.type_right()
+        self.wait(1000)
+        if not self.find( "cont_confirma_botao_claro_verde", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_botao_claro_verde")
+        self.click()
+        self.wait(1000)
+
+
+        if not self.find( "cont_supensao_processos_2060_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_supensao_processos_2060_mov")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_incluir_6_itens_bloco_k", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_6_itens_bloco_k")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_buscar_processos_2060_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_buscar_processos_2060_mov")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_btn_selec_opc_19_03", matching=0.97, waiting_time=10000):
+            not_found("cont_cad_btn_selec_opc_19_03")
+        self.click()
+        self.wait(1000)
+        
+        
+        self.wait(300)
+        self.shift_tab()
+        self.type_keys_with_interval(100,"123")
+        self.wait(1000)
+        # CANCELAR A INCLUSAO, POIS SEM INFORMAR O PROCESSO VAI DAR UM ERRO
+        if not self.find( "cont_movimento_2060_efc_concluir", matching=0.97, waiting_time=10000):
+            not_found("cont_movimento_2060_efc_concluir")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_excluir_opcao_2060_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_opcao_2060_mov")
+        self.click()
+        self.wait(300)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        
+        ##############################################
+        ####### MOVIMENTOS -> Movimento CIAP #########
+        ##############################################
+        
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_movimento_ciap_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_movimento_ciap_menu")
+        self.click()
+        if not self.find( "cont_achar_ciap_escolher_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_achar_ciap_escolher_imposto")
+        self.click_relative(49, 22)
+        self.wait(300)
+        self.type_down()
+        self.enter()
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        # BOTAO CIAP NAO MUDA TIPO DE PROCESSO
+        self.tab()
+        x = 0 
+        while x < 7:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_incluir_movimentos_ciap", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_incluir_movimentos_ciap")
+        self.click()
+        if not self.find( "cont_botao_ciap_bens_buscar_movimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_ciap_bens_buscar_movimentos")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.backspace()
+        self.tab()
+        self.tab()
+        self.type_down()
+        self.enter()
+        # CODIGO ACIMA É PARA PREENCHER O CAMPO MANUALMENTE JA QUE A LUPA ESTA COM PROBLEMAS
+        # aqui vou apagar o 000002 pois nao estou conseguindo incluir pela lupa
+        # Erro documentado 12/01
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+
+        self.tab()
+        x = 0
+        while x < 6:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.wait(1000)
+        # cancelar pois sem o BEM não é possivel incluir, e não estou conseguindo fazer o Bem aparecer
+        # CONSEGUI CADASTRAR O BEM, NAO PRECISA CANCELAR 12/01
+        #if not self.find( "cont_cancelar_referencias_itens", matching=0.97, waiting_time=10000):
+        #    not_found("cont_cancelar_referencias_itens")
+        #self.click()
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_botao_edit_opc_2_ver_26", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_edit_opc_2_ver_26")
+        self.click()
+        if not self.find( "cont_excluir_ciap_movimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_ciap_movimentos")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        
+        ###########################################################
+        ###### MOVIMENTOS -> Movimento Fiscal - Inutilizadas ######
+        ###########################################################
+        
+        
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_movimento_fiscal_inutilizadas_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_movimento_fiscal_inutilizadas_menu")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 20:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"01012024")
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_data_mov_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_data_mov_fiscal")
+        self.click_relative(29, 11)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_editar_opc_23_impostos", matching=0.97, waiting_time=10000):
+            not_found("cont_editar_opc_23_impostos")
+        self.click()
+        if not self.find( "cont_excluir_opcao_2060_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_opcao_2060_mov")
+        self.click()
+        self.wait(500)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        
+        ###################################################
+        ### MOVIMENTOS -> Movimento Documentos (Fiscal) ###
+        ###################################################
+
+        ### ESTA PARTE NAO ESTA COMPLETA ###
+        ### RETORNAR DEPOIS ###
+        
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_movimento_documentos_fiscal_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_movimento_documentos_fiscal_menu")
+        self.click()
+        self.wait(2000)
+        self.enter()
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(2000)
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 15:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 15:
+            self.type_up()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 15:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 15:
+            self.type_up()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.wait(1000)
+        if not self.find( "cont_codigo_de_operacao_dados_doc", matching=0.97, waiting_time=10000):
+            not_found("cont_codigo_de_operacao_dados_doc")
+        self.click_relative(57, 23)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        
+        self.wait(2000)
+
+        if not self.find( "cont_cfop_dados_de_doc_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_cfop_dados_de_doc_mov")
+        self.click_relative(61, 26)
+        self.wait(1000)
+        self.backspace()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        if not self.find( "cont_cond_de_pagamento_mov_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_cond_de_pagamento_mov_rel")
+        self.click_relative(51, 24)
+        self.wait(500)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(2000)
+      
+        if not self.find( "cont_cliente_rel_mov_movi_de_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_cliente_rel_mov_movi_de_itens")
+        self.click_relative(200, 44)
+        self.wait(2000)
+        self.type_keys_with_interval(100,"0089720")
+        
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_rel_vendedor_mov_movi_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_vendedor_mov_movi_itens")
+        self.click_relative(58, 24)
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_rota_mov_rel_busc_documentos", matching=0.97, waiting_time=10000):
+            not_found("cont_rota_mov_rel_busc_documentos")
+        self.click_relative(56, 24)
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 10: 
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 5: 
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        if not self.find( "cont_centro_de_custo_mov_rel_doc", matching=0.97, waiting_time=10000):
+            not_found("cont_centro_de_custo_mov_rel_doc")
+        self.click_relative(87, 28)
+        self.wait(2000)
+        #if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+        #    not_found("cont_opcao_loc_imp_23")
+        #self.click()
+        #self.wait(2000)
+        #if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+        #    not_found("cont_botao_selec_tela_maior_2")
+        #self.click()
+        #self.wait(1000)
+        
+        # OS BOTOES DE LOCALIZAR E SELECIONAR NAO ESTAO FUNCIONANDO POIS NAO TEM DADO NENHUM AQUI, APENAS RETORNAR
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        # tab para a tela descer
+        self.tab()
+        self.tab()
+        self.tab()
+
+        if not self.find( "cont_transportador_movimento_documentos_busc", matching=0.97, waiting_time=10000):
+            not_found("cont_transportador_movimento_documentos_busc")
+        self.click_relative(61, 26)
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        self.tab()
+        self.tab()
+        # tipo de frete
+        x = 0
+        while x < 5:
+            self.type_down()
+            x += 1
+        self.tab()
+        if not self.find( "cont_municipio_coleta_sped_rel_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_municipio_coleta_sped_rel_mov")
+        self.click_relative(51, 26)
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_municipio_entrega_sped_rel_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_municipio_entrega_sped_rel_mov")
+        self.click_relative(58, 27)
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        if not self.find( "cont_classificacao_rel_busc_mov_documentos", matching=0.97, waiting_time=10000):
+            not_found("cont_classificacao_rel_busc_mov_documentos")
+        self.click_relative(54, 28)
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@2")
+        self.tab()
+        x = 0
+        while x < 16:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        if not self.find( "cont_5_retencoes_mov_documentos", matching=0.97, waiting_time=10000):
+            not_found("cont_5_retencoes_mov_documentos")
+        self.click()
+        x = 0
+        while x < 12:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        if not self.find( "cont_6_impostos_mov_documentos", matching=0.97, waiting_time=10000):
+            not_found("cont_6_impostos_mov_documentos")
+        self.click()
+        x = 0
+        while x < 14:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        #########################################################
+        ######### movimento de itens 2 ##########################
+        ########################  #########################
+        
+        self.wait(1000)
+        if not self.find( "cont_2_movto_dos_itens_documentos_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_2_movto_dos_itens_documentos_mov")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_cod_fisc_impo_23")
+        self.click()
+        if not self.find( "cont_mov_f2_itens_rel_busc", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_f2_itens_rel_busc")
+        self.click_relative(8, 38)
+        self.wait(2000)
+        self.type_keys_with_interval(100,"114380")
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(2000)
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        if not self.find( "cont_relativo_centro_de_custos_item_23", matching=0.97, waiting_time=10000):
+            not_found("cont_relativo_centro_de_custos_item_23")
+        self.click_relative(88, 30)
+        self.wait(500)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(2000)
+        self.enter()
+        if not self.find( "cont_mov_relat_classificacao_item", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_relat_classificacao_item")
+        self.click_relative(54, 27)
+        self.wait(500)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_confirmar_mov_item_v", matching=0.97, waiting_time=10000):
+            not_found("cont_confirmar_mov_item_v")
+        self.click()
+        self.wait(2000)
+        self.enter() # aparecendo mensagem de erro
+        self.wait(2000)
+        
+        # antes aparecia uma janela, que nao esta aparecendo mais, por enquanto pular, a tela aparece 
+        # apenas para itens especificos
+        
+        self.wait(2000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(2000)
+        #if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            #not_found("cont_retorn_opc_23_imposto")
+        #MOUSE JA ESTA EM CIMA DE RETORNAR, APENAS CLICAR NOVAMENTE
+        
+        #
+        #
+        #
+        #
+        #
+        #
+        #
+        #
+        #
+        #
+        #
+        #
+        #
+
+        self.click()
+        self.wait(2000)
+
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+
+        self.wait(1000)
+        self.enter()
+
+
+        self.wait(2000)
+        if not self.find( "cont_3_opcao_servicos_mov_item", matching=0.97, waiting_time=10000):
+            not_found("cont_3_opcao_servicos_mov_item")
+        self.click()
+
+        if not self.find( "cont_servico_rel_busc_3_serv_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_servico_rel_busc_3_serv_mov")
+        self.click_relative(65, 24)
+
+        if not self.find( "cont_cadastro_de_servico_f10", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastro_de_servico_f10")
+        self.click()
+
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.tab()
+        self.wait(300)
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"12:30")
+        self.tab()
+        x = 0
+        while x < 7:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.tab()
+        self.space()
+        self.tab()
+        self.type_down()
+        self.type_down()
+        self.enter()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        x = 0
+        while x < 20:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 20:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        if not self.find( "cont_unidade_mov_cad_servico", matching=0.97, waiting_time=10000):
+            not_found("cont_unidade_mov_cad_servico")
+        self.click_relative(55, 27)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        self.type_down()
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+
+        if not self.find( "cont_grupo_fiscal_cad_servico_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_grupo_fiscal_cad_servico_rel")
+        self.click_relative(49, 30)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+
+        if not self.find( "cont_familia_cad_servicos_rel_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_familia_cad_servicos_rel_mov")
+        self.click_relative(56, 29)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+
+        if not self.find( "cont_grupo_agrupamento_cad_servicos_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_grupo_agrupamento_cad_servicos_rel")
+        self.click_relative(53, 30)
+
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+
+        if not self.find( "cont_sub_grupo_rel_mov_cad_serv", matching=0.97, waiting_time=10000):
+            not_found("cont_sub_grupo_rel_mov_cad_serv")
+        self.click_relative(52, 26)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        if not self.find( "cont_marca_rel_mov_cad_serv", matching=0.97, waiting_time=10000):
+            not_found("cont_marca_rel_mov_cad_serv")
+        self.click_relative(51, 29)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_plano_de_contas_rel_mov_cad_servicos", matching=0.97, waiting_time=10000):
+            not_found("cont_plano_de_contas_rel_mov_cad_servicos")
+        self.click_relative(55, 30)
+        self.wait(1000)
+        self.type_keys_with_interval(100,"00010")
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_ncm_rel_busc_cad_servico", matching=0.97, waiting_time=10000):
+            not_found("cont_ncm_rel_busc_cad_servico")
+        self.click_relative(105, 28)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_centro_custo_rel_cad_servi", matching=0.97, waiting_time=10000):
+            not_found("cont_centro_custo_rel_cad_servi")
+        self.click_relative(82, 29)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.enter()
+
+        self.wait(1000)
+        if not self.find( "cont_cardex_cadastro_servicos_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_cardex_cadastro_servicos_mov")
+        self.click()
+
+        if not self.find( "cont_data_rel_cardox_cad_servico", matching=0.97, waiting_time=10000):
+            not_found("cont_data_rel_cardox_cad_servico")
+        self.click_relative(30, 7)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consultar_cardex_cad_servicos", matching=0.97, waiting_time=10000):
+            not_found("cont_consultar_cardex_cad_servicos")
+        self.click()
+        if not self.find( "cont_precos_cad_servicos_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_precos_cad_servicos_mov")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_incluir_6_itens_bloco_k", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_6_itens_bloco_k")
+        self.click()
+        self.wait(1000)
+        self.backspace()
+        if not self.find( "cont_buscar_tabela_cad_servicos", matching=0.97, waiting_time=10000):
+            not_found("cont_buscar_tabela_cad_servicos")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.backspace()
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        
+        if not self.find( "cont_gravar_servicos_preco", matching=0.97, waiting_time=10000):
+            not_found("cont_gravar_servicos_preco")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_lixo_cad_servico_movimentos_exclusao", matching=0.97, waiting_time=10000):
+            not_found("cont_lixo_cad_servico_movimentos_exclusao")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        self.click()
+       
+        self.wait(2000)
+
+        if not self.find( "cont_servico_relativo_buscar_3_23", matching=0.97, waiting_time=10000):
+            not_found("cont_servico_relativo_buscar_3_23")
+        self.click_relative(65, 24)
+
+        if not self.find( "cont_localizar_servicos_f10_busc", matching=0.97, waiting_time=10000):
+            not_found("cont_localizar_servicos_f10_busc")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.space()
+
+        # OPERAÇAO CONTABILIZAÇAO ESTA DESATIVADO
+
+        if not self.find( "cont_centro_de_custo_rel_buscar_mov_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_centro_de_custo_rel_buscar_mov_itens")
+        self.click_relative(87, 28)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.enter()
+
+        if not self.find( "cont_classificacao_rel_bsc_mov_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_classificacao_rel_bsc_mov_itens")
+        self.click_relative(65, 26)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_gravar_v_opcao_23_mov_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_gravar_v_opcao_23_mov_itens")
+        self.click()
+        self.wait(3000)
+
+        if not self.find( "cont_rel_movimento_descricao_f2", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_movimento_descricao_f2")
+        self.click_relative(-22, 22)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+        self.wait(2000)
+        self.type_keys_with_interval(100,"1")
+        self.wait(1000)
+        if not self.find( "cont_cfop_busc_relativo_item_23", matching=0.97, waiting_time=10000):
+            not_found("cont_cfop_busc_relativo_item_23")
+        self.click_relative(60, 21)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+        self.wait(2000)
+
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 6:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        if not self.find( "cont_centro_de_custo_rel_bsc_servic", matching=0.97, waiting_time=10000):
+            not_found("cont_centro_de_custo_rel_bsc_servic")
+        self.click_relative(78, 23)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+        # arquivo vazio, apenas apertar enter
+        self.wait(2000)
+        self.enter()
+        if not self.find( "cont_classificacao_rel_bsc_servic", matching=0.97, waiting_time=10000):
+            not_found("cont_classificacao_rel_bsc_servic")
+        self.click_relative(52, 20)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_4_documentos_referenciados_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_4_documentos_referenciados_mov")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(2000)
+        self.enter()
+        self.wait(1000)
+        
+        self.wait(2000)
+        # aqui esta dando um erro de não conseguir modificar os documentos referenciados 
+        # ao mudar o MODELO o erro para de aparecer
+        if not self.find( "cont_alterar_modelo_rel_nota_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_alterar_modelo_rel_nota_fiscal")
+        self.click_relative(57, 22)
+        self.wait(500)
+        self.type_down()
+        self.wait(200)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(3000)
+        self.enter()
+        self.wait(1000)
+        self.enter()
+
+        if not self.find( "cont_3_servicos_voltar_nota_fisc", matching=0.97, waiting_time=10000):
+            not_found("cont_3_servicos_voltar_nota_fisc")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_4_documentos_referenciados_dnv", matching=0.97, waiting_time=10000):
+            not_found("cont_4_documentos_referenciados_dnv")
+        self.click()   
+        self.wait(1000)
+
+
+        if not self.find( "cont_incluir_cod_fisc_impo_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_cod_fisc_impo_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_tipo_documento_mov_referenciados2", matching=0.97, waiting_time=10000):
+            not_found("cont_tipo_documento_mov_referenciados2")
+        self.click_relative(48, 25)
+        self.wait(1000)
+        self.type_down()
+        self.enter()
+        if not self.find( "cont_data_botao_documentos_referenciados", matching=0.97, waiting_time=10000):
+            not_found("cont_data_botao_documentos_referenciados")
+        self.click_relative(28, 7)
+        self.wait(1000)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(2000)
+
+        self.tab()
+        self.tab()
+        self.type_down()
+
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(2000)
+        self.type_down()
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.wait(1000)
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        
+        self.wait(1000)
+        
+        if not self.find( "cont_documentos_referenciados_rel_sel", matching=0.97, waiting_time=10000):
+            not_found("cont_documentos_referenciados_rel_sel")
+        self.click_relative(23, 47)
+
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()
+
+        self.wait(1000)
+        self.enter()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        self.wait(2000)
+
+        if not self.find( "cont_mov_movi_itens_fiscal_data", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_movi_itens_fiscal_data")
+        self.click_relative(25, 8)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(2000)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+
+        self.wait(1000)
+
+        if not self.find( "cont_editar_mov_opc_08_3", matching=0.97, waiting_time=10000):
+            not_found("cont_editar_mov_opc_08_3")
+        self.click()
+
+        if not self.find( "cont_btn_excluir_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_excluir_opc_08_03")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.type_keys_with_interval(100,"1811")
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(2000)
+
+        # Voltar para apagar o serviço criado, para que nao acomule. NAO PODE ESTAR EM CAPS LOCK
+
+        if not self.find( "cont_cadastros_men_prin_op4", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_men_prin_op4")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_menu_servicos_23", matching=0.97, waiting_time=10000):
+            not_found("cont_menu_servicos_23")
+        self.click()
+        self.wait(2000)
+        self.backspace()
+        if not self.find( "teste_loc_serv", matching=0.97, waiting_time=10000):
+            not_found("teste_loc_serv")
+        self.click()
+        if not self.find( "teste_achar_qa", matching=0.97, waiting_time=10000):
+            not_found("teste_achar_qa")
+        self.click()
+        if not self.find( "teste_editar_qa", matching=0.97, waiting_time=10000):
+            not_found("teste_editar_qa")
+        self.click()
+        if not self.find( "teste_excluir_qa", matching=0.97, waiting_time=10000):
+             not_found("teste_excluir_qa")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "teste_retornar_qa", matching=0.97, waiting_time=10000):
+            not_found("teste_retornar_qa")
+        self.click()
+        self.wait(1000)
+        if not self.find( "teste_loc_serv", matching=0.97, waiting_time=10000):
+            not_found("teste_loc_serv")
+        self.click()
+        self.wait(1000)
+        if not self.find( "teste_retornar_qa", matching=0.97, waiting_time=10000):
+            not_found("teste_retornar_qa")
+        self.click()
+        self.wait(1000)
+
+
+        
+        ###########################################################
+        ###### MOVIMENTOS -> Movimento Conhecimento ( Fiscal ) ######
+        ###########################################################
+        
+        
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_menu_movimento_conhecimentos_fisc", matching=0.97, waiting_time=10000):
+            not_found("cont_menu_movimento_conhecimentos_fisc")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        self.enter()
+        # Mensagens que aparecem na tela sobre localizar, e que data não foi informada
+        self.wait(1000)
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0 # Modelo
+        while x < 3:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 3:
+            self.type_up()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        # Conhecimento
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 4:
+            self.type_up()
+            x += 1
+        self.tab()
+        self.type_down()
+        self.type_up()
+        self.tab()
+        self.type_keys_with_interval(100,"11111111111111111111111111111111111111111111")
+        # area de busca
+
+        if not self.find( "cont_codigo_de_operacao_mov_transp_con", matching=0.97, waiting_time=10000):
+            not_found("cont_codigo_de_operacao_mov_transp_con")
+        self.click_relative(58, 24)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_codigo_fiscal_cfop_mov_transp", matching=0.97, waiting_time=10000):
+            not_found("cont_codigo_fiscal_cfop_mov_transp")
+        self.click_relative(64, 22)
+        self.wait(1000)
+        self.backspace()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_remetente_rel_mov_transp", matching=0.97, waiting_time=10000):
+            not_found("cont_remetente_rel_mov_transp")
+        self.click_relative(61, 20)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_destinatario_rel_mov_transp", matching=0.97, waiting_time=10000):
+            not_found("cont_destinatario_rel_mov_transp")
+        self.click_relative(65, 23)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_pagador_rel_mov_transp", matching=0.97, waiting_time=10000):
+            not_found("cont_pagador_rel_mov_transp")
+        self.click_relative(57, 23)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_consignatario_rel_mov_transp", matching=0.97, waiting_time=10000):
+            not_found("cont_consignatario_rel_mov_transp")
+        self.click_relative(62, 24)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        
+        if not self.find( "cont_motorista_rel_mov_transp", matching=0.97, waiting_time=10000):
+            not_found("cont_motorista_rel_mov_transp")
+        self.click_relative(62, 22)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_transportador_proprietario_mov_transp", matching=0.97, waiting_time=10000):
+            not_found("cont_transportador_proprietario_mov_transp")
+        self.click_relative(62, 22)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_unidade_transp_mov_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_unidade_transp_mov_rel")
+        self.click_relative(64, 25)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_municipio_entrega_rel_mov_transp", matching=0.97, waiting_time=10000):
+            not_found("cont_municipio_entrega_rel_mov_transp")
+        self.click_relative(67, 22)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_municipio_coleta_rel_transp_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_municipio_coleta_rel_transp_mov")
+        self.click_relative(59, 24)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(2000)
+
+        if not self.find( "cont_2_valores_mov_transportes_conhe", matching=0.97, waiting_time=10000):
+            not_found("cont_2_valores_mov_transportes_conhe")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_grupo_fiscal_2_valores_rel_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_grupo_fiscal_2_valores_rel_mov")
+        self.click_relative(60, 26)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 5:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        self.wait(500)
+        self.space()
+        self.space()
+        self.tab()
+        x = 0
+        while x < 4:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        
+        #Tipo da tributaçao
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        #Situaçao tributaria 
+        x = 0
+        while x < 15:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 15:
+            self.type_up()
+            x += 1
+        self.tab()
+        #MODALIDADE
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 3:
+            self.type_up()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 4:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+
+        x = 0
+        while x < 5:
+            self.type_down()
+            x += 1
+
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        
+        x = 0
+        while x < 5:
+            self.type_down()
+            x += 1
+
+        self.tab()
+
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+        x = 0
+        while x < 9:
+            self.type_up()
+            x += 1
+
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        
+        self.tab()
+        x = 0 # Situacao Trib. PIS 
+        while x < 20:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0 # Situacao Trib. PIS 
+        while x < 20:
+            self.type_down()
+            x += 1
+        self.wait(1000)
+        if not self.find( "cont_informacoes_responsavel_frete_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_informacoes_responsavel_frete_mov")
+        self.click()
+        # aqui acontece o erro de "Cannot focus on disabled windown"
+        self.wait(2000)
+        self.enter()
+        self.wait(1000)
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        self.type_right() # Responsavel pela Carta Frete
+
+        if not self.find( "cont_operacao_rel_bsc_frete_responsavel", matching=0.97, waiting_time=10000):
+            not_found("cont_operacao_rel_bsc_frete_responsavel")
+        self.click_relative(46, 27)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_grupo_fiscal_mov_rel_conhecimento", matching=0.97, waiting_time=10000):
+            not_found("cont_grupo_fiscal_mov_rel_conhecimento")
+        self.click_relative(40, 28)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        
+        x = 0
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 15:
+            self.type_down()
+            x += 1
+        
+        self.tab()
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        
+        self.tab()
+        x = 0
+        while x < 15:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        x = 0 # Tipo de Tributaçao
+        while x < 6:
+            self.type_down()
+            x += 1
+        
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        
+        x = 0 
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0 
+        while x < 6:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0 
+        while x < 6:
+            self.type_down()
+            x += 1
+        if not self.find( "cont_observacoes_mov_2_valores", matching=0.97, waiting_time=10000):
+            not_found("cont_observacoes_mov_2_valores")
+        self.click()
+        self.wait(2000)
+        self.enter()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@")
+        if not self.find( "cont_3_notas_fiscais_mov_doc", matching=0.97, waiting_time=10000):
+            not_found("cont_3_notas_fiscais_mov_doc")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_adicionar_3_notas_fiscais_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_adicionar_3_notas_fiscais_mov")
+        self.click()
+        if not self.find( "cont_cliente_fornecedor_busc_rel_1_notas_f", matching=0.97, waiting_time=10000):
+            not_found("cont_cliente_fornecedor_busc_rel_1_notas_f")
+        self.click_relative(162, 6)
+        self.wait(2000)
+        self.type_keys_with_interval(100,"0081260")
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_cfop_bsc_rel_1_nota_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_cfop_bsc_rel_1_nota_fiscal")
+        self.click_relative(96, 5)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_unidade_rel_bsc_1_nota_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_unidade_rel_bsc_1_nota_fiscal")
+        self.click_relative(109, 6)
+        self.wait(2000)
+        self.type_keys_with_interval(100,"CJ")
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 17:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.type_keys_with_interval(10,"11111111111111111111111111111111111111111111")
+        self.wait(1000)
+        if not self.find( "cont_salvar_botao_notas_fiscais_conhecimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_botao_notas_fiscais_conhecimentos")
+        self.click()
+
+        # AQUI ACONTECE UM ERRO Q NAO ESTOU CONSEGUINDO RESOLVER #
+        # ###################################################### # 
+
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_cancelar_fiscais_conhecimentos_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_cancelar_fiscais_conhecimentos_mov")
+        self.click()
+
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_retornar_cadatro_mov_notas", matching=0.97, waiting_time=10000):
+            not_found("cont_retornar_cadatro_mov_notas")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retornar_claro_lancamento_conhecimento_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_retornar_claro_lancamento_conhecimento_mov")
+        self.click()
+        if not self.find( "cont_botn_data_rel_mov_conhecimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_botn_data_rel_mov_conhecimentos")
+        self.click_relative(27, 5)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_botao_edit_opc_2_ver_26", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_edit_opc_2_ver_26")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_excluir_claro_mov_conhecimentos", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_claro_mov_conhecimentos")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_retornar_claro_lancamento_conhecimento_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_retornar_claro_lancamento_conhecimento_mov")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        
+        ###########################################################
+        ###### MOVIMENTOS -> Apuração Presumido ######
+        ###########################################################
+        
+        
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_apuracao_presumido_mov_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_apuracao_presumido_mov_menu")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_down() # Imposto
+        self.type_down() 
+        self.tab()
+        x = 0
+        while x < 12:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        if not self.find( "cont_achar_data_mov_apuracao_2", matching=0.97, waiting_time=10000):
+            not_found("cont_achar_data_mov_apuracao_2")
+        self.click_relative(27, 9)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+
+        if not self.find( "cont_editar_opc_23_impostos", matching=0.97, waiting_time=10000):
+            not_found("cont_editar_opc_23_impostos")
+        self.click()
+
+        if not self.find( "cont_btn_excluir_movimento_presumido_opc_8", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_excluir_movimento_presumido_opc_8")
+        self.click()
+        self.wait(2000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(2000)
+        
+        ###########################################################
+        ######## MOVIMENTOS -> Apuração Simples Nacional  #########
+        ###########################################################
+
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_apuracao_simples_nacional_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_apuracao_simples_nacional_menu")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_incluir_opc_imposto_pres_23", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_opc_imposto_pres_23")
+        self.click()
+        self.wait(1000)
+        self.type_down()
+        self.type_up()
+        self.type_up()
+        self.tab()
+        self.type_keys_with_interval(100,"2024")
+        self.tab()
+        if not self.find( "cont_lupa_movimento_apuracao_simples", matching=0.97, waiting_time=10000):
+            not_found("cont_lupa_movimento_apuracao_simples")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+        # Vazio, apenas dar OK
+        self.wait(1000)
+        self.enter()
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.wait(1000)
+
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_incluir_imposto_por_cfop", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_imposto_por_cfop")
+        self.click()
+        self.wait(1000)
+        self.type_down()
+        # acontencendo erro aqui, esperar resolver apenas apertar enter
+        self.wait(1000)
+        self.enter()
+        self.tab()
+        x = 0
+        while x < 17:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        self.wait(1000)
+        if not self.find( "cont_cancelar_cfop_anexo_x_29", matching=0.97, waiting_time=10000):
+            not_found("cont_cancelar_cfop_anexo_x_29")
+        self.click()
+        self.wait(1000)
+        self.type_right()
+        # Informar evento, GRAVAR
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_data_mov_apuracao_simples_nac_2", matching=0.97, waiting_time=10000):
+            not_found("cont_data_mov_apuracao_simples_nac_2")
+        self.click_relative(26, 7)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_editar_opc_23_impostos", matching=0.97, waiting_time=10000):
+            not_found("cont_editar_opc_23_impostos")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_btn_excluir_movimento_presumido_opc_8", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_excluir_movimento_presumido_opc_8")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        self.wait(1000)
+        
+        ###########################################################
+        ############ MOVIMENTOS -> Fechamento Fiscal  #############
+        ###########################################################
+
+        self.wait(2000)
+        if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_movimentos_menu_opc_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_fechamento_fiscal_menu_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_fechamento_fiscal_menu_mov")
+        self.click()
+        if not self.find( "cont_selecao_mov_fechamento_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_selecao_mov_fechamento_fiscal")
+        self.click()
+        self.wait(1000)
+
+        # codigo fiscal
+        if not self.find( "cont_codigo_fiscal_selecao_rlv", matching=0.97, waiting_time=10000):
+            not_found("cont_codigo_fiscal_selecao_rlv")
+        self.click_relative(69, 25)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+        
+
+        # operação
+        if not self.find( "cont_operacao_mov_rel_selecao", matching=0.97, waiting_time=10000):
+            not_found("cont_operacao_mov_rel_selecao")
+        self.click_relative(67, 24)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+        
+        # cliente
+        if not self.find( "cont_cliente_rel_selecao", matching=0.97, waiting_time=10000):
+            not_found("cont_cliente_rel_selecao")
+        self.click_relative(71, 21)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_botao_selec_tela_maior_2", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_selec_tela_maior_2")
+        self.click()
+
+        # grupo de empresa
+        if not self.find( "cont_grupo_de_empresa_rel_selecao", matching=0.97, waiting_time=10000):
+            not_found("cont_grupo_de_empresa_rel_selecao")
+        self.click_relative(66, 24)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        if not self.find( "cont_mov_select_opc_08_03", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_select_opc_08_03")
+        self.click()
+
+        self.wait(1000)
+        self.enter()
+        # aqui o arquivo esta vazio, apenas apertar enter
+
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.wait(1000)
+
+        if not self.find( "cont_apuracao_de_impostos_fech_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_apuracao_de_impostos_fech_fiscal")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_apuracao_imposto_icms_edit", matching=0.97, waiting_time=10000):
+            not_found("cont_apuracao_imposto_icms_edit")
+        self.click()
+
+        if not self.find( "cont_outros_debitos_do_imposto_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_outros_debitos_do_imposto_rel")
+        self.click_relative(151, 3)
+
+        
+        x = 0
+        while x < 5:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        self.wait(1000)
+
+        #if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+        #    not_found("cont_salvar_opc_23_plano_c")
+        #self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.type_keys_with_interval(100,"123")
+        self.shift_tab()
+        self.type_keys_with_interval(100,"123")
+        self.shift_tab()
+        
+        # UF
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+        self.shift_tab()
+        # Indicador Ajuste
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+
+        self.shift_tab()
+        self.type_keys_with_interval(100,"123")
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+
+
+        if not self.find( "cont_info_adicionais_valores_declaratorios", matching=0.97, waiting_time=10000):
+            not_found("cont_info_adicionais_valores_declaratorios")
+        self.click()
+
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+
+        # OBRIGAÇÕES A RECOLHER
+
+
+        if not self.find( "cont_obrigacoes_a_recolher_mov_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_obrigacoes_a_recolher_mov_imp")
+        self.click()
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.wait(1000)
+        x = 0 # COD. OBRIGAÇAO
+        while x < 5:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        x = 0 # VLR. OBRIGAÇÃO
+        while x < 4:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        x = 0 # INDICADOR PROCESSO
+        while x < 4:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0 # INDICADOR PROCESSO
+        while x < 12:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+
+        # Retornar 
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        ###########
+        # ICMS ST #
+        ###########
+        if not self.find( "cont_fechamento_fiscal_mo_icms_st", matching=0.97, waiting_time=10000):
+            not_found("cont_fechamento_fiscal_mo_icms_st")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_apuracao_dos_impostos_detalhes", matching=0.97, waiting_time=10000):
+            not_found("cont_apuracao_dos_impostos_detalhes")
+        self.click()
+
+        ##################
+        # COPIA DO CODIGO ACIMA, POIS É A MESMA TELA, TESTAR AGORA # PROXIMAS 150 LINHAS 
+
+
+        if not self.find( "cont_outros_debitos_do_imposto_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_outros_debitos_do_imposto_rel")
+        self.click_relative(151, 3)
+   
+        x = 0
+        while x < 5:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        self.wait(1000)
+
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.type_keys_with_interval(100,"123")
+        self.shift_tab()
+        self.type_keys_with_interval(100,"123")
+        self.shift_tab()
+        
+        # UF
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+        self.shift_tab()
+        # Indicador Ajuste
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+
+        self.shift_tab()
+        self.type_keys_with_interval(100,"123")
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+
+
+        if not self.find( "cont_info_adicionais_valores_declaratorios", matching=0.97, waiting_time=10000):
+            not_found("cont_info_adicionais_valores_declaratorios")
+        self.click()
+
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+
+        # OBRIGAÇÕES A RECOLHER
+
+
+        if not self.find( "cont_obrigacoes_a_recolher_mov_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_obrigacoes_a_recolher_mov_imp")
+        self.click()
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.wait(1000)
+        x = 0 # COD. OBRIGAÇAO
+        while x < 5:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        x = 0 # VLR. OBRIGAÇÃO
+        while x < 4:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        x = 0 # INDICADOR PROCESSO
+        while x < 4:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0 # INDICADOR PROCESSO
+        while x < 12:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+
+        # Retornar 
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+        # AQUI ACABA O CODIGO QUE SE REPETE 
+        #
+
+        # AQUI REPETE NOVAMENTE
+        #
+        # 
+
+        if not self.find( "cont_apuracao_imposto_ipi_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_apuracao_imposto_ipi_mov")
+        self.click()
+
+        if not self.find( "cont_apuracao_dos_impostos_detalhes", matching=0.97, waiting_time=10000):
+            not_found("cont_apuracao_dos_impostos_detalhes")
+        self.click()
+
+        if not self.find( "cont_outros_debitos_do_imposto_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_outros_debitos_do_imposto_rel")
+        self.click_relative(151, 3)
+   
+        x = 0
+        while x < 5:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        self.wait(1000)
+
+        if not self.find( "cont_salvar_opc_23_plano_c", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_23_plano_c")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.type_keys_with_interval(100,"123")
+        self.shift_tab()
+        self.type_keys_with_interval(100,"123")
+        self.shift_tab()
+        
+        # UF
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+        self.shift_tab()
+        # Indicador Ajuste
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+
+        self.shift_tab()
+        self.type_keys_with_interval(100,"123")
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+
+
+        if not self.find( "cont_info_adicionais_valores_declaratorios", matching=0.97, waiting_time=10000):
+            not_found("cont_info_adicionais_valores_declaratorios")
+        self.click()
+
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+
+        # OBRIGAÇÕES A RECOLHER
+
+
+        if not self.find( "cont_obrigacoes_a_recolher_mov_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_obrigacoes_a_recolher_mov_imp")
+        self.click()
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.wait(1000)
+        x = 0 # COD. OBRIGAÇAO
+        while x < 5:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        x = 0 # VLR. OBRIGAÇÃO
+        while x < 4:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        x = 0 # INDICADOR PROCESSO
+        while x < 4:
+            self.type_down()
+            x += 1
+        self.tab()
+        x = 0 # INDICADOR PROCESSO
+        while x < 12:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        self.wait(1000)
+        if not self.find( "cont_excluir_info_adicional_apuracao_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_info_adicional_apuracao_imp")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+
+        # Retornar 
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        # CODIGO REPETIDO ACABA AQUI
+
+        self.wait(3000)
+        if not self.find( "cont_forma_pagamento_apuracao_icms", matching=0.97, waiting_time=10000):
+            not_found("cont_forma_pagamento_apuracao_icms")
+        self.click()
+
+        if not self.find( "cont_mov_informe_tipo_de_pagamento_1", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_informe_tipo_de_pagamento_1")
+        self.click_relative(209, 56)
+        ########################################
+        ### PRIMEIRA FORMA DE PAGAMENTO DARF ###
+        ########################################
+
+        if not self.find( "cont_pagamento_com_darf_opcao_1", matching=0.97, waiting_time=10000):
+            not_found("cont_pagamento_com_darf_opcao_1")
+        self.click()
+
+        if not self.find( "cont_selecionar_mov_apuracao_imposto_pag", matching=0.97, waiting_time=10000):
+            not_found("cont_selecionar_mov_apuracao_imposto_pag")
+        self.click()
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.wait(2000)
+        
+        self.type_keys_with_interval(100,"12312312312312")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        if not self.find( "cont_buscar_tabela_cad_servicos", matching=0.97, waiting_time=10000):
+            not_found("cont_buscar_tabela_cad_servicos")
+        self.click()
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+        # arquivo esta vazio, apenas apertar enter no erro
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        x = 0
+        while x < 6: 
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+
+        self.wait(1000)
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()     
+        self.wait(1000)
+
+        self.enter()
+        self.wait(1000)
+    
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        #### SEGUNDA FORMA DE PAGAMENTO ####
+        ##### COMPENSACAO DE PAGAMENTO #####
+
+        if not self.find( "cont_forma_pagamento_apuracao_icms", matching=0.97, waiting_time=10000):
+            not_found("cont_forma_pagamento_apuracao_icms")
+        self.click()
+
+        if not self.find( "cont_mov_informe_tipo_de_pagamento_1", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_informe_tipo_de_pagamento_1")
+        self.click_relative(209, 56)
+
+        if not self.find( "cont_compensacao_de_pagamento_opc_2", matching=0.97, waiting_time=10000):
+            not_found("cont_compensacao_de_pagamento_opc_2")
+        self.click()
+
+        if not self.find( "cont_selecionar_mov_apuracao_imposto_pag", matching=0.97, waiting_time=10000):
+            not_found("cont_selecionar_mov_apuracao_imposto_pag")
+        self.click()
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.wait(2000)
+
+        if not self.find( "cont_btn_imposto_compensacao_pag", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_imposto_compensacao_pag")
+        self.click()
+        self.wait(2000)
+
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_down()
+        self.tab()
+        self.type_down()
+        self.wait(500)
+        self.enter()
+        self.type_keys_with_interval(100,"123")
+        self.wait(1000)
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+
+        self.wait(1000)
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()     
+        self.wait(1000)
+
+        self.enter()
+        self.wait(1000)
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        #### TERCEIRA FORMA DE PAGAMENTO ####
+        ######## OUTRAS COMPENSAÇOES ########
+
+        if not self.find( "cont_forma_pagamento_apuracao_icms", matching=0.97, waiting_time=10000):
+            not_found("cont_forma_pagamento_apuracao_icms")
+        self.click()
+
+        if not self.find( "cont_mov_informe_tipo_de_pagamento_1", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_informe_tipo_de_pagamento_1")
+        self.click_relative(209, 56)
+
+        self.wait(1000)
+
+        if not self.find( "cont_outras_compensacoes_form_pag_3", matching=0.97, waiting_time=10000):
+            not_found("cont_outras_compensacoes_form_pag_3")
+        self.click()
+
+        if not self.find( "cont_selecionar_mov_apuracao_imposto_pag", matching=0.97, waiting_time=10000):
+            not_found("cont_selecionar_mov_apuracao_imposto_pag")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.wait(2000)
+
+        if not self.find( "cont_btn_imposto_compensacao_pag", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_imposto_compensacao_pag")
+        self.click() # botao com nome reutilizado
+
+        self.wait(2000)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+
+        self.tab()
+        self.tab()
+        self.tab()
+
+        # Tipo de credito
+
+        x = 0
+        while x < 10:
+            self.type_down()
+            x += 1
+        self.tab()
+
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+
+        self.wait(1000)
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+
+        self.wait(1000)
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()     
+        self.wait(1000)
+
+        self.enter()
+        self.wait(1000)
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        ##### QUARTA FORMA DE PAGAMENTO #####
+        ####### PAGAMENTO COM DARE-SC #######
+
+        if not self.find( "cont_forma_pagamento_apuracao_icms", matching=0.97, waiting_time=10000):
+            not_found("cont_forma_pagamento_apuracao_icms")
+        self.click()
+
+        if not self.find( "cont_mov_informe_tipo_de_pagamento_1", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_informe_tipo_de_pagamento_1")
+        self.click_relative(209, 56)
+
+        self.wait(1000)
+
+        if not self.find( "cont_pagamento_com_dare_opc_4", matching=0.97, waiting_time=10000):
+            not_found("cont_pagamento_com_dare_opc_4")
+        self.click()
+
+        if not self.find( "cont_selecionar_mov_apuracao_imposto_pag", matching=0.97, waiting_time=10000):
+            not_found("cont_selecionar_mov_apuracao_imposto_pag")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_incluir_ajuste_beneficio_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_incluir_ajuste_beneficio_fiscal")
+        self.click()
+
+        self.wait(2000)
+
+        x = 0
+        while x < 15:
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.type_keys_with_interval(100,"12312312333")
+        self.tab()
+        x = 0
+        while x < 9:
+            self.type_keys_with_interval(100,"123")
+            self.tab()
+            x += 1
+        if not self.find( "cont_btn_imposto_compensacao_pag", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_imposto_compensacao_pag")
+        self.click()
+
+        self.wait(2000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_cad_muni_opc_selec_07", matching=0.97, waiting_time=10000):
+           not_found("cont_cad_muni_opc_selec_07")
+        self.click()
+
+        if not self.find( "cont_confirma_incluir_cod_fisc_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_confirma_incluir_cod_fisc_imp")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_lixeira_mov_contabil_f7_2", matching=0.97, waiting_time=10000):
+            not_found("cont_lixeira_mov_contabil_f7_2")
+        self.click()     
+        self.wait(1000)
+
+        self.enter()
+        self.wait(1000)
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        # ACABOU FORMAS DE PAGAMENTO
+
+        if not self.find( "cont_gerar_apuracao_fechamento_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_gerar_apuracao_fechamento_fiscal")
+        self.click()
+
+        if not self.find( "cont_relatorio_fechamento_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_fechamento_fiscal")
+        self.click()
+
+        if not self.find( "cont_x_vermelho_voltar_relatorio", matching=0.97, waiting_time=10000):
+            not_found("cont_x_vermelho_voltar_relatorio")
+        self.click()
+
+        # BOTAO FECHAR NAO ESTA ABRINDO NENHUMA JANELA
+
+        #if not self.find( "cont_fechar_fechamento_fiscal", matching=0.97, waiting_time=10000):
+        #    not_found("cont_fechar_fechamento_fiscal")
+        #self.click()
+
+
+        # FILTROS
+
+        if not self.find( "cont_filtros_fechamento_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_filtros_fechamento_fiscal")
+        self.click()
+        # tela de filtros ja foi testada, apenas retornar
+
+        self.wait(1000)
+        self.key_esc()
+
+        self.wait(1000)
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        #######################################################################################
+        #######################################################################################
+        ################################# FINAL DE MOVIMENTOS #################################
+        #######################################################################################
+        #######################################################################################
+
+
+        #######################################################################################
+        #######################################################################################
+        ################################ COMEÇO DE CONSULTAS ##################################
+        #######################################################################################
+        #######################################################################################
+
+
+        ########################################################################
+        ####### CONSULTAS -> ANALISE DE BALANÇO VERTICAL E HORIZONTAL ##########
+        ########################################################################
+        self.wait(2000)
+        if not self.find( "cont_consultas_menu_prin_2", matching=0.97, waiting_time=10000):
+            not_found("cont_consultas_menu_prin_2")
+        self.click()
+        if not self.find( "cont_consulta_balanco_vertical_horizontal", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_balanco_vertical_horizontal")
+        self.click()
+
+        self.wait(2000)
+        self.type_keys_with_interval(100,"6")
+        
+        if not self.find( "cont_consulta_periodo1_data", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_periodo1_data")
+        self.click_relative(215, 28)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        
+        
+        if not self.find( "cont_consulta_periodo2_data", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_periodo2_data")
+        self.click_relative(213, 27)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_atual_servicos_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_data_atual_servicos_cardex")
+        self.click()
+        
+        if not self.find( "cont_consulta_grupo_empresa_bsc", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_grupo_empresa_bsc")
+        self.click_relative(54, 30)
+        self.wait(1000)
+        if not self.find( "cont_rela_consulta_grupo_rel_localizar", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_consulta_grupo_rel_localizar")
+        self.click_relative(101, 36)
+        
+        self.wait(1000)
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+
+        self.wait(1000)
+        self.backspace()
+        # Aqui eu faço o backspace para apagar o grupo, pois o unico grupo que tem é o de teste e não tem nada nele
+
+        if not self.find( "cont_consulta_reduzido_inicial_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_reduzido_inicial_rel")
+        self.click_relative(140, 4)
+        self.wait(1000)
+        
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        self.wait(1000)
+        # While para descer até o item que esta disponivel
+        if not self.find( "cont_consulta_selecionar_opc1", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_selecionar_opc1")
+        self.click()
+        self.wait(1000)
+        
+        
+        
+        if not self.find( "cont_reduzido_final_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_reduzido_final_rel")
+        self.click_relative(131, 7)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        x = 0
+        while x < 4:
+            self.type_down()
+            x += 1
+        self.wait(1000)
+        if not self.find( "cont_consulta_selecionar_opc1", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_selecionar_opc1")
+        self.click()
+        self.wait(1000)
+        
+        
+        if not self.find( "cont_consulta_conta_inicial_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_conta_inicial_rel")
+        self.click_relative(189, 4)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consulta_selecionar_opc1", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_selecionar_opc1")
+        self.click()
+        self.wait(1000)
+        
+        
+        if not self.find( "cont_consulta_conta_final_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_conta_final_rel")
+        self.click_relative(182, 6)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consulta_selecionar_opc1", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_selecionar_opc1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_consultas_horizontal_analise", matching=0.97, waiting_time=10000):
+            not_found("cont_consultas_horizontal_analise")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_consulta_analise_horizontal_rel_check", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_analise_horizontal_rel_check")
+        self.click_relative(44, 18)
+
+        self.wait(1000)
+
+        if not self.find( "cont_consulta_vertical_check", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_vertical_check")
+        self.click_relative(35, -22)
+
+        if not self.find( "cont_consulta_ambos_check", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ambos_check")
+        self.click_relative(181, -34)
+        # ESTE BOTÃO ^^^ CONFIRMA SE AMBOS FOI SELECIONADO E CLICA EM GRADE
+        self.wait(1000)
+        if not self.find( "cont_consulta_grade_imprimir", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_grade_imprimir")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consulta_grade_imprimir_cancel", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_grade_imprimir_cancel")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        ########################################################################
+        ############## CONSULTAS -> CONSULTA TOTAIS DE IMPOSTOS ################
+        ########################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_consultas_menu_prin_2", matching=0.97, waiting_time=10000):
+            not_found("cont_consultas_menu_prin_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_consulta_totais_de_impostos", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_totais_de_impostos")
+        self.click()
+        self.wait(1000)
+        #DATA
+        if not self.find( "cont_consulta_total_imposto_data", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_total_imposto_data")
+        self.click_relative(32, 7)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        # AQUI ESTOU PEGANDO O ANO ANTERIOR POIS 2024 NÃO TEM NENHUM DADO A CONSULTAR 
+
+        self.wait(500)
+        self.tab()
+
+        # TABELAS ESTA FECHANDO A JANELA, PROCURAR PARA VER SE É UM ERRO OU NAO
+
+        if not self.find( "cont_consulta_total_imposto_consultar", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_total_imposto_consultar")
+        self.click()
+        self.wait(6000) # Tempo de consulta
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        ########################################################################
+        ############## CONSULTAS -> CONSULTA TOTAIS DE IMPOSTOS ################
+        ########################################################################
+
+
+        self.wait(2000)
+        if not self.find( "cont_consultas_menu_prin_2", matching=0.97, waiting_time=10000):
+            not_found("cont_consultas_menu_prin_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consulta_movimento_de_clientes_ranking", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_movimento_de_clientes_ranking")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_consulta_ranking_emissao_check", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ranking_emissao_check")
+        self.click_relative(116, 6)
+        # CONFERINDO SE EMISSAO ESTA MARCADO ^ 
+        if not self.find( "cont_consulta_ranking_movimento_check", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ranking_movimento_check")
+        self.click_relative(137, 4)
+        # CONFERINDO SE MOVIMENTO ESTA MARCADO ^
+        if not self.find( "cont_consulta_ranking_lancamento_check", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ranking_lancamento_check")
+        self.click_relative(25, 25)
+        # CONFERINDO SE LANÇAMENTO ESTA MARCADO E JA CLICA NO BOTÃO DA DATA
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click() # DATA ANTERIOR
+        self.wait(1000)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_consulta_ranking_grade", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ranking_grade")
+        self.click_relative(48, 16)
+        self.wait(1000)
+        if not self.find( "cont_grade_consultas_imprimir_ranking", matching=0.97, waiting_time=10000):
+            not_found("cont_grade_consultas_imprimir_ranking")
+        self.click()
+        
+        self.wait(1000)
+        if not self.find( "cont_consulta_grade_imprimir_cancel", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_grade_imprimir_cancel")
+        self.click()
+        self.wait(1000)
+
+        # ESTA PARTE DO CODIGO CONFERE AS CAIXINHAS "ENTRADA" E "SAIDA"
+        if not self.find( "cont_consulta_ranking_entrada", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ranking_entrada")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consulta_ranking_saidas", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ranking_saidas")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consulta_ranking_entrada_vazio", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ranking_entrada_vazio")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consulta_ranking_saidas_vazio", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_ranking_saidas_vazio")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_consulta_entrada_check_retorno", matching=0.97, waiting_time=10000):
+            not_found("cont_consulta_entrada_check_retorno")
+        self.click_relative(-216, -42)
+        # AQUI VAI CONFERIR SE ENTRADA ESTA MARCADO, E ENTAO CLICAR NO BOTÃO DE RETORNO ^
+
+
+        #######################################################################################
+        #######################################################################################
+        ################################## FIM DE CONSULTAS ###################################
+        #######################################################################################
+        #######################################################################################
+
+
+
+        #######################################################################################
+        #######################################################################################
+        ############################### COMEÇO DE RELATORIOS ##################################
+        #######################################################################################
+        #######################################################################################
+
+
+        self.wait(3000)
+        ############################################################
+        ######## RELATORIOS -> CADASTROS -> CLASSIFICAÇAO ##########
+        ############################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_classificacao", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_classificacao")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorio_cadastro_btn_codigo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_cadastro_btn_codigo")
+        self.click()
+        if not self.find( "cont_relatorio_btn_alfabetica_cad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_btn_alfabetica_cad")
+        self.click()
+        self.wait(1000)
+        # IMPRIMIR NAO ESTA FUNCIONANDO 
+        if not self.find( "cont_relatorios_imprimir_cad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_imprimir_cad")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_x_fechar_cad", matching=0.97, waiting_time=10000):
+           not_found("cont_relatorios_x_fechar_cad")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorio_cod_retorno_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_cod_retorno_rel")
+        self.click_relative(-68, -86)
+        # ESTE CLICK RELATIVO VAI PARA RETORNO, CASO O CÓDIGO ESTEJA DESMARCADO
+
+        # RELATORIOS -> CADASTROS -> CENTRO DE CUSTOS
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cad_centros_de_custo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_centros_de_custo")
+        self.click()
+
+        self.wait(1000)
+        if not self.find( "cont_relatorio_cadastro_btn_codigo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_cadastro_btn_codigo")
+        self.click()
+        if not self.find( "cont_relatorio_btn_alfabetica_cad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_btn_alfabetica_cad")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_rel_cod_rel_ativos", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_cod_rel_ativos")
+        self.click_relative(-81, 64)
+
+        if not self.find( "cont_relatorios_cad_custo_todos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_custo_todos")
+        self.click()
+        if not self.find( "cont_relatorios_inativos_situacao", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_inativos_situacao")
+        self.click()
+        self.wait(1000)
+
+        # IMPRIMIR NAO ESTA FUNCIONANDO
+
+        if not self.find( "cont_relatorios_imprimir_cad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_imprimir_cad")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_x_fechar_cad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_x_fechar_cad")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorio_cod_retorno_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_cod_retorno_rel")
+        self.click_relative(-68, -86)
+        # RETORNO E CONFERINDO SE CODIGO NAO ESTA CLICADO
+
+        # RELATORIOS -> CADASTROS -> CLIENTES, FORNECEDORES E TRANSPORTADORES
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_clientes_forn_tra", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_clientes_forn_tra")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_selecione_a_relacao_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_selecione_a_relacao_relatorios")
+        self.click_relative(6, 25)
+        x = 0
+        while x < 4:
+            self.type_right()
+            x += 1
+        if not self.find( "cont_relatorios_clientes_contratos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_clientes_contratos")
+        self.click_relative(132, -7)
+        # AQUI VAI CONFERIR SE "CONTRATOS" ESTA MARCADA, SE ESTIVER, VAI CLICAR EM "ALFABETICA"
+        self.wait(1000)
+        self.type_right()
+        self.type_right()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_ordem_imp_dia_aniversario", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_ordem_imp_dia_aniversario")
+        self.click_relative(116, -23)
+        # AQUI VAI CONFERIR SE "DIA ANIVERSARIO" ESTA MARCADO, SE ESTIVER, VAI CLICAR EM "ATIVOS"
+        self.wait(1000)
+        self.type_right()
+        self.type_right()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_todos_situacao", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_todos_situacao")
+        self.click_relative(74, -24)
+        # AQUI ESTA CONFERINDO SE "TODOS" ESTA MARCADO, SE ESTIVER, CLICA EM "FISICA"
+        self.wait(1000)
+        self.type_right()
+        self.type_right()
+        if not self.find( "cont_relatorios_clientes_todos_listar", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_clientes_todos_listar")
+        self.click_relative(88, -27)
+
+        x = 0
+        while x < 10:
+            self.type_right()
+            x += 1
+        
+        if not self.find( "cont_relatorios_conferir_btn_nenhum", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_conferir_btn_nenhum")
+        self.click_relative(-875, 69)
+        self.wait(500)
+        # PAÍS
+        self.type_down()
+        self.enter()
+        self.wait(1000)
+        # REGIÃO
+        self.type_down()
+        self.type_down()
+        self.enter()
+        # ESTADO
+        self.type_down()
+        self.type_down()
+        self.enter()
+        # MUNICIPIO
+        x = 0
+        while x < 7:
+            self.type_down()
+            x += 1
+        self.enter()
+
+        # TIPO DE CONTRATO NAO POSSUI ITENS
+
+        # EXIBIR CONTRATOS
+        if not self.find( "cont_exibir_contratos_relatorios_sim", matching=0.97, waiting_time=10000):
+            not_found("cont_exibir_contratos_relatorios_sim")
+        self.click_relative(7, 26)
+        self.wait(500)
+        self.type_right()
+
+        if not self.find( "cont_relatorios_cliente_exibir_nao", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cliente_exibir_nao")
+        self.click_relative(97, -14)
+        # CONFERINDO SE "NAO" ESTA MARCADO EM "EXIBIR CONTRATROS", SE ESTIVER, CLICAR EM "CADASTRO"
+
+        self.type_right()
+        self.wait(300)
+        # DATA PERIODO
+        if not self.find( "cont_data_relatorios_contrato_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_data_relatorios_contrato_rel")
+        self.click_relative(27, 8)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        if not self.find( "cont_relatorios_cliente_data_confere", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cliente_data_confere")
+        self.click_relative(-289, 50)
+        # AQUI ELE VAI CONFERIR SE A DATA DO ANO ANTERIOR FOI INSERIDA ( ESTE BOTÃO SÓ VAI FUNCIONAR EM 2024)
+        # DEPOIS VAI CLICAR EM "CLIENTES" EM "RELACIONAR/APENAS"
+
+        x = 0
+        while x < 5:
+            self.type_right()
+            x += 1
+        if not self.find( "cont_contabil_achar_todos_relacionar_apenas", matching=0.97, waiting_time=10000):
+            not_found("cont_contabil_achar_todos_relacionar_apenas")
+        self.click_relative(153, -14)
+        # AQUI VAI CONFERIR SE "TODOS" ESTA MARCADO, SE ESTIVER VAI CLICAR EM "00 CLIENTE PREFERENCIAL"
+        
+        x = 0
+        while x < 9:
+            self.type_right()
+            x += 1
+
+        self.wait(1000)
+        if not self.find( "cont_relatorios_mo_qu_vip_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mo_qu_vip_rel")
+        self.click_relative(177, 19)
+        # AQUI CONFERE SE "VIP" ESTA MARCADO, CASO SIM, CLICA EM "SIM" DE "LISTA(OBSERV)"
+        self.wait(500)
+        self.type_right()
+        if not self.find( "cont_relatorios_listar_nao_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_listar_nao_rel")
+        self.click_relative(62, 8)
+        # CONFERINDO SE "NAO" ESTA MARCADO, CASO ESTEJA, CLICAR EM "SIM" DE "IMPR.(LIMITE CRED)"
+
+        self.wait(500)
+        self.type_right()
+        self.wait(1000)
+
+
+        
+
+        if not self.find( "cont_relatorios_impr_nao_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_impr_nao_rel")
+        self.click_relative(-1120, -247)
+        # AQUI CONFERE SE O BOTAO "NAO" ESTA MARCADO EM "IMP.(LIMITE CRED), CASO ESTIVER, CLICAR NO BOTAO DE IMPRESSAO"
+        
+        self.wait(1000)
+        if not self.find( "cont_relatorios_impressao_btn_x_verm", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_impressao_btn_x_verm")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        ######################################################################
+        ######## RELATORIOS -> CADASTROS -> VENDEDORES E COMPRADORES #########
+        ######################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_vendedores_compradores", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_vendedores_compradores")
+        self.click()
+        if not self.find( "cont_relatorios_vendedores_comp_listar", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_vendedores_comp_listar")
+        self.click_relative(5, 41)
+        # RELATIVO PARA CLICAR EM "VENDEDORES"
+        self.type_right()
+        self.type_right()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_todos_vendedores_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_todos_vendedores_rel")
+        self.click_relative(137, -9)
+        # AQUI CONFERE SE "TODOS" ESTA MARCADO E CLICA EM "ATIVOS"
+        self.type_right()
+        self.type_right()
+
+        if not self.find( "cont_todos_relatorios_situacao_check", matching=0.97, waiting_time=10000):
+            not_found("cont_todos_relatorios_situacao_check")
+        self.click_relative(142, -24)
+        # AQUI CONFERE SE "TODOS" ESTA MARCADO E CLICA EM "NOME"
+        self.wait(1000)
+        self.type_right()
+        self.type_right()
+        self.type_right()
+        self.wait(500)
+        if not self.find( "cont_ordem_impressao_relatorios_bairro", matching=0.97, waiting_time=10000):
+            not_found("cont_ordem_impressao_relatorios_bairro")
+        self.click_relative(-903, -93)
+        # AQUI CONFERE SE "BAIRRO" ESTA MARCADO, SE ESTIVER, RETORNA
+
+
+        #################################################################
+        ####### RELATORIOS -> CADASTROS -> CONDIÇÕES DE PAGAMENTO #######
+        #################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_condicoes_pagamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_condicoes_pagamento")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+        #################################################################
+        ############# RELATORIOS -> CADASTROS -> EMPRESAS ###############
+        #################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_empresas", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_empresas")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        #################################################################
+        ######### RELATORIOS -> CADASTROS -> GRUPO DE EMPRESAS ##########
+        #################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_grupo_empresa", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_grupo_empresa")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+        
+        ##############################################################################################
+        ######### RELATORIOS -> CADASTROS -> PARAMETROS FISCAIS -> REGIONALIZAÇÃO -> PAISES ##########
+        ##############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_parametros_regio", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_parametros_regio")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_regionalizacao_paises", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_regionalizacao_paises")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        ##############################################################################################
+        ######### RELATORIOS -> CADASTROS -> PARAMETROS FISCAIS -> REGIONALIZAÇÃO -> REGIOES ##########
+        ##############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_parametros_regio", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_parametros_regio")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_regionalizacao_regioes", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_regionalizacao_regioes")
+        self.click()
+
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ##############################################################################################
+        ######### RELATORIOS -> CADASTROS -> PARAMETROS FISCAIS -> REGIONALIZAÇÃO -> ESTADOS #########
+        ##############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_parametros_regio", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_parametros_regio")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_regionalizacao_estados", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_regionalizacao_estados")
+        self.click()
+
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ##############################################################################################
+        ############### RELATORIOS -> CADASTROS -> PARAMETROS FISCAIS -> MUNICIPIOS ->  ##############
+        ##############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_parametros_regio", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_parametros_regio")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_regionalizacao_municipios", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_regionalizacao_municipios")
+        self.click()
+
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+
+        ###############################################################################################
+        ## RELATORIOS -> CADASTROS ->  PARAMETROS FISCAIS -> SITUAÇÃO FISCAL -> GRUPO FISCAL DE ITEM ##
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+
+        if not self.find( "cont_relatorios_cad_situacao_fiscal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_situacao_fiscal_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_situacao_grupo_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_situacao_grupo_fiscal")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+
+        ###############################################################################################
+        ## RELATORIOS -> CADASTROS ->  PARAMETROS FISCAIS -> SITUAÇÃO FISCAL -> CODIGOS DE OPERACAO  ##
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+
+        if not self.find( "cont_relatorios_cad_situacao_fiscal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_situacao_fiscal_2")
+        self.click()
+        self.wait(1000)
+
+        
+
+        if not self.find( "cont_relatorios_situacao_codigos_operacao", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_situacao_codigos_operacao")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+
+        ###############################################################################################
+        ## RELATORIOS -> CADASTROS ->  PARAMETROS FISCAIS -> SITUAÇÃO FISCAL -> DECRETOS E OBSERVACOES ##
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+
+        if not self.find( "cont_relatorios_cad_situacao_fiscal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_situacao_fiscal_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_situacao_decretos_observacoes", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_situacao_decretos_observacoes")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ###############################################################################################
+        ## RELATORIOS -> CADASTROS ->  PARAMETROS FISCAIS -> SITUAÇÃO FISCAL -> CODIGOS FISCAIS CFOP ##
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+
+        if not self.find( "cont_relatorios_cad_situacao_fiscal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_situacao_fiscal_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_situacao_cfop", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_situacao_cfop")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ###############################################################################################
+        ####### RELATORIOS -> CADASTROS ->  PARAMETROS FISCAIS -> SITUAÇÃO FISCAL -> SITUAÇÕES ########
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_parametros_fiscais")
+        self.click()
+
+        if not self.find( "cont_relatorios_cad_situacao_fiscal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_situacao_fiscal_2")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_situacao_cfop", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_situacao_cfop")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> FAMILIA #############
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # FAMILIAS
+        if not self.find( "cont_relatorios_cad_itens_familias", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_itens_familias")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> GRUPOS #############
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # GRUPOS
+        if not self.find( "cont_relatorios_cad_itens_grupos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_itens_grupos")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> SUBGRUPOS ###########
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # SUB GRUPOS
+        if not self.find( "cont_relatoris_agrupamento_subgrupos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatoris_agrupamento_subgrupos")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> MARCAS ###########
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # MARCAS
+        if not self.find( "cont_relatorios_cad_agrupamento_itens_marcas", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_agrupamento_itens_marcas")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> UNIDADES ###########
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # MARCAS
+        if not self.find( "cont_relatorios_cad_agrupamento_itens_unidades", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_agrupamento_itens_unidades")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> UNIDADES ###########
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # UNIDADES
+        if not self.find( "cont_relatorios_cad_agrupamento_itens_unidades", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_agrupamento_itens_unidades")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> TIPOS ###########
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # TIPOS
+        if not self.find( "cont_relatorios_itens_agrupamento_tipos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_itens_agrupamento_tipos")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> SUBTIPOS ###########
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # SUBTIPOS
+        if not self.find( "cont_relatorios_agrupamento_itens_subtipos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_agrupamento_itens_subtipos")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+        
+
+        ###############################################################################################
+        ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> CONTROLES ###########
+        ###############################################################################################
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        # AGRUPAMENTO
+        if not self.find( "cont_relatorio__cad_itens_agrupamento", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio__cad_itens_agrupamento")
+        self.click()
+        self.wait(1000)
+
+        # CONTROLES
+        if not self.find( "cont_relatorios_agrupemento_itens_controles", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_agrupemento_itens_controles")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        
+        ###############################################################################################
+        ################# RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE ->  ITENS  #####################
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        # ITENS DE ESTOQUE
+        if not self.find( "cont_relatorioscad_itens_de_estoque", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorioscad_itens_de_estoque")
+        self.click()
+        self.wait(500)
+
+        if not self.find( "cont_relatorios_cadastro_estoque_itens", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_estoque_itens")
+        self.click()
+
+        #
+        if not self.find( "cont_relatorio_itens_rel_codigo_imprimir", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_itens_rel_codigo_imprimir")
+        self.click_relative(16, 53)
+        # CLICANDO EM "REDUZIDO"
+
+        x = 0
+        while x < 3:
+            self.type_right()
+            x += 1
+        
+        if not self.find( "cont_relatorio_itens_conf_referencia", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_itens_conf_referencia")
+        self.click_relative(-988, 54)
+        # AQUI ESTA CONFERINDO SE "REFERENCIA FABRICANTE" ESTA MARCADO, CASO SIM, CLICAR EM "SEM AGRUPAMENTO"
+
+        x = 0
+        while x < 3:
+            self.type_right()
+            x += 1
+        
+        if not self.find( "cont_relatorio_itens_familia_grupo_conf", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_itens_familia_grupo_conf")
+        self.click_relative(-991, 65)
+        # AQUI ESTA CONFERINDO SE "FAMILIA + GRUPO + SUBGRUPO" ESTA MARCADO, CASO SIM, CLICAR EM "ATIVOS"
+
+        x = 0
+        while x < 2:
+            self.type_right()
+            x += 1
+
+        if not self.find( "cont_relatorios_itens_conf_todos_situacao", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_itens_conf_todos_situacao")
+        self.click_relative(87, 9)
+        # AQUI ESTA CONFERINDO SE "TODOS" ESTA MARCADO, CASO SIM, CLICAR EM "SIM"
+
+        self.type_right()
+        if not self.find( "cont_relatorios_itens_pesos_nao_conf", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_itens_pesos_nao_conf")
+        self.click_relative(61, 8)
+        # AQUI CONFERE SE "NAO" EM "IMPRIMIR PESOS" ESTA MARCADO, AI MARCA "SIM" EM "AGRUPA POR FORNECEDOR"
+
+        self.type_right()
+
+        if not self.find( "cont_relatorios_itens_agrupa_forn_nao", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_itens_agrupa_forn_nao")
+        self.click_relative(83, -4)
+        # CONFERINDO SE "NAO" ESTA MARCADO EM "AGRUPA POR FORNECEDOR" E AI CLICA EM "CUSTOS"
+
+        x = 0
+        while x < 3:
+            self.type_right()
+            x += 1
+
+        if not self.find( "cont_relatorios_itens_valores_nenhum_conf", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_itens_valores_nenhum_conf")
+        self.click_relative(187, -1)
+        # CONFERINDO SE "NENHUM" ESTA MARCADO E CLICANDO EM "SIM" DE "MARCADOS COM PIN"
+
+        x = 0
+        while x < 2:
+            self.type_right()
+            x += 1
+
+        if not self.find( "cont_relatorios_itens_todos_pis_conf", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_itens_todos_pis_conf")
+        self.click_relative(-1123, 65)
+        # CONFERINDO SE "TODOS" ESTA MARCADO E CLICA EM "DESCRIÇAO"
+
+        self.type_right()
+        if not self.find( "cont_relatorio_itens_codigo_conf_ret", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_itens_codigo_conf_ret")
+        self.click_relative(-647, -228)
+        # CONFERINDO SE "CODIGO" ESTA MARCADO, CASO SIM, ELE CLICA EM RETORNAR
+
+        ###############################################################################################
+        ############################# RELATORIOS -> CADASTROS -> USUARIOS  ############################
+        ###############################################################################################
+
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_usuario_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_usuario_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        ###############################################################################################
+        ######################### RELATORIOS -> CADASTROS -> PLANO FINANCEIRO  ########################
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_plano_financeiro_relatorios_cadastro", matching=0.97, waiting_time=10000):
+            not_found("cont_plano_financeiro_relatorios_cadastro")
+        self.click()
+
+        self.wait(1000)
+        if not self.find( "cont_relatorio_cadastro_btn_codigo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_cadastro_btn_codigo")
+        self.click()
+        if not self.find( "cont_relatorio_btn_alfabetica_cad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_btn_alfabetica_cad")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_rel_cod_rel_ativos", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_cod_rel_ativos")
+        self.click_relative(-81, 64)
+
+        if not self.find( "cont_relatorios_cad_custo_todos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_custo_todos")
+        self.click()
+        if not self.find( "cont_relatorios_inativos_situacao", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_inativos_situacao")
+        self.click()
+        self.wait(1000)
+
+        
+
+        if not self.find( "cont_relatorios_imprimir_cad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_imprimir_cad")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_x_fechar_cad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_x_fechar_cad")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorio_cod_retorno_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_cod_retorno_rel")
+        self.click_relative(-68, -86)
+
+        
+        ###############################################################################################
+        ######################### RELATORIOS -> CADASTROS -> PLANO DE CONTAS  #########################
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastro_plano_de_contas", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastro_plano_de_contas")
+        self.click()
+        self.wait(2000)
+
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"6")
+        self.tab()
+
+        if not self.find( "cont_relatorios_cad_livros_oficial_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_livros_oficial_rel")
+        self.click_relative(46, 26)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorio_cad_conta_inicial_busc", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorio_cad_conta_inicial_busc")
+        self.click_relative(192, 1)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cad_conta_final_busc", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_conta_final_busc")
+        self.click_relative(192, 7)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        ###############################################################################################
+        ######################### RELATORIOS -> CADASTROS -> LOCAL COBRANÇA  ##########################
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_local_cobranca", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_local_cobranca")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        ###############################################################################################
+        ############################ RELATORIOS -> CADASTROS -> HISTORICOS  ###########################
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_historicos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_historicos")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        ###############################################################################################
+        ###################### RELATORIOS -> CADASTROS -> LINHAS RAMOS -> LINHAS  #####################
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_linhas_ramos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_linhas_ramos")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_linhas_linhas", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_linhas_linhas")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+
+        ###############################################################################################
+        ################ RELATORIOS -> CADASTROS -> LINHAS RAMOS -> RAMOS DE ATIVIDADE  ###############
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_linhas_ramos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_linhas_ramos")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros-linhas_ramos_atv", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros-linhas_ramos_atv")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        ###############################################################################################
+        ################# RELATORIOS -> CADASTROS -> LINHAS RAMOS -> ROTAS DE ENTREGA  ################
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_linhas_ramos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_linhas_ramos")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_linhas_rotas", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_linhas_rotas")
+        self.click()
+
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+
+        ###############################################################################################
+        ##################### RELATORIOS -> CADASTROS -> LINHAS RAMOS -> SEGMENTOS ####################
+        ###############################################################################################
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cadastros_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_1")
+        self.click_relative(14, -18)
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cadastros_linhas_ramos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cadastros_linhas_ramos")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_cad_linhas_segmentos", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_linhas_segmentos")
+        self.click()
+
+        if not self.find( "cont_relatorios_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_condicao_alfabetica")
+        self.click_relative(94, 7)
+        # AQUI CONFERE SE "ALFABETICA" ESTA MARCADA, CASO SIM, MARCA "CODIGO"
+        self.wait(1000)
+        if not self.find( "cont_relatorios_cad_condicao_alfabetica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_cad_condicao_alfabetica")
+        self.click_relative(13, -84)
+        # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
+
+        # FIM DE RELATORIOS -> CADASTROS
+
+        # COMEÇANDO RELATORIOS -> MOVIMENTO FISCAL
+
+        ###############################################################################################
+        ################ RELATORIOS -> MOVIMENTO FISCAL -> LIVRO DE ENTRADA E SAIDAS  #################
+        ###############################################################################################
+        
+        
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_livro_entrada", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_livro_entrada")
+        self.click()
+
+        if not self.find( "cont_relatorios_movimento_fiscal_data", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_data")
+        self.click_relative(27, 7)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_livro_oficial_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_livro_oficial_rel")
+        self.click_relative(104, 5)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_movimento_livro_de_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_livro_de_rel")
+        self.click_relative(7, 41)
+        self.type_right()
+
+        if not self.find( "cont_relatorios_movimentos_fiscal_rel_imprime", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimentos_fiscal_rel_imprime")
+        self.click_relative(116, -14)
+
+        x = 0
+        while x < 6:
+            self.type_down()
+            self.space()
+            x += 1
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_movimento_fiscal_emi_livro_check", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_emi_livro_check")
+        self.click_relative(417, 10)
+
+        x = 0
+        while x < 7:
+            self.space()
+            self.type_down()
+            x += 1
+        
+        if not self.find( "cont_relatorios_movimento_fiscal_centro_ini", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_centro_ini")
+        self.click_relative(178, 5)
+        self.wait(1000)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_centro_custo_final", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_centro_custo_final")
+        self.click_relative(182, 5)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+
+        self.tab()
+        self.tab()
+        self.type_right()
+
+        self.wait(1000)
+        if not self.find( "cont_rel_mov_cod_fiscal_conf", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_cod_fiscal_conf")
+        self.click_relative(209, -11)
+        # AQUI CONFERE SE CABEÇALHO ESTA DESMARCADO, CASO SIM, CLICA NA CAIXA "ICMS"
+        # A CAIXA VAI SER DESMARCADA
+
+        self.space()
+
+        x = 0
+        while x < 6:
+            self.type_down()
+            self.space()
+            x += 1
+        
+        if not self.find( "cont_rel_mov_fiscal_conf_pis_presu", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fiscal_conf_pis_presu")
+        self.click_relative(300, 29)
+        self.wait(1000)
+        # AQUI CONFERE SE AS CAIXAS DE DESDOBRAMENTOS ESTÃO MARCADAS, CASO SIM, CLICA EM "SIM" EM "AGRUPA TIPO PESSOA"
+
+        self.type_right()
+        self.tab()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@") # OBSERVAÇOES
+        self.tab()
+        self.type_keys_with_interval(100,"1") # ESTADOS
+        self.tab()
+        self.type_keys_with_interval(100,"2")
+        self.tab()
+        self.type_keys_with_interval(100,"1") # SERIE
+        self.tab()
+        self.type_keys_with_interval(100,"2")
+        self.tab()
+        self.wait(2000)
+
+        if not self.find( "cont_salvar_opc_rel_mov_fiscal", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_opc_rel_mov_fiscal")
+        self.click()
+
+        self.wait(1000)
+        self.enter()
+        self.wait(5000)
+        
+        
+        ###############################################################################################
+        ####################### RELATORIOS -> MOVIMENTO FISCAL -> LIVRO DE ISS  #######################
+        ###############################################################################################
+        
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_fiscal_livros_iss", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_livros_iss")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_mov_data_livro_iss", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_data_livro_iss")
+        self.click_relative(27, 6)
+        self.wait(1000)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+
+        self.wait(1000)
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.tab()
+        self.space() # QUEBRA MENSAL
+        self.tab()
+        self.space() # IMPRIME NOME DO EMISSOR
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_keys_with_interval(100,"2")
+        self.tab()
+        self.type_right() # codigo fiscal CABEçalho
+        self.tab()
+        self.space() # MUNICIPIO
+        self.tab()
+        self.space() # MUNICIPIO FATO GERADOR
+        self.tab()
+
+        if not self.find( "cont_rel_movimentos_livro_oficial_iss", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_movimentos_livro_oficial_iss")
+        self.click_relative(44, 30)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.type_right()
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.wait(1000)
+
+        # MOUSE ESTA PARANDO EM CIMA DE MATRICAL 
+
+        #if not self.find( "cont_rel_mov_matrical_livros_iss", matching=0.97, waiting_time=10000):
+        #    not_found("cont_rel_mov_matrical_livros_iss")
+        self.click()
+
+        self.wait(1000)
+        self.enter()
+        self.wait(2000)
+        if not self.find( "cont_rel_mov_fiscal_livro_iss_fechar_matrical", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fiscal_livro_iss_fechar_matrical")
+        self.click()
+
+        self.wait(1000)
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+
+        ###############################################################################################
+        ################## RELATORIOS -> MOVIMENTO FISCAL -> APURAÇÃO DE IMPOSTO  #####################
+        ###############################################################################################
+        
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_fis_apuracao_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fis_apuracao_imposto")
+        self.click()
+
+        self.wait(1000)
+
+        if not self.find( "cont_data_rela_mov_apuracao_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_data_rela_mov_apuracao_imposto")
+        self.click_relative(27, 7)
+        self.wait(1000)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+
+        self.wait(1000)
+        self.tab()
+
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        x = 0
+        while x < 3:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+        
+        # GRUPO DE EMPRESAS
+        if not self.find( "cont_grupo_empresa_rela_mov_apuracao", matching=0.97, waiting_time=10000):
+            not_found("cont_grupo_empresa_rela_mov_apuracao")
+        self.click_relative(55, 21)
+        self.wait(1000)
+
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(2000)
+
+
+        #CENTRO INICIAL
+        if not self.find( "cont_relat_mov_apuracao_centro_inicial", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_mov_apuracao_centro_inicial")
+        self.click_relative(147, 2)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(2000)
+        self.enter()
+        self.wait(1000)
+
+
+        # CENTRO FINAL 
+        if not self.find( "cont_rela_mov_centro_final_apuracao", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_centro_final_apuracao")
+        self.click_relative(152, 2)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(2000)
+        self.enter()
+        self.wait(1000)
+
+        self.tab()
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        
+
+        # CLICANDO EM "SIM" EM "VARIOS IMPOSTOS" PARA HABILITAR AS CAIXINHAS DE MARCAÇÃO
+        if not self.find( "cont_rela_mov_apuracao_varios_impostos", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_apuracao_varios_impostos")
+        self.click_relative(6, 43)
+
+
+        if not self.find( "cont_livro_oficial_relatorios_mov_apuracao", matching=0.97, waiting_time=10000):
+            not_found("cont_livro_oficial_relatorios_mov_apuracao")
+        self.click_relative(74, 29) # LIVRO OFICIAL
+
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(2000)
+
+        self.tab()
+        self.type_down()
+        self.tab()
+
+        # IMPOSTOS 
+
+        x = 0
+        while x < 7:
+            self.space()
+            self.type_down()
+            x += 1
+
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+
+        x = 0
+        while x < 3:
+            self.space()
+            self.type_down()
+            x += 1
+        self.tab()
+        self.type_up()
+        self.wait(2000)
+        if not self.find( "cont_rela_mov_informacoes_do_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_informacoes_do_imposto")
+        self.click()
+
+        self.wait(1000)
+
+        x = 0
+        while x < 6:
+            self.type_keys_with_interval(100,"1")
+            self.tab()
+            x += 1
+
+        self.wait(1000)
+        if not self.find( "cont_rela_mov_observacoes_apuracao", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_observacoes_apuracao")
+        self.click() # OBSERVAÇOES
+        self.wait(1000)
+
+        self.type_keys_with_interval(100,"qa12!@")
+        self.wait(1000)
+
+        if not self.find( "cont_rel_mov_matrical_livros_iss", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_matrical_livros_iss")
+        self.click() # MATRICAL
+
+        self.wait(1000)
+        self.enter()
+        self.wait(2000)
+        if not self.find( "cont_rel_mov_fiscal_livro_iss_fechar_matrical", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fiscal_livro_iss_fechar_matrical")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        ###############################################################################################
+        ############### RELATORIOS -> MOVIMENTO FISCAL -> DEMONSTRATIVO DE RETENÇÕES  #################
+        ###############################################################################################
+        
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_fiscal_demonstrativo_retencoes", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_demonstrativo_retencoes")
+        self.click()
+        self.wait(2000)
+
+        if not self.find( "cont_rela_mov_data_retencoes", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_data_retencoes")
+        self.click_relative(28, 8)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        self.wait(1000)
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.wait(1000)
+        if not self.find( "cont_rela_mov_retencoes_livro_oficial", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_retencoes_livro_oficial")
+        self.click_relative(109, 3)
+
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(2000)
+
+        if not self.find( "cont_rela_mov_centro_custo_ini_retencoes", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_centro_custo_ini_retencoes")
+        self.click_relative(79, 22)
+        self.wait(1000)
+
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(2000)
+
+        self.enter()
+        # arquivo vazio
+
+        if not self.find( "cont_rel_mov_centro_custo_final_retencao", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_centro_custo_final_retencao")
+        self.click_relative(77, 26)
+        self.wait(1000)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(2000)
+
+        self.enter()
+
+        self.tab()
+        self.tab()
+        self.tab()
+
+        # Movimento
+        self.type_right()
+        self.type_right()
+        self.wait(1000)
+        self.tab()
+        self.space()
+        self.tab()
+        
+        # NOTAS FISCAIS
+
+        self.type_right()
+        self.type_right()
+        
+
+        # mouse parando em cima de MATRICAL 
+        self.wait(2000)
+        #if not self.find( "cont_rel_mov_matrical_livros_iss", matching=0.97, waiting_time=10000):
+        #    not_found("cont_rel_mov_matrical_livros_iss")
+        self.click()
+        self.wait(1000)
+
+        self.enter()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        
+        ###############################################################################################
+        ########### RELATORIOS -> MOVIMENTO FISCAL -> Relatorio - Diferencial de Aliquota  ############
+        ###############################################################################################
+        
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_aliquota_diferencial", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_aliquota_diferencial")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_data_rela_mov_dif_aliquota", matching=0.97, waiting_time=10000):
+            not_found("cont_data_rela_mov_dif_aliquota")
+        self.click_relative(26, 6)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        self.wait(1000)
+
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.wait(1000)
+        self.tab()
+        self.tab()
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.type_right()
+        self.type_right()
+        self.tab()
+        self.space() # CONSIDERAR DEVOLUÇÕES
+        self.wait(1000)
+
+        
+
+        if not self.find( "cont_rela_mov_imprimir_achar_iss", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_imprimir_achar_iss")
+        self.click()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+        
+        ###############################################################################################
+        ########################### RELATORIOS -> MOVIMENTO FISCAL -> DIPI  ###########################
+        ###############################################################################################
+        
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_rela_mov_fiscal_dipi", matching=0.97, waiting_time=10000):
+            not_found("cont_rela_mov_fiscal_dipi")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_rel_mov_fisc_dipi_data", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fisc_dipi_data")
+        self.click_relative(28, 8)
+        self.wait(1000)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"2024")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.tab()
+        self.tab()
+        self.space()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_mov_fiscal_dipi_livro", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_dipi_livro")
+        self.click_relative(44, 30)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+
+        self.wait(1000)
+        if not self.find( "cont_relatorios_btn_grafico_geral_opc_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_btn_grafico_geral_opc_1")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_x_geral_fechar_mat_imp")
+        self.click()
+        self.wait(1000)
+
+
+        # botao de grafico nao esta abrindo nenhuma janela
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+        ###############################################################################################
+        ########################## RELATORIOS -> MOVIMENTO FISCAL -> GI/ICMS  #########################
+        ###############################################################################################
+
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_gi_icms", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_gi_icms")
+        self.click()
+
+        self.wait(1000)
+
+        if not self.find( "cont_rel_mov_fisc_dipi_data", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fisc_dipi_data")
+        self.click_relative(28, 8)
+        self.wait(1000)
+
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        self.wait(500)
+        if not self.find( "cont_data_anterior_ano", matching=0.97, waiting_time=10000):
+            not_found("cont_data_anterior_ano")
+        self.click()
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_mov_fiscal_icms_saidas", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_icms_saidas")
+        self.click()
+        self.tab()
+        self.type_right()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_mov_icms_livro", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_icms_livro")
+        self.click_relative(45, 29)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+
+        if not self.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_icms_imprimir")
+        self.click()
+        self.wait(7000)
+
+        if not self.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_x_geral_fechar_mat_imp")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_matrical_opc_1_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_matrical_opc_1_mov")
+        self.click()
+
+        self.wait(2000)
+        self.enter()
+
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+
+        ###############################################################################################
+        ################### RELATORIOS -> MOVIMENTO FISCAL -> RESUMO P/MUNICIPIO  #####################
+        ###############################################################################################
+
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_resumo_municipio", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_resumo_municipio")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_rel_mov_fisc_dipi_data", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fisc_dipi_data")
+        self.click_relative(28, 8)
+        self.wait(1000)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_mov_relatorios_data_ano_atual", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_relatorios_data_ano_atual")
+        self.click()
+
+        self.tab()
+        self.tab()
+
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"1")
+        self.tab()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_mov_livro_oficial_resumo_mun", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_livro_oficial_resumo_mun")
+        self.click_relative(109, 3)
+        self.wait(1000)
+
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+
+        self.tab()
+        self.tab()
+        self.type_right()
+        self.tab()
+        self.type_right()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_centro_custo_resumo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_centro_custo_resumo")
+        self.click_relative(77, 25)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+
+        # ARQUIVO VAZIO
+        self.enter()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_centro_custo_final_resumo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_centro_custo_final_resumo")
+        self.click_relative(76, 24)
+        self.wait(1000)
+        if not self.find( "cont_opcao_loc_imp_23", matching=0.97, waiting_time=10000):
+            not_found("cont_opcao_loc_imp_23")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_opc_selecionar_22_03", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_opc_selecionar_22_03")
+        self.click()
+        self.wait(1000)
+
+        # ARQUIVO VAZIO
+        self.enter()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_icms_imprimir")
+        self.click()
+        self.wait(10000)
+        # carregamento devagar
+
+        if not self.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_x_geral_fechar_mat_imp")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_matrical_opc_1_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_matrical_opc_1_mov")
+        self.click()
+
+        self.wait(2000)
+        if not self.find( "cont_relatorios_mov_matrical_btn_ok", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_matrical_btn_ok")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_relatorios_mov_fechar_matricial_btn", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fechar_matricial_btn")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        self.click()
+
+
+
+        ###############################################################################################
+        ################# RELATORIOS -> MOVIMENTO FISCAL -> LIVRO DE ISS (DIARIO)  ####################
+        ###############################################################################################
+
+        self.wait(2000)
+
+        if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_menu_principal_2")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_relatorios_movimento_fiscal_1", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_movimento_fiscal_1")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_relatorios_mov_fiscal_livro_de_iss_diario", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_livro_de_iss_diario")
+        self.click()
+
+        self.wait(1000)
+
+        if not self.find( "cont_rel_mov_fisc_dipi_data", matching=0.97, waiting_time=10000):
+            not_found("cont_rel_mov_fisc_dipi_data")
+        self.click_relative(28, 8)
+        self.wait(1000)
+        if not self.find( "cont_carregar_ano_servico_cardex", matching=0.97, waiting_time=10000):
+            not_found("cont_carregar_ano_servico_cardex")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_mov_relatorios_data_ano_atual", matching=0.97, waiting_time=10000):
+            not_found("cont_mov_relatorios_data_ano_atual")
+        self.click()
+
+        # ULTIMA ATUALIZAÇÃO 22/03/2024
+
+
+
+
+
+
+
+
+
+
+
 def not_found(label) :
     print(f"Element not found  {label}")
     
 if __name__ == '__main__' :
     Bot.main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

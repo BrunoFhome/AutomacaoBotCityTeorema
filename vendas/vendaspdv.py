@@ -38,7 +38,7 @@ class Bot(DesktopBot) :
         
         ##################################################################
                             ####---LOGIN---####
-        
+        """
         self.execute(r"C:\Teorema\bin\vendas_pdv")
         self.wait(5000)
         self.tab()
@@ -150,15 +150,18 @@ class Bot(DesktopBot) :
         #self.find_button( "botao_cadastro_salvar" ) 
         #    #("botao_cadastro_salvar")
         #self.click()
-        
-############## PRIMEIRO ABRIR O CAIXA ###################
+
+        #########################################################
+        ############## PRIMEIRO ABRIR O CAIXA ###################
+        #########################################################
+
         #self.find_button( "caixa_comeco_menu_princi")      
         #self.click()
+
         self.find_button( "23_caixa_abrir_menu" )
             #("23_caixa_abrir_menu")
         self.click()
         
-
 
         self.find_button("abrir_caixa_comecar_aut_1")
         #teste de abrir o caixa
@@ -173,13 +176,12 @@ class Bot(DesktopBot) :
         self.find_button( "confirmar_abrir_caixa_menu")    
         self.click()
         self.wait(1000)
-        self.key_esc()
-        self.wait(1000)
+        
         
 
-        #self.find_button( "23_retornar_caixa_abrir" )
+        self.find_button( "23_retornar_caixa_abrir" )
             #("23_retornar_caixa_abrir")
-        #self.click()
+        self.click()
         
         self.wait(2000)
         
@@ -203,14 +205,20 @@ class Bot(DesktopBot) :
         self.type_keys_with_interval(1,'0080124')
         self.wait(1000)
         self.enter()
-        self.wait(1000)
+        self.wait(2000)
 
         self.find_button( "botao_selecionar_1")
         
         self.click()
 
-        self.wait(1000)
+        self.wait(2000)
         self.key_f4()
+
+        x = 0
+        while x < 7:
+            self.delete()
+            x += 1
+
         self.find_button( "localizar_vendedor_menu_vendas")
             
         self.click()
@@ -221,7 +229,7 @@ class Bot(DesktopBot) :
         self.find_button( "clicar_reduzido_vendas_item")
         
         self.click()
-        self.wait(500)
+        self.wait(1000)
         self.click()
         x = 0
         while x < 7 :
@@ -237,7 +245,7 @@ class Bot(DesktopBot) :
         self.click_relative(12, 35)
         self.wait(1000)
 
-        self.type_keys_with_interval(1,"109941")
+        self.type_keys_with_interval(1,"116545")
         self.enter()
         self.wait(2000)
         #apartir daq, antes de selecionar o item, adicionar mudanças
@@ -375,22 +383,10 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
         
-        self.type_keys_with_interval(1,"1")
-        self.tab()
-        self.type_keys_with_interval(1,"1")
-        self.tab()
-        self.type_keys_with_interval(1,"1")
-        self.tab()
-        self.tab()
-        self.type_keys_with_interval(1,"1")
-        self.tab()
-        self.type_keys_with_interval(1,"1")
-        self.tab()
-        self.type_keys_with_interval(1,"12345678")
-        self.tab()
-        self.tab()
-        self.enter()
-        self.wait(2000)
+        if not self.find( "vendas_confirmar_botao_item", matching=0.97, waiting_time=10000):
+            not_found("vendas_confirmar_botao_item")
+        self.click()
+        self.wait(3000)
         self.key_esc()
         self.wait(2000)
 
@@ -913,7 +909,7 @@ class Bot(DesktopBot) :
         self.enter()
         self.wait(3000)
 
-        self.type_keys_with_interval(1,"109941")
+        self.type_keys_with_interval(1,"114801")
         self.enter()
         self.find_button( "botao_selecionar_item")
             
@@ -924,7 +920,7 @@ class Bot(DesktopBot) :
         self.tab()
         self.type_keys_with_interval(1,"1")
         self.tab()
-        self.type_keys_with_interval(1,"1")
+        self.type_keys_with_interval(1,"0")
         self.tab()
         self.tab()
         self.type_keys_with_interval(1,"1")
@@ -1061,6 +1057,7 @@ class Bot(DesktopBot) :
             
         self.click()
         #
+        """
         self.find_button( "23_recomeçar_venda" )
             #("23_recomeçar_venda")
         self.click()
@@ -1089,7 +1086,7 @@ class Bot(DesktopBot) :
         self.click()
         
         self.wait(1000)
-        self.type_keys_with_interval(1,"109941")
+        self.type_keys_with_interval(1,"116545")
         self.enter()
         self.find_button( "botao_selecionar_item")
             
@@ -1283,6 +1280,9 @@ class Bot(DesktopBot) :
        # self.wait(2000)
         #self.key_esc()
         self.wait(2000)
+        self.key_esc()
+        self.wait(2000)
+        self.enter()
         #self.enter()
 
         if not self.find( "vendas_achar_f8_simulacao", matching=0.97, waiting_time=10000):

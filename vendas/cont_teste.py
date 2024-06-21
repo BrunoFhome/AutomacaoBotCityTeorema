@@ -316,37 +316,219 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         bot.click()
         
-        if not bot.find( "cont_relatorios_mov_resumo_municipio", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mov_resumo_municipio")
-        bot.click()
-        if not bot.find( "cont_relatorios_mov_livro_oficial_resumo_mun", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mov_livro_oficial_resumo_mun")
-        bot.click_relative(109, 3)
-        if not bot.find( "cont_relatorios_mov_centro_custo_resumo", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mov_centro_custo_resumo")
-        bot.click_relative(77, 25)
-        if not bot.find( "cont_relatorios_mov_centro_custo_final_resumo", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mov_centro_custo_final_resumo")
-        bot.click_relative(76, 24)
-        if not bot.find( "cont_mov_relatorios_data_ano_atual", matching=0.97, waiting_time=10000):
-            not_found("cont_mov_relatorios_data_ano_atual")
-        bot.click()
-        if not bot.find( "cont_relatorios_mov_matrical_btn_ok", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mov_matrical_btn_ok")
-        bot.click()
-        if not bot.find( "cont_relatorios_mov_fechar_matricial_btn", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mov_fechar_matricial_btn")
-        bot.click()
-        if not bot.find( "cont_relatorios_mov_fiscal_livro_de_iss_diario", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mov_fiscal_livro_de_iss_diario")
-        bot.click()
+       
         if not bot.find( "cont_cad_btn_selec_opc_22_03", matching=0.97, waiting_time=10000):
             not_found("cont_cad_btn_selec_opc_22_03")
         bot.click()
-        if not bot.find( "cont_parametro_empresa_qa12_achar", matching=0.97, waiting_time=10000):
-            not_found("cont_parametro_empresa_qa12_achar")
+       
+        if not bot.find( "vendas_pdv_data_botao_rel", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_data_botao_rel")
+        bot.click_relative(28, 10)
+        if not bot.find( "vendas_pdv_cliente_buscar_movimentos", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_cliente_buscar_movimentos")
+        bot.click()
+        if not bot.find( "vendas_pdv_localizar_opc_09", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_localizar_opc_09")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_retorno_consulta", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_retorno_consulta")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_entregas_vendas_24", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_entregas_vendas_24")
+        bot.click()
+        if not bot.find( "vendas_pdv_24_recomecar_venda", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_24_recomecar_venda")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_localizar", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_localizar")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_vendas_mais_2", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_vendas_mais_2")
+        bot.click()
+        if not bot.find( "vendaspdv_btn_documentos_vendas", matching=0.97, waiting_time=10000):
+            not_found("vendaspdv_btn_documentos_vendas")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_f8simulacao_2", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_f8simulacao_2")
+        bot.click()
+        if not bot.find( "vendas_pdv_f11_recuperar_vendas_btn", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_f11_recuperar_vendas_btn")
+        bot.click()
+        if not bot.find( "vendas_pdv_cnpj_duplicado_btn", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_cnpj_duplicado_btn")
+        bot.click()
+        if not bot.find( "cont_data_relatorios_carregar_semana", matching=0.97, waiting_time=10000):
+            not_found("cont_data_relatorios_carregar_semana")
+        bot.click()
+        if not bot.find( "cont_relatorios_mov_cont_lotes", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_cont_lotes")
+        bot.click()
+        if not bot.find( "cont_data_relatorios_mov_cont_lotes", matching=0.97, waiting_time=10000):
+            not_found("cont_data_relatorios_mov_cont_lotes")
+        bot.click_relative(29, 8)
+        
+        if not bot.find( "cont_localizar_btn_relatorios_mov_contabil", matching=0.97, waiting_time=10000):
+            not_found("cont_localizar_btn_relatorios_mov_contabil")
+        bot.click()
+        if not bot.find( "cont_btn_selecionar_relatorios_mov_cont", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_selecionar_relatorios_mov_cont")
+        bot.click()
+       
+        if not bot.find( "cont_relatorios_mov_fiscal_icms_imprimir", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_fiscal_icms_imprimir")
         bot.click()
         
+        if not bot.find( "cont_relatorios_matrical_opc_1_mov", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_matrical_opc_1_mov")
+        bot.click()
+        if not bot.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
+            not_found("cont_retorn_opc_23_imposto")
+        bot.click()
+       
+        if not bot.find( "cont_barra_tarefas_buscar_contabil", matching=0.97, waiting_time=10000):
+            not_found("cont_barra_tarefas_buscar_contabil")
+        bot.click()
+        if not bot.find( "cont_balancete_de_verificacao_barra", matching=0.97, waiting_time=10000):
+            not_found("cont_balancete_de_verificacao_barra")
+        bot.click()
+        
+        if not bot.find( "cont_relatorios_btn_matrical_razao_analitica", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_btn_matrical_razao_analitica")
+        bot.click()
+        if not bot.find( "cont_btn_ok_impressao_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_ok_impressao_relatorios")
+        bot.click()
+        
+        if not bot.find( "cont_btn_fechar_relatorios_matrical_impr", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_fechar_relatorios_matrical_impr")
+        bot.click()
+        if not bot.find( "cont_btn_retornar_relatorios_razao_analitico", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_retornar_relatorios_razao_analitico")
+        bot.click()
+        
+       
+        if not bot.find( "cont_btn_relatorios_matricial_diario", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_relatorios_matricial_diario")
+        bot.click()
+        if not bot.find( "cont_relatorios_btn_grafica_diario", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_btn_grafica_diario")
+        bot.click()
+        if not bot.find( "cont_relatorios_diario_btn_retornar", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_diario_btn_retornar")
+        bot.click()
+        
+       
+        
+        if not bot.find( "cont_btn_grafica_relatorios_balanco", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_grafica_relatorios_balanco")
+        bot.click()
+        
+       
+       
+        if not bot.find( "cont_btn_grafico_dlpa_relatorios", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_grafico_dlpa_relatorios")
+        bot.click()
+        if not bot.find( "cont_relat_mov_cont_cliente_forn_grupo", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_mov_cont_cliente_forn_grupo")
+        bot.click_relative(54, 24)
+        
+       
+       
+       
+        if not bot.find( "cont_botao_close_impressao", matching=0.97, waiting_time=10000):
+            not_found("cont_botao_close_impressao")
+        bot.click()
+        if not bot.find( "cont_relat_gravar_documento_emissao", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_gravar_documento_emissao")
+        bot.click()
+        if not bot.find( "cont_btn_ok_gravacao", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_ok_gravacao")
+        bot.click()
+        if not bot.find( "cont_relatorios_patrimonio_etiquetas", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_patrimonio_etiquetas")
+        bot.click()
+        if not bot.find( "cont_relat_patrimonio_btn_adicionar", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_patrimonio_btn_adicionar")
+        bot.click()
+        if not bot.find( "cont_btn_seleciona_patrimonio_etiqueta", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_seleciona_patrimonio_etiqueta")
+        bot.click_relative(22, 23)
+        if not bot.find( "cont_relat_patrimonio_etiqueta_2_impress", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_patrimonio_etiqueta_2_impress")
+        bot.click()
+        if not bot.find( "cont_relat_patri_selec_impressora", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_patri_selec_impressora")
+        bot.click_relative(213, 25)
+        if not bot.find( "cont_btn_impressao_relat_patri", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_impressao_relat_patri")
+        bot.click()
+        if not bot.find( "cont_relatorios_emissoes_princ", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_emissoes_princ")
+        bot.click()
+        if not bot.find( "cont_relatorios_emissoes_valida_pr_sintegra", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_emissoes_valida_pr_sintegra")
+        bot.click()
+        if not bot.find( "cont_relatorios_emissao_btn_gerar", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_emissao_btn_gerar")
+        bot.click()
+        if not bot.find( "cont_emissao_gerar_area_de_trab", matching=0.97, waiting_time=10000):
+            not_found("cont_emissao_gerar_area_de_trab")
+        bot.click()
+        if not bot.find( "cont_achar_pasta_area_trab_geracao_rel", matching=0.97, waiting_time=10000):
+            not_found("cont_achar_pasta_area_trab_geracao_rel")
+        bot.click()
+        if not bot.find( "cont_btn_salvar_emissao_geracao", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_salvar_emissao_geracao")
+        bot.click()
+        if not bot.find( "cont_btn_ok_geracao_sucedida", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_ok_geracao_sucedida")
+        bot.click()
+        if not bot.find( "cont_relatorios_emissoes_giad", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_emissoes_giad")
+        bot.click()
+        if not bot.find( "cont_btn_geracao_ok_emissao", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_geracao_ok_emissao")
+        bot.click()
+        if not bot.find( "cont_btn_arquivo_gerado_sucesso", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_arquivo_gerado_sucesso")
+        bot.click_relative(308, 47)
+        if not bot.find( "cont_btn_relator_emissao_giad_empresa", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_relator_emissao_giad_empresa")
+        bot.click_relative(43, 22)
+        if not bot.find( "cont_btn_importar_emissoes_rel_giad", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_importar_emissoes_rel_giad")
+        bot.click()
+        if not bot.find( "cont_btn_import_com_sucesso_ok", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_import_com_sucesso_ok")
+        bot.click_relative(301, 47)
+        if not bot.find( "cont_btn_gerar_relator_emissao_giad", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_gerar_relator_emissao_giad")
+        bot.click()
+        if not bot.find( "cont_relatorios_emissoes_siscred", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_emissoes_siscred")
+        bot.click()
+        if not bot.find( "cont_btn_excluir_movimentos_opc_14", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_excluir_movimentos_opc_14")
+        bot.click()
+        if not bot.find( "cont_relatorios_mov_modalidade_acumulo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mov_modalidade_acumulo")
+        bot.click()
+        if not bot.find( "cont_relat_emissoes_dfc", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_dfc")
+        bot.click()
+        
+        if not bot.find( "cont_relat_emissoes_siss", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_siss")
+        bot.click()
+        if not bot.find( "cont_relat_emissoes_btn_ok_gerar", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_btn_ok_gerar")
+        bot.click()
+        if not bot.find( "cont_relat_emissoes_dime", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_dime")
+        bot.click()
+        
+        
+       
         
         
       

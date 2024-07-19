@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        """
+        
         ######################### COMEÇO DE CONSULTAS ##########################
 
         ########################################################################
@@ -4102,7 +4102,7 @@ class Bot(DesktopBot) :
         self.click()
 
         # TEMPO DE ESPERA ESTA GRANDE PARA ABRIR O RELATORIO
-        self.wait(20000)
+        self.wait(180000)
         if not self.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_x_geral_fechar_mat_imp")
         self.click()
@@ -4374,7 +4374,7 @@ class Bot(DesktopBot) :
             not_found("cont_btn_grafico_dlpa_relatorios")
         self.click()
         # TEMPO DE DEMORA MUITO LONGO
-        self.wait(37000)
+        self.wait(55000)
 
         if not self.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_x_geral_fechar_mat_imp")
@@ -4491,14 +4491,14 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
 
-        if not self.find( "cont_btn_grafico_dlpa_relatorios", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_grafico_dlpa_relatorios")
+        if not self.find( "cont_relat_grafica_diario_02", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_grafica_diario_02")
         self.click()
-        self.wait(8000)
+        self.wait(20000)
         if not self.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_x_geral_fechar_mat_imp")
         self.click()
-        self.wait(5000)
+        self.wait(8000)
         if not self.find( "cont_btn_retornar_relacao_diario_24", matching=0.97, waiting_time=10000):
             not_found("cont_btn_retornar_relacao_diario_24")
         self.click()
@@ -5833,35 +5833,37 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
 
-        if not self.find( "cont_relatorios_emissao_btn_gerar", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_emissao_btn_gerar")
-        self.click()
-        self.wait(2000)
+        # A GERAÇÃO DO SISS ESTA COM PROBLEMA, ALGUMAS VEZES GERA E OUTRAS NÃO
 
-        if not self.find( "cont_emissao_gerar_area_de_trab", matching=0.97, waiting_time=10000):
-            not_found("cont_emissao_gerar_area_de_trab")
-        self.click()
-        self.wait(1000)
-        if not self.find( "cont_achar_pasta_area_trab_geracao_rel", matching=0.97, waiting_time=10000):
-            not_found("cont_achar_pasta_area_trab_geracao_rel")
-        self.double_click()
-        self.wait(1000)
-        if not self.find( "cont_btn_salvar_emissao_geracao", matching=0.97, waiting_time=10000):
-            self("cont_btn_salvar_emissao_geracao")
-        self.click()
-        self.wait(5000)
+        # if not self.find( "cont_relatorios_emissao_btn_gerar", matching=0.97, waiting_time=10000):
+        #     not_found("cont_relatorios_emissao_btn_gerar")
+        # self.click()
+        # self.wait(2000)
 
-        if not self.find( "cont_relat_emissoes_btn_ok_gerar", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissoes_btn_ok_gerar")
-        self.click()
-        self.wait(2000)
+        # if not self.find( "cont_emissao_gerar_area_de_trab", matching=0.97, waiting_time=10000):
+        #     not_found("cont_emissao_gerar_area_de_trab")
+        # self.click()
+        # self.wait(1000)
+        # if not self.find( "cont_achar_pasta_area_trab_geracao_rel", matching=0.97, waiting_time=10000):
+        #     not_found("cont_achar_pasta_area_trab_geracao_rel")
+        # self.double_click()
+        # self.wait(1000)
+        # if not self.find( "cont_btn_salvar_emissao_geracao", matching=0.97, waiting_time=10000):
+        #     self("cont_btn_salvar_emissao_geracao")
+        # self.click()
+        # self.wait(5000)
+
+        # if not self.find( "cont_relat_emissoes_btn_ok_gerar", matching=0.97, waiting_time=10000):
+        #     not_found("cont_relat_emissoes_btn_ok_gerar")
+        # self.click()
+        # self.wait(2000)
 
         if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
             not_found("cont_retorn_opc_23_imposto")
         self.click()
         self.wait(1000)
 
-        """
+        
         ###############################################################################################
         ############################### RELATORIOS -> EMISSÕES -> DIME ################################
         ###############################################################################################
@@ -6106,7 +6108,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-
+        
         ###############################################################################################
         ############################### RELATORIOS -> RELATORIO LMP ###################################
         ###############################################################################################
@@ -6141,7 +6143,7 @@ class Bot(DesktopBot) :
             not_found("cont_btn_grafico_dlpa_relatorios")
         self.click()
 
-        self.wait(10000)
+        self.wait(12000)
 
         if not self.find( "cont_relatorios_impressao_btn_x_verm", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_impressao_btn_x_verm")

@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        """
+        
         #########################################################################################
         ################################ COMEÇO DE MOVIMENTOS ###################################
         #########################################################################################
@@ -771,7 +771,7 @@ class Bot(DesktopBot) :
         # MOVIMENTOS -> GERAÇÃO CONTABIL
         #
         # 
-
+        self.wait(3000)
         if not self.find( "cont_movimentos_menu_opc_2", matching=0.97, waiting_time=10000):
             not_found("cont_movimentos_menu_opc_2")
         self.click()
@@ -809,7 +809,7 @@ class Bot(DesktopBot) :
         if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
             not_found("cont_retorn_opc_23_imposto")
         self.click()
-        """
+        
         #########################################################################################################
         ########################### MOVIMENTOS -> INVENTARIO ####################################################
         #########################################################################################################

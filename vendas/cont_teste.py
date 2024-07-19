@@ -526,7 +526,64 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_relat_emissoes_dime", matching=0.97, waiting_time=10000):
             not_found("cont_relat_emissoes_dime")
         bot.click()
+        if not bot.find( "cont_relat_emissoes_dime_empresa_info", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_dime_empresa_info")
+        bot.click_relative(45, 22)
+        if not bot.find( "cont_relat_emissoes_dime_calcular", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_dime_calcular")
+        bot.click()
+        if not bot.find( "cont_relatorios_emissoes_dime_importar", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_emissoes_dime_importar")
+        bot.click()
+        if not bot.find( "cont_relat_emissoes_dime_imp_sucesso", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_dime_imp_sucesso")
+        bot.click_relative(306, 48)
+        if not bot.find( "cont_relat_emissoes_dime_gerar_inf", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_dime_gerar_inf")
+        bot.click()
+        if not bot.find( "cont_relat_emissao_inf_gerada_sucesso", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissao_inf_gerada_sucesso")
+        bot.click_relative(306, 49)
+        if not bot.find( "cont_relat_emissoes_dime_gerar_arquivo", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_dime_gerar_arquivo")
+        bot.click()
+        if not bot.find( "cont_btn_impressao_relat_emissao_demi", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_impressao_relat_emissao_demi")
+        bot.click()
+        if not bot.find( "cont_impressao_grafica_relat_emissao_demi", matching=0.97, waiting_time=10000):
+            not_found("cont_impressao_grafica_relat_emissao_demi")
+        bot.click()
+        if not bot.find( "cont_relat_emissao_dief", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissao_dief")
+        bot.click()
+        if not bot.find( "cont_relat_emissoes_dirf_ret", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissoes_dirf_ret")
+        bot.click()
+        if not bot.find( "cont_relat_emissao_dirf_empresa_gerac", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissao_dirf_empresa_gerac")
+        bot.click_relative(49, 26)
+        if not bot.find( "cont_relat_emissao_empresa_dirf", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissao_empresa_dirf")
+        bot.click_relative(47, 24)
+        if not bot.find( "cont_relat_emissao_dirf_gerar", matching=0.97, waiting_time=10000):
+            not_found("cont_relat_emissao_dirf_gerar")
+        bot.click()
+        if not bot.find( "cont_relatorios_relatorio_lmp", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_relatorio_lmp")
+        bot.click()
+        if not bot.find( "cont_btn_data_relatorios_lmp", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_data_relatorios_lmp")
+        bot.click_relative(26, 7)
+        if not bot.find( "cont_relatorios_mapa_resumo", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_mapa_resumo")
+        bot.click()
+        if not bot.find( "cont_importacoes_area_de_trabalho_pasta", matching=0.97, waiting_time=10000):
+            not_found("cont_importacoes_area_de_trabalho_pasta")
+        bot.click()
         
+        if not bot.find( "cont_pasta_importacoes_geracoes_contabil", matching=0.97, waiting_time=10000):
+            not_found("cont_pasta_importacoes_geracoes_contabil")
+        bot.click()
         
        
         

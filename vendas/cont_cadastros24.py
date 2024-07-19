@@ -1226,7 +1226,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        """
+        
         ############################################################################
         ################# CADASTROS -> EMPRESAS -> GRUPO DE EMPRESAS ###############
         ############################################################################
@@ -4017,8 +4017,9 @@ class Bot(DesktopBot) :
         self.click()
         
         self.wait(2000)
-        self.enter()
-        self.wait
+        self.backspace()
+        
+        self.wait(1000)
 
         if not self.find( "cont_centro_de_custo_16", matching=0.97, waiting_time=10000):
             not_found("cont_centro_de_custo_16")
@@ -4155,10 +4156,10 @@ class Bot(DesktopBot) :
             not_found("cont_24_btn_selecionar_opc_relatorios")
         self.click()
         self.wait(2000)
-        if not self.find( "cont_condicao_pag_2_27", matching=0.97, waiting_time=10000):
-            not_found("cont_condicao_pag_2_27")
-        self.click_relative(71, 27)
-        self.wait(2000)
+        if not self.find( "cont_condicao_pagamento_btn_24_06", matching=0.97, waiting_time=10000):
+            not_found("cont_condicao_pagamento_btn_24_06")
+        self.click_relative(66, 28)
+        self.wait(3000)
         if not self.find( "cont_loc_cod_fiscais_5", matching=0.97, waiting_time=10000):
             not_found("cont_loc_cod_fiscais_5")
         self.click()
@@ -5390,7 +5391,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
         
-        
+        """
         ################################################################################################
         ########### CADASTRO -> PLANO DE CONTAS, CUSTOS E FINCEIRO -> PLANO DE CONTAS - F4 #############
         ################################################################################################
@@ -6176,8 +6177,8 @@ class Bot(DesktopBot) :
             not_found("cont_cadastros_menu_princ_opc_08")
         self.click()
         self.wait(1000)
-        if not self.find( "cont_menu_impostos_23", matching=0.97, waiting_time=10000):
-            not_found("cont_menu_impostos_23")
+        if not self.find( "cont_btn_impostos_24_opc_menu", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_impostos_24_opc_menu")
         self.click()
         if not self.find( "cont_incluir_plano_de_contas_23", matching=0.97, waiting_time=10000):
             not_found("cont_incluir_plano_de_contas_23")

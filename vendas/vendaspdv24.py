@@ -36,7 +36,6 @@ class Bot(DesktopBot) :
 
     def action(self,execution=None) :
         
-
         ##################################################################
                             ####---LOGIN---####
         
@@ -196,10 +195,9 @@ class Bot(DesktopBot) :
 #####################--------VENDAS--------#########################
 #COMEÇO DE VENDAS
         
-        if not self.find( "vendas_pdv_btn_vendas_menu_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_vendas_menu_24")
+        if not self.find( "cont_vendas_pdv_btn_vendas_2407", matching=0.97, waiting_time=10000):
+            not_found("cont_vendas_pdv_btn_vendas_2407")
         self.click()
-        
 
         self.wait(3000)
         
@@ -218,17 +216,13 @@ class Bot(DesktopBot) :
 
         self.wait(2000)
         self.key_f4()
-
-        x = 0
-        while x < 7:
-            self.delete()
-            x += 1
-
-        self.find_button( "localizar_vendedor_menu_vendas")
-            
+        self.wait(2000)
+        self.find_button( "localizar_vendedor_menu_vendas")  
         self.click()
+        self.wait(2000)
         self.find_button( "selecionar_o_vendedor_menu_venda")
         self.click()
+
         self.wait(1000)
         # CLICAR EM CAIXAR ANTES DE ACHAR ITEM
         #self.find_button( "clicar_reduzido_vendas_item") 
@@ -424,17 +418,22 @@ class Bot(DesktopBot) :
             self.type_up()
             x += 1
         
+        self.wait(2000)
         #self.find_button( "clicar_observacoes_buscar")   
         #self.click_relative(86, 8)
         self.find_button( "23_botao_buscar_observacoes" )
             #("23_botao_buscar_observacoes")
         self.click()
 
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_localizar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_localizar_opc_2407")
+        self.click()
+
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
-        #self.find_button( "23_botao_finalizar_f9" )
+        self.find_button( "23_botao_finalizar_f9" )
             #("23_botao_finalizar_f9")
         #mouse parando em cima
         self.wait(2000)
@@ -526,13 +525,11 @@ class Bot(DesktopBot) :
         self.tab()
         self.tab()
         self.enter()
-        # nao usar por enquanto, testando finalizacao da nota
         #self.find_button( "botao_sair_finalizar_orcamento_2" ) 
         #    #("botao_sair_finalizar_orcamento_2")
         #self.click()
 
 
-        ######## NÃO ESTOU CONSEGUINDO EMITIR A NOTA FISCAL 24/04
         self.find_button( "Botao_nota_fiscal_pagamento")
         
         self.click()
@@ -577,15 +574,18 @@ class Bot(DesktopBot) :
         self.tab()
         self.type_keys_with_interval(1,"12:30")
         self.wait(1000)
-        self.find_button( "botao_cliente_fornecedor_nf")
         
+        self.wait(3000)
+
+        self.find_button( "botao_cliente_fornecedor_nf")  
         self.click_relative(65, 28)
-        
+    
+        self.wait(2000)
+
         self.find_button( "botao_localizar_2")
-            
         self.click()
       
-        self.wait(1000)
+        self.wait(2000)
 
         self.find_button( "botao_selecionar_nfs")
             
@@ -603,65 +603,60 @@ class Bot(DesktopBot) :
         #self.find_button( "botao_selecionar_4")
             
         #self.click()
-        
+        self.wait(2000)
         self.find_button( "botao_classificacao_nfs_1")
-        
         self.click_relative(65, 26)
-        
+        self.wait(2000)
+
         self.find_button( "botao_localizar_nfs_1")
-            
         self.click()
+        self.wait(2000)
         
-        #
-        #
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
-        
+        self.wait(2000)
         
         self.find_button( "botao_transportador(a)_nfs")
-            
         self.click_relative(63, 27)
         
         self.wait(2000)
         
         self.find_button( "botao_localizar_nfs_2")
-            
         self.click()
+        self.wait(2000)
         
         self.find_button( "botao_selecionar_nfs_2")
-            
         self.click()
+        self.wait(2000)
         
         self.find_button( "botao_local_entrega_nfs")
-            
         self.click_relative(63, 25)
+        self.wait(2000)
         
-        self.find_button( "botao_localizar_local_entrega")
-            
+        self.find_button( "botao_localizar_local_entrega")     
         self.click()
+        self.wait(2000)
         
-        ##
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
+        self.wait(2000)
         
         self.find_button( "ler_codigo_ficcal_cfop")
-            
         self.click_relative(68, 28)
-        self.wait(1000)
+        self.wait(2000)
+
         #self.backspace()
         self.type_keys_with_interval(1,"5.102")
-        self.wait(1000)
+        self.wait(2000)
 
-
-        self.find_button( "botao_localizar_codigos_fiscais_1")
-            
+        self.find_button( "botao_localizar_codigos_fiscais_1")    
         self.click()
         
         
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         
         self.find_button( "achar_placa1")
@@ -700,8 +695,8 @@ class Bot(DesktopBot) :
             
         self.click()
         
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         
         self.tab()
@@ -791,20 +786,20 @@ class Bot(DesktopBot) :
             x += 1
         x = 0
         
+        self.wait(2000)
+
         self.find_button( "botao_adicionar_notas_referenciadas_2")
-            
         self.click()
-        
+        self.wait(2000)
         self.find_button( "achar_chave_nfe")
-            
         self.click_relative(92, 4)
-        
+        self.wait(1000)
         self.type_keys_with_interval(1,"11111111111111111111111111111111111111111111")
         self.wait(2000)
 
         ###
-        if not self.find( "vendas_pdv_btn_gravar_opc_24_novo", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_gravar_opc_24_novo")
+        if not self.find( "vendas_pdv_btn_gravar_nf_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_gravar_nf_2407")
         self.click()
         self.wait(2000)
         
@@ -855,12 +850,14 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
         self.find_button( "achar_calculadora_finalizar_vend_2")
-        
         self.click_relative(278, 7)
         self.wait(1000)
         #
-        if not self.find( "vendas_pdv_btn_entregas_opc_24_2", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_entregas_opc_24_2")
+        
+        self.wait(3000)
+
+        if not self.find( "vendas_pdv_btn_entregar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_entregar_opc_2407")
         self.click()
         
         self.wait(1000)
@@ -908,10 +905,12 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
         
-
+        
         #
-        if not self.find( "vendas_pdv_btn_recomecar_novo", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_recomecar_novo")
+        self.wait(2000)
+        if not self.find( "vendas_pdv_btn_recomecar_24_07", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_recomecar_24_07")
+        self
         self.click()
         
         self.wait(3000)
@@ -1076,8 +1075,10 @@ class Bot(DesktopBot) :
         self.click()
         #
         
-        if not self.find( "vendas_pdv_btn_recomecar_novo", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_recomecar_novo")
+        self.wait(3000)
+
+        if not self.find( "vendas_pdv_btn_recomecar_24_07", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_recomecar_24_07")
         self.click()
         self.wait(1000)
         self.enter()
@@ -1171,8 +1172,8 @@ class Bot(DesktopBot) :
             #("23_botao_buscar_observacoes")
         self.click()
 
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
 
@@ -1311,8 +1312,10 @@ class Bot(DesktopBot) :
             not_found("vendas_achar_f8_simulacao")
         # aqui é apenas para o mouse sair de cima do botao de vendas
         
-        if not self.find( "vendas_pdv_btn_vendas_mais_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_vendas_mais_24")
+        self.wait(3000)
+
+        if not self.find( "vendas_pdv_btn_vendas_mais_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_vendas_mais_opc_2407")
         self.click()
         self.wait(4000)
         
@@ -1384,8 +1387,8 @@ class Bot(DesktopBot) :
             
         self.click()
         #####
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -1395,8 +1398,8 @@ class Bot(DesktopBot) :
 
         
         
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -1411,8 +1414,8 @@ class Bot(DesktopBot) :
         self.click()
         
        
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -1429,8 +1432,10 @@ class Bot(DesktopBot) :
         
         
         ####
-        if not self.find( "vendas_pdv_btn_documentos_vend_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_documentos_vend_24")
+        
+        self.wait(3000)
+        if not self.find( "vendas_pdv_btn_documentos_24_07", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_documentos_24_07")
         self.click()
         
         
@@ -1697,8 +1702,8 @@ class Bot(DesktopBot) :
             ##("localizar_grupo_empresas_rs_f7")
         self.click()
         ############
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -1872,13 +1877,15 @@ class Bot(DesktopBot) :
         #ERRO AQUI COM LOC E SELEC, USAR RELATIVO
         #
         #
-        self.find_button( "grupo_empresas_rel_filtro_loc_2")
-            ##("grupo_empresas_rel_filtro_loc_2")
-        self.click_relative(120, 81)
+        
         self.wait(2000)
-        self.find_button( "filtro_relativo_grupo_empresas_selc_2")
-            ##("filtro_relativo_grupo_empresas_selc_2")
-        self.click_relative(196, 82)
+        if not self.find( "vendas_pdv_btn_localizar_grupo_empresa_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_localizar_grupo_empresa_2407")
+        self.click_relative(29, 33)
+        self.wait(2000)
+        if not self.find( "vendas_pdv_btn_selecionar_rel_grupo_empresas", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_rel_grupo_empresas")
+        self.click_relative(96, 32)
         
         self.wait(2000)
         self.enter()
@@ -1887,13 +1894,11 @@ class Bot(DesktopBot) :
             ##("moeda_para_cotacao_buscar_1")
         self.click_relative(81, 26)
         self.wait(1000)
-        self.find_button( "filtro_relatiivo_moeda_localizar")
-            ##("filtro_relatiivo_moeda_localizar")
-        self.click_relative(120, 83)
-        self.wait(1000)
-        self.find_button( "filtro_relativo_moeda_selec_f7")
-            ##("filtro_relativo_moeda_selec_f7")
-        self.click_relative(195, 84)
+        
+        self.wait(2000)
+        if not self.find( "vendas_pdv_btn_selec_moedas_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selec_moedas_2407")
+        self.click_relative(96, 34)
         
         self.wait(1000)
      
@@ -2080,11 +2085,12 @@ class Bot(DesktopBot) :
         ########################   F8 SIMULAÇÃO ######################
         ##############################################################
         ##############################################################
-        self.wait(3000)
-        if not self.find( "vendas_pdv_btn_01_24_simulacao_f8", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_01_24_simulacao_f8")
-        self.click()
         
+
+        self.wait(3000)
+        if not self.find( "vendas_pdv_f8_simulacao_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_f8_simulacao_2407")
+        self.click()
         
         self.tab()
         self.type_right()
@@ -2110,8 +2116,8 @@ class Bot(DesktopBot) :
             #("botao_simulacao_localizar")
         self.click()
         #####
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -2141,13 +2147,13 @@ class Bot(DesktopBot) :
         self.wait(1000)
         self.enter()
 
-
+        
 #########  F11 RECUPERAR VENDAS  ###########
-
-        if not self.find( "vendas_pdv_btn_f11_recupera", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_f11_recupera")
+        self.wait(3000)
+        if not self.find( "vendas_pdv_f11_recup_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_f11_recup_2407")
         self.click()
-         
+        
         
         self.find_button( "23_recuperar_vendas_2" )
             #("23_recuperar_vendas_2")
@@ -2308,41 +2314,45 @@ class Bot(DesktopBot) :
         self.find_button( "achar_2selecao_os_clientes" ) 
             #("achar_2selecao_os_clientes")
         self.click()
+        self.wait(2000)
         self.find_button( "botao_condicaodepagamento_loc" ) 
             #("botao_condicaodepagamento_loc")
         self.click_relative(65, 29)
-        
+        self.wait(2000)
         self.find_button( "loc_condicao_pagamento_os" ) 
             #("loc_condicao_pagamento_os")
         self.click()
+        self.wait(2000)
         #####
         #####
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
-        self.wait(1000)
+        self.wait(2000)
         self.find_button( "achar_servico_buscar_botao" ) 
             #("achar_servico_buscar_botao")
         self.click_relative(63, 29)
-        
+        self.wait(2000)
         self.find_button( "loc_condicao_pagamento_os" ) 
             #("loc_condicao_pagamento_os")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        self.wait(2000)
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.enter()
-
+        self.wait(2000)
         self.find_button( "item_relativo_botao_buscar" ) 
             #("item_relativo_botao_buscar")
         self.click_relative(63, 24)
-        
+        self.wait(2000)
         self.find_button( "loc_condicao_pagamento_os" ) 
             #("loc_condicao_pagamento_os")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        self.wait(2000)
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -2395,16 +2405,13 @@ class Bot(DesktopBot) :
         
         
         
+        self.wait(2000)
         self.find_button( "filtrar_todos_com_segmento_botao" ) 
             #("filtrar_todos_com_segmento_botao")
         self.click_relative(227, 32)
-        #### PAREI AQUI DENTRO DE FILTRO 
-        #
-        #
-        #
-        ##
-        if not self.find( "vendas_pdv_btn_cnj_duplicado", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_cnj_duplicado")
+        
+        if not self.find( "vendas_pdv_filtragem_cnpj_dupli_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_filtragem_cnpj_dupli_2407")
         self.click()
         
         
@@ -2502,8 +2509,8 @@ class Bot(DesktopBot) :
             #("seleciona_relativo_filtro_clientes")
         self.click_relative(22, 26)
         
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -2541,8 +2548,8 @@ class Bot(DesktopBot) :
         #
         #
 
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -2731,8 +2738,8 @@ class Bot(DesktopBot) :
         #
         #
 
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -2887,8 +2894,8 @@ class Bot(DesktopBot) :
         #
         #
 
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -2910,8 +2917,8 @@ class Bot(DesktopBot) :
         self.click()
 
  
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
 
@@ -2975,8 +2982,8 @@ class Bot(DesktopBot) :
         #
         #
         #
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
 
@@ -2989,8 +2996,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
 
@@ -3040,8 +3047,8 @@ class Bot(DesktopBot) :
         ##
         #
         #
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
 
@@ -3104,8 +3111,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         self.wait(1000)
@@ -3118,8 +3125,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         ###  NAO TEM F2 CODIGO DISPONIVEL PARA SELECIONAR, POR ENQUANTO PULAR ESTA PARTE
@@ -3162,8 +3169,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
 
@@ -3209,8 +3216,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -3221,8 +3228,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -3284,8 +3291,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -3295,8 +3302,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -3324,8 +3331,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -3336,8 +3343,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -3348,8 +3355,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -3360,8 +3367,8 @@ class Bot(DesktopBot) :
         self.find_button( "localizar_grupo_de_os_2" ) 
             #("localizar_grupo_de_os_2")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
 
@@ -3371,14 +3378,12 @@ class Bot(DesktopBot) :
         self.tab()
 
         self.type_keys_with_interval(1,"qa12!@")
-        #
-        ##
-        #
-        #
-        #
-        #
-        if not self.find( "vendas_pdv_btn_continuar_parcelas_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_continuar_parcelas_24")
+    
+        
+
+        self.wait(2000)
+        if not self.find( "vendas_pdv_btn_continuar_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_continuar_2407")
         self.click()
         
         
@@ -3538,17 +3543,17 @@ class Bot(DesktopBot) :
         #self.find_button( "cancelar_exportar_para_excel_grade" ) 
             #("cancelar_exportar_para_excel_grade")
         #self.click()
-        
+
+        ##########################################
         ############# AGENDA O.S. ################
-        #
-        #####
-        #####
-        #####
+        ##########################################
+        
+        
         self.wait(3000)
 
-        if not self.find( "vendas_analise_relativo_agenda_os", matching=0.97, waiting_time=10000):
-            not_found("vendas_analise_relativo_agenda_os")
-        self.click_relative(96, 12)
+        if not self.find( "vendas_pdv_agenda_os_relativo", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_agenda_os_relativo")
+        self.click_relative(94, 11)
         
         self.find_button( "achar_data_agenda_os" ) 
             #("achar_data_agenda_os")
@@ -3624,8 +3629,8 @@ class Bot(DesktopBot) :
             #("localizar_clientes_agenda_os_botao")
         self.click()
         
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(1000)
         
@@ -3662,16 +3667,15 @@ class Bot(DesktopBot) :
         #self.click()
 
         
-
-################################################
-################ CADASTROS #####################
-################################################
+        
+        ################################################
+        ################ CADASTROS #####################
+        ################################################
         self.wait(3000)
-        if not self.find( "vendas_pdv_btn_cadastros_menu_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_cadastros_menu_24")
+        if not self.find( "vendas_pdv_btn_cadastros_2407_menu", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_cadastros_2407_menu")
         self.click()
-        
-        
+        self.wait(2000)
         self.find_button( "botao_municipios_cadastro_1" ) 
             #("botao_municipios_cadastro_1")
         self.click()
@@ -3699,8 +3703,8 @@ class Bot(DesktopBot) :
             #("localizar_botao_cadastro_municipios_estado")
         self.click()
         
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.tab()
@@ -3717,9 +3721,10 @@ class Bot(DesktopBot) :
         self.click()
         
         self.wait(1000)
-
-        if not self.find( "vendas_pdv_btn_excluir_opc_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_excluir_opc_24")
+        
+        self.wait(3000)
+        if not self.find( "vendas_pdv_btn_excluir_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_excluir_2407")
         self.click()
     
 
@@ -3729,16 +3734,14 @@ class Bot(DesktopBot) :
         self.find_button( "botao_retornar_cadastro_municipio_salvo" ) 
             #("botao_retornar_cadastro_municipio_salvo")
         self.click()
-        
+        #############################################################
         ################## CADASTRO DE TERMINAIS ####################
-        ###
-        ###
-        ###
-        ###
-        ###
+        #############################################################
+        
+        
         self.wait(2000)
-        if not self.find( "vendas_pdv_btn_cad_menu_24_opc_2", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_cad_menu_24_opc_2")
+        if not self.find( "vendas_pdv_btn_cadastros_2407_menu", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_cadastros_2407_menu")
         self.click()
         self.find_button( "botao_terminais_cadastro_vendass" ) 
             #("botao_terminais_cadastro_vendass")
@@ -3866,8 +3869,8 @@ class Bot(DesktopBot) :
         self.wait(1000)
         self.enter()
         self.wait(1000)
-        if not self.find( "vendas_pdv_btn_cad_menu_24_opc_2", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_cad_menu_24_opc_2")
+        if not self.find( "vendas_pdv_btn_cadastros_2407_menu", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_cadastros_2407_menu")
         self.click()
         self.find_button( "botao_terminais_cadastro_vendass" ) 
             #("botao_terminais_cadastro_vendass")
@@ -3895,11 +3898,12 @@ class Bot(DesktopBot) :
         self.enter()
         self.wait(1000)
         
+        ######################################################
+        ############## CADASTRO DE EQUIPAMENTOS ##############
+        ######################################################
 
-############## CADASTRO DE EQUIPAMENTOS ##############
-
-        if not self.find( "vendas_pdv_btn_cad_menu_24_opc_2", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_cad_menu_24_opc_2")
+        if not self.find( "vendas_pdv_btn_cadastros_2407_menu", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_cadastros_2407_menu")
         self.click()
         self.find_button( "botao_cadastro_de_equipamentos_abrir" ) 
             #("botao_cadastro_de_equipamentos_abrir")
@@ -3952,9 +3956,12 @@ class Bot(DesktopBot) :
         self.find_button( "botao_retornar_cadastro_equipament_4" ) 
             #("botao_retornar_cadastro_equipament_4")
         self.click()
-############# CADASTRO TIPO DE OS  #############
-        if not self.find( "vendas_pdv_btn_cad_menu_24_opc_2", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_cad_menu_24_opc_2")
+        ##################################################
+        ############# CADASTRO TIPO DE OS  ###############
+        ##################################################
+
+        if not self.find( "vendas_pdv_btn_cadastros_2407_menu", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_cadastros_2407_menu")
         self.click()
         self.find_button( "tipo_os_botao_cadastro" ) 
             #("tipo_os_botao_cadastro")
@@ -3984,10 +3991,12 @@ class Bot(DesktopBot) :
             #("retornar_cadastro_tipo_de_os")
         self.click()
 
+        #####################################################################
+        ################### CADASTRO DE GRUPOS DE O.S  ######################
+        #####################################################################
 
-################### CADASTRO DE GRUPOS DE O.S  ######################
-        if not self.find( "vendas_pdv_btn_cad_menu_24_opc_2", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_cad_menu_24_opc_2")
+        if not self.find( "vendas_pdv_btn_cadastros_2407_menu", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_cadastros_2407_menu")
         self.click()
         self.find_button( "botao_cadastro_grupos_de_os" ) 
             #("botao_cadastro_grupos_de_os")
@@ -4020,10 +4029,13 @@ class Bot(DesktopBot) :
         self.click()
         
         self.wait(2000)
-        ########### CADASTROS  ############
-        ########### CONFIGURAÇÃO BALAÇA ###########
-        if not self.find( "vendas_pdv_btn_cad_menu_24_opc_2", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_cad_menu_24_opc_2")
+
+        #####################################################
+        ########### CADASTROS CONFIGURAÇÃO BALAÇA ###########
+        #####################################################
+
+        if not self.find( "vendas_pdv_btn_cadastros_2407_menu", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_cadastros_2407_menu")
         self.click()
         self.find_button( "cadastros_configuracao_balanca_1" ) 
             #("cadastros_configuracao_balanca_1")
@@ -4108,8 +4120,10 @@ class Bot(DesktopBot) :
             #("botao_retornar_configuracao_balanca_cadastro")
         self.click()
         
-        ####################################################
-        ####################  AGENDA  ######################
+        ###################################################################################################
+        #####################################  AGENDA  ####################################################
+        ###################################################################################################
+
         self.wait(2000)
 
         self.find_button( "botao_agenda_menu_principal_vendas" ) 
@@ -4150,13 +4164,13 @@ class Bot(DesktopBot) :
             #("retornar_botao_agenda_compromissos_6")
         self.click()
         self.wait(2000)
-
+        
         ################################################################
         ######################   CHAMADAS    ###########################
         ################################################################
-
-        if not self.find( "vendas_pdv_btn_chamadas_menu_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_chamadas_menu_24")
+        self.wait(3000)
+        if not self.find( "vendas_pdv_btn_chamadas_menu_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_chamadas_menu_2407")
         self.click()
 
         
@@ -4222,14 +4236,13 @@ class Bot(DesktopBot) :
         #self.find_button( "botao_pesquisar_chamados_incluir" ) 
             #("botao_pesquisar_chamados_incluir")
         #self.click()
-         #
-          #
-           #
-            #[
+        
+        
         self.wait(2000)
-        if not self.find( "vendas_pdv_btn_chamados_rettornar_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_chamados_rettornar_24")
+        if not self.find( "vendas_pdv_btn_retornar_2407_pesquisa", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_retornar_2407_pesquisa")
         self.click()
+        self.wait(2000)
         
         self.find_button( "anexos_chamados_incluir_achar" ) 
             #("anexos_chamados_incluir_achar")
@@ -4294,10 +4307,13 @@ class Bot(DesktopBot) :
             #("botao_pular_relativo_para_fechar")
         self.click_relative(151, -19)
 
+        self.wait(5000)
+        self.key_esc()
 
-################### GRADE EM CHAMADOS ####################
-##########################################################
-        """
+
+        ################### GRADE EM CHAMADOS ####################
+        ##########################################################
+        
         self.find_button( "grade_relativo_chamadas" ) 
             #("grade_relativo_chamadas")
         self.click_relative(48, 14)
@@ -4504,21 +4520,24 @@ class Bot(DesktopBot) :
             #("export_to_xml_grade_4")
         self.click()
         self.wait(500)
-        """
+        
         self.wait(3000)
         self.key_esc()
-        
-
-####################################################################
-###################### DOC-E #######################################
-####################################################################
-        self.wait(3000)
+        self.wait(2000)
         self.find_button( "botao_para_retorn_de_chamadas_7" ) 
             #("botao_para_retorn_de_chamadas_7")
         self.click()
-        if not self.find( "vendas_pdv_doc_e_menu_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_doc_e_menu_24")
+        
+        
+        ####################################################################
+        ###################### DOC-E #######################################
+        ####################################################################
+        
+        self.wait(3000)
+        if not self.find( "vendas_pdv_btn_doc_e_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_doc_e_2407")
         self.click()
+        self.wait(2000)
         
         
         self.tab()
@@ -4545,8 +4564,8 @@ class Bot(DesktopBot) :
         #self.find_button( "botao_relativo_localizar_em_doce" ) 
             #("botao_relativo_localizar_em_doce")
         #self.click_relative(-45, 16)
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.tab()
@@ -4650,30 +4669,21 @@ class Bot(DesktopBot) :
         self.type_up()
         self.type_up()
         self.type_up()
-        self.wait(500)
+        self.wait(1000)
         self.find_button( "adicionar_nome_filtro_doce" ) 
             #("adicionar_nome_filtro_doce")
         self.click()
         self.wait(1000)
-        self.find_button( "codigo_selecionar_cliente_filtro_doc" ) 
-            #("codigo_selecionar_cliente_filtro_doc")
-        self.click_relative(-28, 25)
-        
-        self.wait(1000)
-        self.find_button( "padrao_de_busca_filtro_doce" ) 
-            #("padrao_de_busca_filtro_doce")
-        self.click_relative(8, 35)
-        self.wait(500)
-        self.type_right()
-        self.type_right()
-        self.find_button( "achar_qualquer_posicao_botao_relativo_filtro" ) 
-            #("achar_qualquer_posicao_botao_relativo_filtro")
-        self.click_relative(-70, 7)
-       
         
         self.wait(2000)
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_seleciona_cliente_rel_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_seleciona_cliente_rel_2407")
+        self.click_relative(26, 23)
+        
+        
+        self.wait(2000)
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.wait(1000)
@@ -4696,11 +4706,12 @@ class Bot(DesktopBot) :
             #("nome_final_filtro_doce_rel")
         self.click_relative(21, 22)
         
+        self.wait(2000)
         self.find_button( "filtrar_todos_com_segmento_doce" ) 
             #("filtrar_todos_com_segmento_doce")
         self.click_relative(229, 35)
-        if not self.find( "vendas_pdv_cnpj_duplicado_22", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_cnpj_duplicado_22")
+        if not self.find( "vendas_pdv_filtragem_cnpj_dupli_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_filtragem_cnpj_dupli_2407")
         self.click()
         self.find_button( "situacao_filtragem_doce_achar" ) 
             #("situacao_filtragem_doce_achar")
@@ -4747,8 +4758,8 @@ class Bot(DesktopBot) :
             #("localizar_recado_responsavel")
         #self.click()
         self.wait(1000)
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         
@@ -4991,20 +5002,16 @@ class Bot(DesktopBot) :
 
         self.wait(2000)
         self.key_esc()
-        #
-        ##
-        ###
-        ####
-        #####
+        
         
         ###############################################################################
         ################################ PROCESSOS ####################################
         ###############################################################################
         self.wait(2000)
 
-        if not self.find( "vebndas_pdv_btn_processo_rel", matching=0.97, waiting_time=10000):
-            not_found("vebndas_pdv_btn_processo_rel")
-        self.click_relative(78, 14)
+        if not self.find( "vendas_pdv_btn_processos_rel_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_processos_rel_2407")
+        self.click_relative(79, 18)
         
         
         self.find_button( "altera_data_processos_botao" ) 
@@ -5022,16 +5029,17 @@ class Bot(DesktopBot) :
         self.wait(3000)
         self.enter()
         self.wait(3000)
-        if not self.find( "vebndas_pdv_btn_processo_rel", matching=0.97, waiting_time=10000):
-            not_found("vebndas_pdv_btn_processo_rel")
-        self.click_relative(78, 14)
+        if not self.find( "vendas_pdv_btn_processos_rel_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_processos_rel_2407")
+        self.click_relative(79, 18)
         self.wait(2000)
         self.find_button( "info_da_release_processos" ) 
             #("info_da_release_processos")
         self.click()
+        
         self.wait(2000)
-        if not self.find( "vendas_pdv_info_release_voltar", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_info_release_voltar")
+        if not self.find( "vendas_pdv_btn_voltar_2407_release", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_voltar_2407_release")
         self.click()
         
         
@@ -5078,9 +5086,7 @@ class Bot(DesktopBot) :
         if not self.find( "vendas_pdv_flecha_solicitante", matching=0.97, waiting_time=10000):
             not_found("vendas_pdv_flecha_solicitante")
         self.click()
-        # errando clique relativo aqui, arrumar
-        #
-        #
+        
         self.wait(2000)
 
         self.find_button( "nome_cadastro_solicitante_pecas" ) 
@@ -5108,9 +5114,9 @@ class Bot(DesktopBot) :
             #("botao_buscar_pecas_clientes_2")
         self.click()
         self.wait(2000)
-#####
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.wait(1000)
@@ -5126,8 +5132,8 @@ class Bot(DesktopBot) :
         self.wait(2000)
 
 
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.find_button( "2selecao_pecas_clic" ) 
@@ -5136,8 +5142,8 @@ class Bot(DesktopBot) :
         self.find_button( "2selecao_pecas_clique_relativo" ) 
             #("2selecao_pecas_clique_relativo")
         self.click_relative(0, 43)
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.find_button( "achar_todos_pecas_botao_situacao" ) 
@@ -5281,8 +5287,8 @@ class Bot(DesktopBot) :
             #("localizar_itens_req_pecas_2")
         self.click()
         self.wait(1000)
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.find_button( "cliente_pecas_botao_proc_1" ) 
@@ -5310,8 +5316,8 @@ class Bot(DesktopBot) :
         self.find_button( "loc_equi_veiculos_pecas" ) 
             #("loc_equi_veiculos_pecas")
         self.click()
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.find_button( "botao_placa_pecas_vei_2" ) 
@@ -5326,8 +5332,8 @@ class Bot(DesktopBot) :
             #("localizar_placas_veiculos_botao_5")
         self.click()
         self.wait(1000)
-        if not self.find( "vendas_pdv_btn_selecionar_vendas", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_selecionar_vendas")
+        if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
         self.wait(2000)
         self.find_button( "retornar_de_pecas_fim_1" ) 
@@ -5338,9 +5344,8 @@ class Bot(DesktopBot) :
         
         #ordem de servico -> incluir -> Orcamento
         
-        #MEXER EM CAIXA, (ABERTO DESDE 17/05)
         self.wait(2000)
-
+        
         self.find_button( "caixa_menu_princ_botao" ) 
             #("caixa_menu_princ_botao")
         self.click()
@@ -5360,40 +5365,8 @@ class Bot(DesktopBot) :
         self.enter()
         ###
         ###
-        ###
         
-        self.find_button( "impressao_rel_botao_caixa_1" ) 
-            #("impressao_rel_botao_caixa_1")
-        self.click_relative(86, 15)
-        self.wait(1000)
-        self.find_button( "impressao_matricial_caixa_1" ) 
-            #("impressao_matricial_caixa_1")
-        self.click()
-        self.wait(1000)
-        self.wait(1000)
-        self.key_esc()
-        self.wait(1000)
-        self.key_esc()
-        self.wait(1000)
-        self.enter()
-        ##
         
-        self.wait(1000)
-        self.find_button( "impressao_rel_botao_caixa_1" ) 
-            #("impressao_rel_botao_caixa_1")
-        self.click_relative(86, 15)
-        self.wait(1000)
-        
-        self.find_button( "impressao_matricial_caixa_1" ) 
-            #("impressao_matricial_caixa_1")
-        self.click()
-        self.wait(1000)
-        self.enter()
-        self.wait(1000)
-        self.key_esc()
-        self.wait(1000) 
-
-        self.enter()
         self.wait(1000)
 
         self.find_button( "impressao_rel_botao_caixa_1" ) 
@@ -5421,7 +5394,7 @@ class Bot(DesktopBot) :
         self.find_button( "vendas_a_prazo_grafico_caixa_1" ) 
             #("vendas_a_prazo_grafico_caixa_1")
         self.click()
-        self.wait(2000)
+        self.wait(8000)
 
         self.find_button( "achar_x_verm_caixa_impressao_2" ) 
             #("achar_x_verm_caixa_impressao_2")
@@ -5462,11 +5435,14 @@ class Bot(DesktopBot) :
         self.enter()
         self.wait(2000)
         
-        #
-        ####
-        #### SANGRIA
-        if not self.find( "vendas_pdv_btn_sangria_24", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_sangria_24")
+        
+        ######################################
+        ############### SANGRIA ##############
+        ######################################
+        self.wait(3000)
+
+        if not self.find( "vendas_pdv_btn_sangria_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_sangria_2407")
         self.click()
         
 

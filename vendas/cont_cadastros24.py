@@ -32,11 +32,11 @@ class Bot(DesktopBot) :
                           message="Erro ao executar o Bot",
                           alert_type=AlertType.ERROR)
 
-
+       
 
 
     def action(self,execution=None) :
-        """
+        
         #######################################################
         ############# COMEÇO CONTABIL - CADASTROS #############
         #######################################################
@@ -4003,21 +4003,21 @@ class Bot(DesktopBot) :
         self.click()
         
         self.wait(2000)
-        if not self.find( "cont_plano_financeiro_15", matching=0.97, waiting_time=10000):
-            not_found("cont_plano_financeiro_15")
-        self.click_relative(84, 26)
-        self.wait(2000)
-        self.type_keys_with_interval(100,"0010010")
-        if not self.find( "cont_loc_cod_fiscais_5", matching=0.97, waiting_time=10000):
-            not_found("cont_loc_cod_fiscais_5")
-        self.click()
+        #if not self.find( "cont_plano_financeiro_15", matching=0.97, waiting_time=10000):
+        #    not_found("cont_plano_financeiro_15")
+        #self.click_relative(84, 26)
+        #self.wait(2000)
+        #self.type_keys_with_interval(100,"0010010")
+        #if not self.find( "cont_loc_cod_fiscais_5", matching=0.97, waiting_time=10000):
+        #    not_found("cont_loc_cod_fiscais_5")
+        #self.click()
+        #
+        #if not self.find( "cont_24_botao_selecionar_contabil", matching=0.97, waiting_time=10000):
+        #    not_found("cont_24_botao_selecionar_contabil")
+        #self.click()
         
-        if not self.find( "cont_24_botao_selecionar_contabil", matching=0.97, waiting_time=10000):
-            not_found("cont_24_botao_selecionar_contabil")
-        self.click()
-        
-        self.wait(2000)
-        self.backspace()
+        #self.wait(2000)
+        #self.backspace()
         
         self.wait(1000)
 
@@ -4033,8 +4033,8 @@ class Bot(DesktopBot) :
             not_found("cont_24_botao_selecionar_contabil")
         self.click()
         self.wait(2000)
+        self.backspace()
         
-        self.enter()
         
         self.wait(2000)
         if not self.find( "cont_classificacao_17", matching=0.97, waiting_time=10000):
@@ -4219,7 +4219,7 @@ class Bot(DesktopBot) :
         #     not_found("cont_2_agrupamento_clientes")
         # self.click()
         # self.wait(2000)
-
+        
         if not self.find( "cont_codigo_contabeis_multi_empresa", matching=0.97, waiting_time=10000):
             not_found("cont_codigo_contabeis_multi_empresa")
         self.click()
@@ -4228,6 +4228,8 @@ class Bot(DesktopBot) :
             not_found("cont_codigo_contabil_client_22")
         self.click_relative(63, 29)
         self.wait(4000)
+        self.type_down()
+        self.wait(1000)
         self.enter()
         self.wait(2000)
         if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
@@ -5391,7 +5393,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
         
-        """
+        
         ################################################################################################
         ########### CADASTRO -> PLANO DE CONTAS, CUSTOS E FINCEIRO -> PLANO DE CONTAS - F4 #############
         ################################################################################################
@@ -5500,7 +5502,7 @@ class Bot(DesktopBot) :
         #########################################################################################################
         ########### CADASTRO -> PLANO DE CONTAS, CUSTOS E FINCEIRO -> MANUTENÇÃO DO PLANO DE CONTAS #############
         #########################################################################################################
-
+        self.wait(3000)
         if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
             not_found("cont_cadastros_menu_princ_opc_08")
         self.click()
@@ -7867,7 +7869,7 @@ class Bot(DesktopBot) :
         ################################# FIM DE CADASTROS #######################################
         ##########################################################################################
         ##########################################################################################
-
+        
 
 
 def not_found(label) :

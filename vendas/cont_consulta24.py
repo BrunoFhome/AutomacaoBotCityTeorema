@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        
+        """
         ######################### COMEÇO DE CONSULTAS ##########################
 
         ########################################################################
@@ -1121,7 +1121,7 @@ class Bot(DesktopBot) :
         # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
 
 
-
+        
         ###############################################################################################
         ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> SUBGRUPOS ###########
         ###############################################################################################
@@ -2120,7 +2120,7 @@ class Bot(DesktopBot) :
         self.click()
 
 
-
+        
         ###############################################################################################
         ################## RELATORIOS -> MOVIMENTO FISCAL -> APURAÇÃO DE IMPOSTO  #####################
         ###############################################################################################
@@ -3098,7 +3098,7 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
         self.wait(1000)
-        
+        """
         ###############################################################################################
         ################## RELATORIOS -> MOVIMENTO FISCAL -> FATURAMENTO EMPRESA  #####################
         ###############################################################################################
@@ -4498,9 +4498,9 @@ class Bot(DesktopBot) :
         if not self.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_x_geral_fechar_mat_imp")
         self.click()
-        self.wait(8000)
-        if not self.find( "cont_btn_retornar_relacao_diario_24", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_retornar_relacao_diario_24")
+        self.wait(15000)
+        if not self.find( "cont_relatorios_diario_btn_retornar", matching=0.97, waiting_time=10000):
+            not_found("cont_relatorios_diario_btn_retornar")
         self.click()
         
         
@@ -4906,9 +4906,9 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-        if not self.find( "cont_relat_conf_codigo_fiscal_rel", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_conf_codigo_fiscal_rel")
-        self.click_relative(66, 21)
+        if not self.find( "cont_cod_fiscal_relatorios_rel_btn_2", matching=0.97, waiting_time=10000):
+            not_found("cont_cod_fiscal_relatorios_rel_btn_2")
+        self.click_relative(68, 24)
 
         self.wait(1000)
         if not self.find( "cont_localizar_btn_relatorios_mov_contabil", matching=0.97, waiting_time=10000):

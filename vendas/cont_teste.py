@@ -428,12 +428,8 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_btn_grafico_dlpa_relatorios", matching=0.97, waiting_time=10000):
             not_found("cont_btn_grafico_dlpa_relatorios")
         bot.click()
-        if not bot.find( "cont_relat_mov_cont_cliente_forn_grupo", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_mov_cont_cliente_forn_grupo")
-        bot.click_relative(54, 24)
         
-       
-       
+        
        
         if not bot.find( "cont_botao_close_impressao", matching=0.97, waiting_time=10000):
             not_found("cont_botao_close_impressao")
@@ -444,30 +440,18 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_btn_ok_gravacao", matching=0.97, waiting_time=10000):
             not_found("cont_btn_ok_gravacao")
         bot.click()
-        if not bot.find( "cont_relatorios_patrimonio_etiquetas", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_patrimonio_etiquetas")
-        bot.click()
+        
         if not bot.find( "cont_relat_patrimonio_btn_adicionar", matching=0.97, waiting_time=10000):
             not_found("cont_relat_patrimonio_btn_adicionar")
         bot.click()
-        if not bot.find( "cont_btn_seleciona_patrimonio_etiqueta", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_seleciona_patrimonio_etiqueta")
-        bot.click_relative(22, 23)
-        if not bot.find( "cont_relat_patrimonio_etiqueta_2_impress", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_patrimonio_etiqueta_2_impress")
-        bot.click()
-        if not bot.find( "cont_relat_patri_selec_impressora", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_patri_selec_impressora")
-        bot.click_relative(213, 25)
+        
+        
+        
         if not bot.find( "cont_btn_impressao_relat_patri", matching=0.97, waiting_time=10000):
             not_found("cont_btn_impressao_relat_patri")
         bot.click()
-        if not bot.find( "cont_relatorios_emissoes_princ", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_emissoes_princ")
-        bot.click()
-        if not bot.find( "cont_relatorios_emissoes_valida_pr_sintegra", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_emissoes_valida_pr_sintegra")
-        bot.click()
+        
+        
         if not bot.find( "cont_relatorios_emissao_btn_gerar", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_emissao_btn_gerar")
         bot.click()
@@ -483,109 +467,116 @@ class Bot(DesktopBot) :
         if not bot.find( "cont_btn_ok_geracao_sucedida", matching=0.97, waiting_time=10000):
             not_found("cont_btn_ok_geracao_sucedida")
         bot.click()
-        if not bot.find( "cont_relatorios_emissoes_giad", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_emissoes_giad")
-        bot.click()
+        
         if not bot.find( "cont_btn_geracao_ok_emissao", matching=0.97, waiting_time=10000):
             not_found("cont_btn_geracao_ok_emissao")
         bot.click()
-        if not bot.find( "cont_btn_arquivo_gerado_sucesso", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_arquivo_gerado_sucesso")
-        bot.click_relative(308, 47)
-        if not bot.find( "cont_btn_relator_emissao_giad_empresa", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_relator_emissao_giad_empresa")
-        bot.click_relative(43, 22)
+        
         if not bot.find( "cont_btn_importar_emissoes_rel_giad", matching=0.97, waiting_time=10000):
             not_found("cont_btn_importar_emissoes_rel_giad")
         bot.click()
-        if not bot.find( "cont_btn_import_com_sucesso_ok", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_import_com_sucesso_ok")
-        bot.click_relative(301, 47)
+        
         if not bot.find( "cont_btn_gerar_relator_emissao_giad", matching=0.97, waiting_time=10000):
             not_found("cont_btn_gerar_relator_emissao_giad")
         bot.click()
-        if not bot.find( "cont_relatorios_emissoes_siscred", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_emissoes_siscred")
-        bot.click()
+       
         if not bot.find( "cont_btn_excluir_movimentos_opc_14", matching=0.97, waiting_time=10000):
             not_found("cont_btn_excluir_movimentos_opc_14")
         bot.click()
-        if not bot.find( "cont_relatorios_mov_modalidade_acumulo", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mov_modalidade_acumulo")
-        bot.click()
-        if not bot.find( "cont_relat_emissoes_dfc", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissoes_dfc")
-        bot.click()
         
-        if not bot.find( "cont_relat_emissoes_siss", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissoes_siss")
-        bot.click()
+       
         if not bot.find( "cont_relat_emissoes_btn_ok_gerar", matching=0.97, waiting_time=10000):
             not_found("cont_relat_emissoes_btn_ok_gerar")
         bot.click()
-        if not bot.find( "cont_relat_emissoes_dime", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissoes_dime")
-        bot.click()
-        if not bot.find( "cont_relat_emissoes_dime_empresa_info", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissoes_dime_empresa_info")
-        bot.click_relative(45, 22)
+        
+        
         if not bot.find( "cont_relat_emissoes_dime_calcular", matching=0.97, waiting_time=10000):
             not_found("cont_relat_emissoes_dime_calcular")
         bot.click()
         if not bot.find( "cont_relatorios_emissoes_dime_importar", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_emissoes_dime_importar")
         bot.click()
-        if not bot.find( "cont_relat_emissoes_dime_imp_sucesso", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissoes_dime_imp_sucesso")
-        bot.click_relative(306, 48)
+        
         if not bot.find( "cont_relat_emissoes_dime_gerar_inf", matching=0.97, waiting_time=10000):
             not_found("cont_relat_emissoes_dime_gerar_inf")
         bot.click()
-        if not bot.find( "cont_relat_emissao_inf_gerada_sucesso", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissao_inf_gerada_sucesso")
-        bot.click_relative(306, 49)
+        
         if not bot.find( "cont_relat_emissoes_dime_gerar_arquivo", matching=0.97, waiting_time=10000):
             not_found("cont_relat_emissoes_dime_gerar_arquivo")
         bot.click()
         if not bot.find( "cont_btn_impressao_relat_emissao_demi", matching=0.97, waiting_time=10000):
             not_found("cont_btn_impressao_relat_emissao_demi")
         bot.click()
-        if not bot.find( "cont_impressao_grafica_relat_emissao_demi", matching=0.97, waiting_time=10000):
-            not_found("cont_impressao_grafica_relat_emissao_demi")
-        bot.click()
-        if not bot.find( "cont_relat_emissao_dief", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissao_dief")
-        bot.click()
-        if not bot.find( "cont_relat_emissoes_dirf_ret", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissoes_dirf_ret")
-        bot.click()
-        if not bot.find( "cont_relat_emissao_dirf_empresa_gerac", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissao_dirf_empresa_gerac")
-        bot.click_relative(49, 26)
-        if not bot.find( "cont_relat_emissao_empresa_dirf", matching=0.97, waiting_time=10000):
-            not_found("cont_relat_emissao_empresa_dirf")
-        bot.click_relative(47, 24)
+        
         if not bot.find( "cont_relat_emissao_dirf_gerar", matching=0.97, waiting_time=10000):
             not_found("cont_relat_emissao_dirf_gerar")
         bot.click()
-        if not bot.find( "cont_relatorios_relatorio_lmp", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_relatorio_lmp")
+        
+        if not bot.find( "cont_vendas_pdv_btn_vendas_2407", matching=0.97, waiting_time=10000):
+            not_found("cont_vendas_pdv_btn_vendas_2407")
         bot.click()
-        if not bot.find( "cont_btn_data_relatorios_lmp", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_data_relatorios_lmp")
-        bot.click_relative(26, 7)
-        if not bot.find( "cont_relatorios_mapa_resumo", matching=0.97, waiting_time=10000):
-            not_found("cont_relatorios_mapa_resumo")
+        if not bot.find( "vendas_pdv_btn_localizar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_localizar_opc_2407")
         bot.click()
-        if not bot.find( "cont_importacoes_area_de_trabalho_pasta", matching=0.97, waiting_time=10000):
-            not_found("cont_importacoes_area_de_trabalho_pasta")
+        if not bot.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_selecionar_opc_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_gravar_nf_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_gravar_nf_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_entregar_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_entregar_opc_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_recomecar_24_07", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_recomecar_24_07")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_vendas_mais_opc_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_vendas_mais_opc_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_documentos_24_07", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_documentos_24_07")
         bot.click()
         
-        if not bot.find( "cont_pasta_importacoes_geracoes_contabil", matching=0.97, waiting_time=10000):
-            not_found("cont_pasta_importacoes_geracoes_contabil")
+        if not bot.find( "vendas_pdv_f8_simulacao_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_f8_simulacao_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_f11_recup_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_f11_recup_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_filtragem_cnpj_dupli_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_filtragem_cnpj_dupli_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_continuar_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_continuar_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_agenda_os_relativo", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_agenda_os_relativo")
+        bot.click_relative(94, 11)
+        if not bot.find( "vendas_pdv_btn_cadastros_2407_menu", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_cadastros_2407_menu")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_excluir_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_excluir_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_chamadas_menu_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_chamadas_menu_2407")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_retornar_2407_pesquisa", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_retornar_2407_pesquisa")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_doc_e_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_doc_e_2407")
         bot.click()
         
-       
+        if not bot.find( "vendas_pdv_btn_processos_rel_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_processos_rel_2407")
+        bot.click_relative(79, 18)
+        if not bot.find( "vendas_pdv_btn_voltar_2407_release", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_voltar_2407_release")
+        bot.click()
+        if not bot.find( "vendas_pdv_btn_sangria_2407", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_sangria_2407")
+        bot.click()
         
         
       

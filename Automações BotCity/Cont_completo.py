@@ -7,7 +7,7 @@ maestro = BotMaestroSDK.from_sys_args()
 execution = maestro.get_execution()
 
 """ 
-CÓDIGO FEITO PARA SISTEMA CONTABIL 24.05 - PARTE DE CADASTROS
+CÓDIGO FEITO PARA SISTEMA CONTABIL 24.07
 O CÓDIGO FOI FEITO UTILIZANDO A RESOLUÇÃO 1366 x 768 com TAMANHO DE TEXTO 100%
 O SISTEMA TAMBÉM DEVE ESTAR EM TELA CHEIA PARA QUE FUNCIONE CORRETAMENTE
 BASE - ICTUS 0000024
@@ -35,9 +35,9 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        
+        """
         #######################################################
-        ############# COMEÇO CONTABIL - CADASTROS #############
+        ############# COMEÇO CONTABIL - COMPLETO ##############
         #######################################################
         
         self.execute(r"C:\Teorema\bin\contabil")
@@ -3369,7 +3369,7 @@ class Bot(DesktopBot) :
         ############################################################################################
         ####################### CADASTROS -> PARAMETROS FISCAIS  -> SITUAÇÕES ######################
         ############################################################################################
-
+        self.wait(2000)
 
         if not self.find( "cont_cad_menu_princ_opc_19_2", matching=0.97, waiting_time=10000):
             not_found("cont_cad_menu_princ_opc_19_2")
@@ -3728,14 +3728,14 @@ class Bot(DesktopBot) :
         self.wait(2000)
         self.enter()
         #CANCELAR NO LUGAR DE SALVAR
-        if not self.find( "cont_cancelar_bot_itens_23", matching=0.97, waiting_time=10000):
-            not_found("cont_cancelar_bot_itens_23")
-        self.click()
-        self.wait(2000)
-        self.enter()
-        #if not self.find( "cont_salvar_regiao_cad_3", matching=0.97, waiting_time=10000):
-        #    not_found("cont_salvar_regiao_cad_3")
+        #if not self.find( "cont_cancelar_bot_itens_23", matching=0.97, waiting_time=10000):
+        #    not_found("cont_cancelar_bot_itens_23")
         #self.click()
+        #self.wait(2000)
+        #self.enter()
+        if not self.find( "cont_salvar_regiao_cad_3", matching=0.97, waiting_time=10000):
+            not_found("cont_salvar_regiao_cad_3")
+        self.click()
         if not self.find( "cont_retornar_parametro", matching=0.97, waiting_time=10000):
             not_found("cont_retornar_parametro")
         self.click()
@@ -3746,20 +3746,20 @@ class Bot(DesktopBot) :
         if not self.find( "cont_localizar_pais", matching=0.97, waiting_time=10000):
             not_found("cont_localizar_pais")
         self.click()
-        #if not self.find( "cont_achar_123_situacoes", matching=0.97, waiting_time=10000):
-        #    not_found("cont_achar_123_situacoes")
-        #self.click()
+        if not self.find( "cont_achar_123_situacoes", matching=0.97, waiting_time=10000):
+            not_found("cont_achar_123_situacoes")
+        self.click()
         
         self.wait(2000)
-        #if not self.find( "cont_editar_qa_12_pais", matching=0.97, waiting_time=10000):
-        #    not_found("cont_editar_qa_12_pais")
-        #self.click()
-        #self.wait(2000)
-        #if not self.find( "cont_excluir_pais_param", matching=0.97, waiting_time=10000):
-        #    not_found("cont_excluir_pais_param")
-        #self.click()
-        #self.wait(2000)
-        #self.enter()
+        if not self.find( "cont_editar_qa_12_pais", matching=0.97, waiting_time=10000):
+            not_found("cont_editar_qa_12_pais")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_excluir_pais_param", matching=0.97, waiting_time=10000):
+            not_found("cont_excluir_pais_param")
+        self.click()
+        self.wait(2000)
+        self.enter()
         if not self.find( "cont_retornar_parametro", matching=0.97, waiting_time=10000):
             not_found("cont_retornar_parametro")
         self.click()
@@ -6305,12 +6305,12 @@ class Bot(DesktopBot) :
         self.wait(2000)
         self.click() #MOUSE PAROU EM CIMA DE RETORNAR PARA MENU, CLICAR NOVAMENTE PARA RETORNAR
         
-        #######################################
-        #######################################
-        # CADASTROS -> IMPOSTO PRESUMIDO ######
-        #######################################
-        #######################################
-
+        
+        ################################################################################################
+        ############################## CADASTROS -> IMPOSTO PRESUMIDO ##################################
+        ################################################################################################
+        
+        
         self.wait(3000)
         if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
             not_found("cont_cadastros_menu_princ_opc_08")
@@ -7186,7 +7186,7 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
 
-        
+        """
         ###################################################################################################
         ###################################### CADASTROS -> SERVIÇOS ######################################
         ###################################################################################################
@@ -11969,7 +11969,7 @@ class Bot(DesktopBot) :
         # AQUI ACABA O CODIGO QUE SE REPETE 
         #
 
-
+        
         ####################################################################################
         ############################# FECHAMENTO FISCAL -> IPI #############################
         ####################################################################################
@@ -12463,11 +12463,11 @@ class Bot(DesktopBot) :
         #######################################################################################
         #######################################################################################
 
-
+        
         ########################################################################
         ####### CONSULTAS -> ANALISE DE BALANÇO VERTICAL E HORIZONTAL ##########
         ########################################################################
-        self.wait(2000)
+        self.wait(3000)
         if not self.find( "cont_consultas_menu_prin_2", matching=0.97, waiting_time=10000):
             not_found("cont_consultas_menu_prin_2")
         self.click()
@@ -14734,7 +14734,7 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
 
-
+        
         ###############################################################################################
         ############### RELATORIOS -> MOVIMENTO FISCAL -> DEMONSTRATIVO DE RETENÇÕES  #################
         ###############################################################################################
@@ -15803,7 +15803,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
 
-
+        
         ###############################################################################################
         ################## RELATORIOS -> MOVIMENTO FISCAL -> LIVRO REG CONTROLE  ######################
         ###############################################################################################
@@ -15843,7 +15843,7 @@ class Bot(DesktopBot) :
             not_found("cont_relatorios_mov_fiscal_icms_imprimir")
         self.click()
 
-        self.wait(15000)
+        self.wait(20000)
 
         if not self.find( "cont_cons_mov_x_fechar", matching=0.97, waiting_time=10000):
             not_found("cont_cons_mov_x_fechar")
@@ -16809,7 +16809,7 @@ class Bot(DesktopBot) :
             not_found("cont_btn_grafico_dlpa_relatorios")
         self.click()
         # TEMPO DE DEMORA MUITO LONGO
-        self.wait(55000)
+        self.wait(180000)
 
         if not self.find( "cont_relatorios_x_geral_fechar_mat_imp", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_x_geral_fechar_mat_imp")
@@ -17043,7 +17043,7 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
 
-
+        
         ###############################################################################################
         ############# RELATORIOS -> MOVIMENTO CONTABIL -> Movimento cliente/fornecedor  ###############
         ###############################################################################################
@@ -17973,7 +17973,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(1000)
 
-
+        
         ###############################################################################################
         ######################### RELATORIOS -> EMISSÕES -> GIAD ########################
         ###############################################################################################
@@ -18582,7 +18582,7 @@ class Bot(DesktopBot) :
             not_found("cont_btn_grafico_dlpa_relatorios")
         self.click()
 
-        self.wait(12000)
+        self.wait(20000)
 
         if not self.find( "cont_relatorios_impressao_btn_x_verm", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_impressao_btn_x_verm")
@@ -18959,7 +18959,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(12000)
         # ARQUIVO GERADO COM SUCESSO
-
+        
         if not self.find( "cont_btn_geracao_ok_emissao", matching=0.97, waiting_time=10000):
             not_found("cont_btn_geracao_ok_emissao")
         self.click()
@@ -19037,7 +19037,7 @@ class Bot(DesktopBot) :
         if not self.find( "cont_btn_salvar_emissao_geracao", matching=0.97, waiting_time=10000):
             not_found("cont_btn_salvar_emissao_geracao")
         self.click()
-        self.wait(7000)
+        self.wait(15000)
         # ARQUIVO GERADO COM SUCESSO
         if not self.find( "cont_relat_emissoes_btn_ok_gerar", matching=0.97, waiting_time=10000):
             not_found("cont_relat_emissoes_btn_ok_gerar")

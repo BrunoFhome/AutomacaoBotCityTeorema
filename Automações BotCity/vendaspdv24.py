@@ -7,7 +7,7 @@ maestro = BotMaestroSDK.from_sys_args()
 execution = maestro.get_execution()
 
 """
-CÓDIGO FEITO PARA SISTEMA VENDAS PDV 24.05
+CÓDIGO FEITO PARA SISTEMA VENDAS PDV 24.07
 O CÓDIGO FOI FEITO UTILIZANDO A RESOLUÇÃO 1366 x 768 com TAMANHO DE TEXTO 100%
 O SISTEMA TAMBÉM DEVE ESTAR EM TELA CHEIA PARA QUE FUNCIONE CORRETAMENTE
 BASE - ICTUS 0000024
@@ -38,7 +38,7 @@ class Bot(DesktopBot) :
         
         ##################################################################
                             ####---LOGIN---####
-        
+        """
         self.execute(r"C:\Teorema\bin\vendas_pdv")
         self.wait(5000)
         self.tab()
@@ -5435,14 +5435,14 @@ class Bot(DesktopBot) :
         self.enter()
         self.wait(2000)
         
-        
+        """
         ######################################
         ############### SANGRIA ##############
         ######################################
         self.wait(3000)
 
-        if not self.find( "vendas_pdv_btn_sangria_2407", matching=0.97, waiting_time=10000):
-            not_found("vendas_pdv_btn_sangria_2407")
+        if not self.find( "vendas_pdv_btn_sangria_24_07", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_sangria_24_07")
         self.click()
         
 

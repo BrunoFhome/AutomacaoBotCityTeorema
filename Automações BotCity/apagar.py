@@ -29,7 +29,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-
+        self.wait(2000)
         x = 0
         while x < 25:
             self.wait(1000)

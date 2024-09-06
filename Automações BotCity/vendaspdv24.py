@@ -36,13 +36,15 @@ class Bot(DesktopBot) :
 
     def action(self,execution=None) :
         
-        ##################################################################
-                            ####---LOGIN---####
-        """
+        #########################################################################
+        ###############################---LOGIN---###############################
+        #########################################################################
         self.execute(r"C:\Teorema\bin\vendas_pdv")
-        self.wait(5000)
-        self.tab()
+        self.wait(8000)
         
+        if not self.find( "vendas_pdv_balcao_caixa_btn_24_07", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_balcao_caixa_btn_24_07")
+        self.click_relative(-21, 72)
 
         self.type_keys_with_interval(100,"teorema")
         self.wait(1000)
@@ -663,6 +665,7 @@ class Bot(DesktopBot) :
             
         self.click_relative(11, 26)
         
+        
         self.type_keys_with_interval(1,"123")
         self.tab()
         self.type_keys_with_interval(1,"123")
@@ -694,14 +697,17 @@ class Bot(DesktopBot) :
         self.find_button( "botao_localizar_observações_1")
             
         self.click()
-        
+        self.wait(2000)
         if not self.find( "vendas_pdv_btn_selecionar_opc_2407", matching=0.97, waiting_time=10000):
             not_found("vendas_pdv_btn_selecionar_opc_2407")
         self.click()
-        
+        self.wait(1000)
         self.tab()
+        self.wait(1000)
         self.space()
         self.space()
+        self.tab()
+        self.wait(1000)
         self.tab()
 
         while x < 6 :
@@ -1668,9 +1674,10 @@ class Bot(DesktopBot) :
             #("clicar_botao_ano_atual_data")
         self.click()
         
-        self.find_button( "botao_para_datas_financeiro_relativo" ) 
-            #("botao_para_datas_financeiro_relativo")
-        self.click_relative(-37, 20)
+        self.wait(2000)
+        if not self.find( "vendas_pdv_financeiro_btn_data_rel", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_financeiro_btn_data_rel")
+        self.click_relative(27, 10)
         
         self.find_button( "botao_carregar_ano_data_financeiro" ) 
             #("botao_carregar_ano_data_financeiro")
@@ -5435,7 +5442,7 @@ class Bot(DesktopBot) :
         self.enter()
         self.wait(2000)
         
-        """
+        
         ######################################
         ############### SANGRIA ##############
         ######################################

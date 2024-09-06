@@ -577,6 +577,9 @@ class Bot(DesktopBot) :
         if not bot.find( "vendas_pdv_btn_sangria_2407", matching=0.97, waiting_time=10000):
             not_found("vendas_pdv_btn_sangria_2407")
         bot.click()
+        if not bot.find( "vendas_pdv_btn_sangria_24_07", matching=0.97, waiting_time=10000):
+            not_found("vendas_pdv_btn_sangria_24_07")
+        bot.click()
         
         
       

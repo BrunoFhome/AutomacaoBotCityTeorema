@@ -18857,7 +18857,8 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
         self.enter()
-        self.wait(40000) # tempo de espera importação
+        self.wait(40000)
+        # tempo de espera importação
 
         # Cadastro de lotes
         #self.type_keys_with_interval(100,"teste123")
@@ -18870,7 +18871,7 @@ class Bot(DesktopBot) :
         #if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
         #    not_found("cont_retorn_opc_23_imposto")
         #self.click()
-
+        
         # EXCLUIR
 
         if not self.find( "cont_btn_excluir_importacoes_export", matching=0.97, waiting_time=10000):
@@ -19014,7 +19015,7 @@ class Bot(DesktopBot) :
         if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
             not_found("cont_retorn_opc_23_imposto")
         self.click()
-
+        
         ##########################################################################################
         ################# IMPORTACOES E EXPORTACOES -> DOMINIO -> EXPORTAÇÃO #####################
         ##########################################################################################
@@ -19029,8 +19030,8 @@ class Bot(DesktopBot) :
             not_found("cont_importacoes_menu_dominio_btn")
         self.click()
         self.wait(1000)
-        if not self.find( "cont_importacoes_dominio_export", matching=0.97, waiting_time=10000):
-            not_found("cont_importacoes_dominio_export")
+        if not self.find( "cont_24_07_imp_exportacao_btn_exp", matching=0.97, waiting_time=10000):
+            not_found("cont_24_07_imp_exportacao_btn_exp")
         self.click()
         self.wait(1000)
         if not self.find( "cont_import_domin_export_empresa_inf", matching=0.97, waiting_time=10000):

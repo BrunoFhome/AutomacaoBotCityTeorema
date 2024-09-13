@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        """
+        
         #######################################################
         ############# COMEÇO CONTABIL - COMPLETO ##############
         #######################################################
@@ -2473,21 +2473,59 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(3000)
         self.enter()
-        self.wait(1000)
-        self.enter()
-        self.wait(1000)
-        self.enter()
-        self.wait(1000)
-        self.enter()
         if not self.find( "cont_retornar_parametro", matching=0.97, waiting_time=10000):
             not_found("cont_retornar_parametro")
         self.click()
         self.wait(1000)
         self.click()
 
-        
-    
 
+        #################################################################################
+        #################### EXCLUINDO PARAMETRO DA EMPRESA DE TESTES ###################
+        #################################################################################
+
+        self.wait(3000)
+        if not self.find( "cont_cad_menu_princ_opc_19_2", matching=0.97, waiting_time=10000):
+            not_found("cont_cad_menu_princ_opc_19_2")
+        self.click()
+        self.wait(1000)
+        
+        
+        if not self.find( "cont_parametrosfin_23", matching=0.97, waiting_time=10000):
+            not_found("cont_parametrosfin_23")
+        self.click()
+        if not self.find( "cont_param_empresa_f9_fin", matching=0.97, waiting_time=10000):
+            not_found("cont_param_empresa_f9_fin")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_loc_empresa_criada", matching=0.97, waiting_time=10000):
+            not_found("cont_loc_empresa_criada")
+        self.click()
+        self.wait(1000)
+
+        if not self.find( "cont_btn_parametros_empresa_exclusao_teste", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_parametros_empresa_exclusao_teste")
+        self.click()
+        self.wait(2000)
+
+        if not self.find( "cont_btn_editar_parametros_empresa_excluir", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_editar_parametros_empresa_excluir")
+        self.click()
+        self.wait(1000)
+        if not self.find( "cont_btn_excluir_24_07_parametros_fiscais", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_excluir_24_07_parametros_fiscais")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_btn_sim_exclusao_parametros_teste", matching=0.97, waiting_time=10000):
+            not_found("cont_btn_sim_exclusao_parametros_teste")
+        self.click()
+        self.wait(2000)
+        if not self.find( "cont_retornar_parametro", matching=0.97, waiting_time=10000):
+            not_found("cont_retornar_parametro")
+        self.click()
+        self.wait(1000)
+        self.click()
+        self.wait(2000)
                          
         
         #################################################################################
@@ -12453,7 +12491,7 @@ class Bot(DesktopBot) :
         if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
             not_found("cont_retorn_opc_23_imposto")
         self.click()
-
+        
         #######################################################################################
         #######################################################################################
         ################################# FINAL DE MOVIMENTOS #################################
@@ -12467,7 +12505,7 @@ class Bot(DesktopBot) :
         #######################################################################################
         #######################################################################################
         
-        """
+        
         ########################################################################
         ####### CONSULTAS -> ANALISE DE BALANÇO VERTICAL E HORIZONTAL ##########
         ########################################################################
@@ -15388,7 +15426,7 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
         self.wait(1000)
-       
+        
         ###############################################################################################
         ################ RELATORIOS -> MOVIMENTO FISCAL -> LIVROS PARA COD FISCAL  ####################
         ###############################################################################################
@@ -17285,7 +17323,7 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
 
-
+        
         ###############################################################################################
         ############## RELATORIOS -> Conferencias -> Conferencias de notas fiscais  ###################
         ###############################################################################################
@@ -17356,9 +17394,9 @@ class Bot(DesktopBot) :
         #    not_found("cont_localizar_btn_relatorios_mov_contabil")
         #self.click() 
         self.wait(1000)
-        if not self.find( "cont_btn_selecionar_relatorios_mov_cont", matching=0.97, waiting_time=10000):
-            not_found("cont_btn_selecionar_relatorios_mov_cont")
-        self.click()
+        #if not self.find( "cont_btn_selecionar_relatorios_mov_cont", matching=0.97, waiting_time=10000):
+        #    not_found("cont_btn_selecionar_relatorios_mov_cont")
+        #self.click()
         self.wait(1000)
 
         if not self.find( "cont_relat_conferen_reduz_inicial", matching=0.97, waiting_time=10000):
@@ -17679,7 +17717,7 @@ class Bot(DesktopBot) :
         if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
             not_found("cont_retorn_opc_23_imposto")
         self.click()
-
+        
         ###############################################################################################
         ############################# RELATORIOS -> PATRIMONIOS ->  RAZÃO #############################
         ###############################################################################################

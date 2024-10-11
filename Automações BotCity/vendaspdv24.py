@@ -39,7 +39,7 @@ class Bot(DesktopBot) :
         #########################################################################
         ###############################---LOGIN---###############################
         #########################################################################
-        self.execute(r"C:\Teorema\bin\vendas_pdv")
+        self.execute(r"C:\Teorema\bin\vendas_pdv.exe")
         self.wait(8000)
         
         if not self.find( "vendas_pdv_balcao_caixa_btn_24_07", matching=0.97, waiting_time=10000):
@@ -245,7 +245,7 @@ class Bot(DesktopBot) :
         self.click_relative(12, 35)
         self.wait(1000)
 
-        self.type_keys_with_interval(1,"112322")
+        self.type_keys_with_interval(1,"116774")
         self.enter()
         self.wait(2000)
         #apartir daq, antes de selecionar o item, adicionar mudanças
@@ -1111,7 +1111,7 @@ class Bot(DesktopBot) :
         self.click()
         
         self.wait(1000)
-        self.type_keys_with_interval(1,"112322")
+        self.type_keys_with_interval(1,"116774")
         self.enter()
         self.find_button( "botao_selecionar_item")
             

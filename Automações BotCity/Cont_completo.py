@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        
+        """
         #######################################################
         ############# COMEÇO CONTABIL - COMPLETO ##############
         #######################################################
@@ -1207,7 +1207,7 @@ class Bot(DesktopBot) :
         #################################################################################
         ######################### EXCLUIR O CADASTRO DA EMPRESA #########################
         #################################################################################
-
+        
         self.wait(3000)
         if not self.find( "cont_cad_menu_princ_opc_19_2", matching=0.97, waiting_time=10000):
             not_found("cont_cad_menu_princ_opc_19_2")
@@ -2526,7 +2526,7 @@ class Bot(DesktopBot) :
         self.wait(1000)
         self.click()
         self.wait(2000)
-                         
+        
         
         #################################################################################
         ############### CADASTROS -> PARAMETROS -> PARAMETROS TRANSPORTES ###############
@@ -2670,11 +2670,11 @@ class Bot(DesktopBot) :
         self.wait(1000)
         self.wait(3000)
         self.click()
-
+        
         ############################################################################################
         ############### CADASTROS -> PARAMETROS FISCAIS  -> REGIONALIZAÇÃO -> REGIOES ##############
         ############################################################################################
-
+        self.wait(2000)
         
         if not self.find( "cont_cad_menu_princ_opc_19_2", matching=0.97, waiting_time=10000):
             not_found("cont_cad_menu_princ_opc_19_2")
@@ -7225,13 +7225,13 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
 
-        
+        """
         ###################################################################################################
         ###################################### CADASTROS -> SERVIÇOS ######################################
         ###################################################################################################
         
         self.wait(3000)
-        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+        if not self.find( "cont_cadastros_m enu_princ_opc_08", matching=0.97, waiting_time=10000):
             not_found("cont_cadastros_menu_princ_opc_08")
         self.click()
         self.wait(1000)

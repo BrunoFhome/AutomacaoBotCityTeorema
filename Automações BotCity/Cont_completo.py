@@ -3001,7 +3001,7 @@ class Bot(DesktopBot) :
         ################ CADASTROS -> PARAMETROS FISCAIS  -> CODIGOS FISCAIS (CFOP) ################
         ############################################################################################
 
-
+        self.wait(2000)
 
         if not self.find( "cont_cad_menu_princ_opc_19_2", matching=0.97, waiting_time=10000):
             not_found("cont_cad_menu_princ_opc_19_2")
@@ -7225,13 +7225,13 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
 
-        """
+        
         ###################################################################################################
         ###################################### CADASTROS -> SERVIÇOS ######################################
         ###################################################################################################
         
         self.wait(3000)
-        if not self.find( "cont_cadastros_m enu_princ_opc_08", matching=0.97, waiting_time=10000):
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
             not_found("cont_cadastros_menu_princ_opc_08")
         self.click()
         self.wait(1000)
@@ -7748,7 +7748,7 @@ class Bot(DesktopBot) :
         if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
             not_found("cont_retorn_opc_23_imposto")
         self.click()
-
+        
         ################################################################################################
         ############################# CADASTROS -> DOCUMENTAÇOES -> DOCUMENTOS #########################
         ################################################################################################
@@ -13589,7 +13589,7 @@ class Bot(DesktopBot) :
         # AQUI CONFERE SE "ALFABETICA" ESTA DESMARCADA, CASO ESTEJA, RETORNA
 
 
-
+        """
         ###############################################################################################
         ########## RELATORIOS -> CADASTROS ->  ITENS DE ESTOQUE -> AGRUPAMENTO -> SUBGRUPOS ###########
         ###############################################################################################
@@ -14142,7 +14142,7 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
 
-
+        
         ###############################################################################################
         ######################### RELATORIOS -> CADASTROS -> LOCAL COBRANÇA  ##########################
         ###############################################################################################

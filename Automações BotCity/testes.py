@@ -25,6 +25,9 @@
         if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
             not_found("crm_btn_excluir_opc1_2407")
         bot.click()
+        if not bot.find( "crm_botao_nao_importar_dados", matching=0.97, waiting_time=10000):
+            not_found("crm_botao_nao_importar_dados")
+        bot.click()
         
 
 
@@ -127,6 +130,42 @@
         if not bot.find( "crm_relativo_itens_lista_abrir", matching=0.97, waiting_time=10000):
             not_found("crm_relativo_itens_lista_abrir")
         bot.click_relative(-15, 73)
+        if not bot.find( "crm_cadastros_sistemas_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_sistemas_menu")
+        bot.click()
+        if not bot.find( "crm_cadastros_status_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_status_menu")
+        bot.click()
+        if not bot.find( "crm_cadastros_assuntos_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_assuntos_menu")
+        bot.click()
+        if not bot.find( "crm_cadastro_fases_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastro_fases_menu")
+        bot.click()
+        if not bot.find( "crm_cadastro_tipo_de_chamadas_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastro_tipo_de_chamadas_menu")
+        bot.click()
+        if not bot.find( "crm_cadastros_tipos_de_contrato_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_tipos_de_contrato_menu")
+        bot.click()
+        if not bot.find( "crm_cadastros_situacoes_de_contato_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_situacoes_de_contato_menu")
+        bot.click()
+        if not bot.find( "crm_cadastros_status_de_negociacao", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_status_de_negociacao")
+        bot.click()
+        if not bot.find( "crm_cadastros_documentacoes_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_documentacoes_menu")
+        bot.click()
+        if not bot.find( "crm_cadastros_documentos_referenciados", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_documentos_referenciados")
+        bot.click()
+        if not bot.find( "crm_botao_ir_para_ultimo_cadastro", matching=0.97, waiting_time=10000):
+            not_found("crm_botao_ir_para_ultimo_cadastro")
+        bot.click()
+        if not bot.find( "crm_btn_confirmar_cadastro_parametros", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_confirmar_cadastro_parametros")
+        bot.click()
         
 
 

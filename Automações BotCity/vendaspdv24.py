@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        
+        """
         #########################################################################
         ###############################---LOGIN---###############################
         #########################################################################
@@ -924,7 +924,8 @@ class Bot(DesktopBot) :
         
         #FIM DE PRIMEIRA VENDA
 
-
+        
+        self.wait(3000)
         self.find_button( "botao_f2_buscar")
             
         self.click_relative(12, 35)
@@ -1635,7 +1636,7 @@ class Bot(DesktopBot) :
         #self.click()
         
         
-        
+        """
 #######################  F7 FINANCEIRO   ######################
         
 
@@ -3158,7 +3159,7 @@ class Bot(DesktopBot) :
         self.wait(2000)
         #self.enter()
         
-
+        
 #########    observacoes
         self.wait(3000)
         self.enter()
@@ -3402,7 +3403,7 @@ class Bot(DesktopBot) :
         self.wait(2000)
         self.enter()
         
-#aqui comeca o codigo q estou editando, teste.
+
         self.find_button( "acoes_rel_engrenagem_1" ) 
             #("acoes_rel_engrenagem_1")
         self.click_relative(69, 16)
@@ -3432,8 +3433,7 @@ class Bot(DesktopBot) :
         self.key_esc()
         self.wait(1000)
 
-#aqui acaba o codigo q estou editando
-#acontecendo erro ainda, ajeitar para que volte a automação
+
         self.find_button( "botao_exlucir_consulta_adiantamentos_1" ) 
             #("botao_exlucir_consulta_adiantamentos_1")
         self.click()
@@ -3454,7 +3454,7 @@ class Bot(DesktopBot) :
         self.click()
         self.enter()
         
-
+        
 ######## GRADE   #############
 
         self.find_button( "grade_1_abrir_botao_os_test")

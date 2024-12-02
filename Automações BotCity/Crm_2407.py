@@ -43,7 +43,7 @@ class Bot(DesktopBot) :
         #########################################################################
         ###############################---LOGIN---###############################
         #########################################################################
-
+        
         self.execute(r"C:\Teorema\bin\crm.exe")
         self.wait(8000)
         if not bot.find( "crm_achar_botao_login_inicial", matching=0.97, waiting_time=10000):
@@ -593,19 +593,24 @@ class Bot(DesktopBot) :
         if not bot.find( "crm_btn_selecionar_opc1_2407", matching=0.97, waiting_time=10000):
             not_found("crm_btn_selecionar_opc1_2407")
         bot.click()
+        self.wait(2000)
+        
         if not self.find( "cont_usa_precos_da_empresa_busc", matching=0.97, waiting_time=10000):
             not_found("cont_usa_precos_da_empresa_busc")
         self.click_relative(67, 29)
         self.wait(2000)
         self.enter()
-        
-        self.wait(2000)
         if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
             not_found("crm_btn_localizar_opc1_2407")
         bot.click()
         if not bot.find( "crm_btn_selecionar_opc1_2407", matching=0.97, waiting_time=10000):
             not_found("crm_btn_selecionar_opc1_2407")
         bot.click()
+        self.wait(2000)
+        self.wait(1000)
+        
+       
+        
         if not self.find( "cont_usa_situacao_da_empresa_busc", matching=0.97, waiting_time=10000):
             not_found("cont_usa_situacao_da_empresa_busc")
         self.click_relative(68, 31)
@@ -1691,7 +1696,7 @@ class Bot(DesktopBot) :
             not_found("crm_relativo_itens_lista_abrir")
         bot.click_relative(-15, 73)
         
-        self.wait(4000)
+        self.wait(10000)
         if not bot.find( "crm_codigos_padroes_reliativo_item_lista", matching=0.97, waiting_time=10000):
             not_found("crm_codigos_padroes_reliativo_item_lista")
         bot.click_relative(-5, 75)
@@ -1746,6 +1751,7 @@ class Bot(DesktopBot) :
             x += 1
         self.type_keys_with_interval(100,"123")
         self.tab()
+        
         if not self.find( "cont_1_nota_fiscal_rel", matching=0.97, waiting_time=10000):
             not_found("cont_1_nota_fiscal_rel")
         self.click_relative(225, 25)
@@ -1764,9 +1770,9 @@ class Bot(DesktopBot) :
         self.tab()
         self.type_down()
         self.tab()
-        if not self.find( "cont_finalizar_add_5", matching=0.97, waiting_time=10000):
-            not_found("cont_finalizar_add_5")
-        self.click()
+        if not bot.find( "crm_btn_confirmar_cadastro_parametros", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_confirmar_cadastro_parametros")
+        bot.click()
         self.wait(2000)
         
         self.wait(1000)
@@ -2472,8 +2478,8 @@ class Bot(DesktopBot) :
         self.wait(1000)
         self.click()
         self.wait(2000)
-
-       
+ 
+        
         ############################################################################################
         ############### CADASTROS -> PARAMETROS FISCAIS  -> REGIONALIZAÇÃO -> PAISES ###############
         ############################################################################################
@@ -6615,6 +6621,7 @@ class Bot(DesktopBot) :
             not_found("crm_btn_selecionar_opc1_2407")
         bot.click()
         self.wait(1000)
+        self.backspace()
         self.tab()
         self.tab()
         self.wait(1000)
@@ -7235,10 +7242,11 @@ class Bot(DesktopBot) :
             not_found("crm_tabela_precos_tabela_bsc")
         bot.click_relative(49, 47)
         self.wait(2000)
-        
+        self.type_keys_with_interval(100,"00001")
         if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
             not_found("crm_btn_localizar_opc1_2407")
         bot.click()
+
         if not bot.find( "crm_btn_selecionar_opc1_2407", matching=0.97, waiting_time=10000):
             not_found("crm_btn_selecionar_opc1_2407")
         bot.click()
@@ -7548,7 +7556,7 @@ class Bot(DesktopBot) :
         bot.click()
         
         
-               
+        
         #####################################################################
         ############################---FORMULAS---###########################
         #####################################################################
@@ -7562,14 +7570,15 @@ class Bot(DesktopBot) :
         if not self.find( "formulas", matching=0.97, waiting_time=10000):
             self.not_found("formulas")
         self.click()
-        if not self.find( "buscarempresaformulas", matching=0.97, waiting_time=10000):
-            self.not_found("buscarempresaformulas")
-        self.click_relative(178, 38)           
-        if not bot.find( "crm_btn_selecionar_opc1_2407", matching=0.97, waiting_time=10000):
-            not_found("crm_btn_selecionar_opc1_2407")
+        self.wait(2000)
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
         bot.click()
-        self.tab()
-        self.tab()
+        self.wait(2000)
+        if not bot.find( "crm_botao_nao_importar_dados", matching=0.97, waiting_time=10000):
+            not_found("crm_botao_nao_importar_dados")
+        bot.click()
+        self.wait(2000)
         self.type_keys_with_interval(1,'te12!@')
         if not self.find( "salvarenquete", matching=0.97, waiting_time=10000):
             self.not_found("salvarenquete")
@@ -7578,22 +7587,6 @@ class Bot(DesktopBot) :
             not_found("crm_cad_formulas_padroes")
         bot.click()
         self.click()
-        if not self.find( "cancelarformula", matching=0.97, waiting_time=10000):
-            self.not_found("cancelarformula")
-        self.click()           
-        ### abandonar operação ###
-        self.wait(1000)
-        self.enter()
-        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
-            not_found("crm_btn_incluir_princ_24_07")
-        bot.click()
-        #if not self.find( "simexcluirrs", matching=0.97, waiting_time=10000):
-        #    self.not_found("simexcluirrs")
-        #self.click()
-        self.enter()
-        if not bot.find( "crm_btn_selecionar_opc1_2407", matching=0.97, waiting_time=10000):
-            not_found("crm_btn_selecionar_opc1_2407")
-        bot.click()
         if not self.find( "salvarenquete", matching=0.97, waiting_time=10000):
             self.not_found("salvarenquete")
         self.click()
@@ -7843,7 +7836,7 @@ class Bot(DesktopBot) :
         ################################################################################################
         ############### CADASTRO -> CONDICAO DE PAGAMENTO ##########################
         ################################################################################################
-
+        self.wait(2000)
         if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
             not_found("cont_cadastros_menu_princ_opc_08")
         self.click()
@@ -7898,6 +7891,8 @@ class Bot(DesktopBot) :
             self.not_found("selecionarmunicipiovcr")
         self.click()
         self.wait(500)
+        
+        self.wait(2000)
         if not self.find( "operacaobaixafinanceiro", matching=0.97, waiting_time=10000):
             self.not_found("operacaobaixafinanceiro")
         self.click_relative(58, 87)
@@ -7911,6 +7906,13 @@ class Bot(DesktopBot) :
         if not self.find( "planofinanceiro", matching=0.97, waiting_time=10000):
             self.not_found("planofinanceiro")
         self.click_relative(487, 46)
+        self.wait(2000)
+        self.type_keys_with_interval(100,"001001001")
+        self.wait(1000)
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        self.wait(1000)
         if not self.find( "selecionarmunicipiovcr", matching=0.97, waiting_time=10000):
             self.not_found("selecionarmunicipiovcr")
         self.click()
@@ -7976,7 +7978,520 @@ class Bot(DesktopBot) :
             not_found("crm_btn_retornar_opc1_2407")
         bot.click()
 
+        
+        ################################################################################################
+                ########################### CADASTRO -> SISTEMAS #################################
+        ################################################################################################
 
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+        if not bot.find( "crm_cadastros_sistemas_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_sistemas_menu")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"qa12!@")
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        
+        ################################################################################################
+                ########################### CADASTRO -> STATUS #################################
+        ################################################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_cadastros_status_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_status_menu")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12!@")
+        self.shift_tab()
+        x = 0
+        while x < 12:
+            self.type_down()
+            x += 1
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+
+        ################################################################################################
+                ########################### CADASTRO -> ASSUNTOS #################################
+        ################################################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_cadastros_assuntos_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_assuntos_menu")
+        bot.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.type_keys_with_interval(100,"qa12!@")
+
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+
+        ################################################################################################
+                ########################### CADASTRO -> FASES #################################
+        ################################################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_cadastro_fases_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastro_fases_menu")
+        bot.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.type_keys_with_interval(100,"qa12!@")
+
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+
+        ################################################################################################
+          ############################# CADASTRO -> TIPO DE CHAMADAS #################################
+        ################################################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_cadastro_tipo_de_chamadas_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastro_tipo_de_chamadas_menu")
+        bot.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.type_keys_with_interval(100,"qa12!@")
+
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+
+        ################################################################################################
+          ########################### CADASTRO -> TIPOS DE CONTATO #################################
+        ################################################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_cadastros_tipos_de_contrato_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_tipos_de_contrato_menu")
+        bot.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.type_keys_with_interval(100,"qa12!@")
+
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+
+        ################################################################################################
+          ########################### CADASTRO -> SITUAÇÃO DE CONTATO #################################
+        ################################################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_cadastros_situacoes_de_contato_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_situacoes_de_contato_menu")
+        bot.click()
+
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+
+        ################################################################################################
+          ########################### CADASTRO -> STATUS DE NEGOCIAÇÃO ################################
+        ################################################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+
+        if not bot.find( "crm_cadastros_status_de_negociacao", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_status_de_negociacao")
+        bot.click()
+
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.type_keys_with_interval(100,"qa12!@")
+        self.tab()
+        self.tab()
+
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.type_keys_with_interval(100,"qa12")
+        self.wait(1000)
+
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+
+        ################################################################################################
+          ########################### CADASTRO -> DOCUMENTAÇÕES ################################
+        ################################################################################################
+
+        self.wait(2000)
+        if not self.find( "cont_cadastros_menu_princ_opc_08", matching=0.97, waiting_time=10000):
+            not_found("cont_cadastros_menu_princ_opc_08")
+        self.click()
+        self.wait(1000)
+        if not bot.find( "crm_cadastros_documentacoes_menu", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_documentacoes_menu")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_cadastros_documentos_referenciados", matching=0.97, waiting_time=10000):
+            not_found("crm_cadastros_documentos_referenciados")
+        bot.click()
+        if not bot.find( "crm_btn_incluir_princ_24_07", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_incluir_princ_24_07")
+        bot.click()
+        self.wait(2000)
+        self.type_down()
+        ################################### DOCUMENTO DE ARRECADAÇÃO #####################################
+        self.tab()
+        self.type_down()
+        self.type_down()
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        self.type_keys_with_interval(100,"123")
+        self.tab()
+        
+        if not bot.find( "crm_btn_salvar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_salvar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_botao_ir_para_ultimo_cadastro", matching=0.97, waiting_time=10000):
+            not_found("crm_botao_ir_para_ultimo_cadastro")
+        bot.click()
+        if not bot.find( "crm_btn_editar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_editar_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        if not bot.find( "crm_btn_excluir_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_excluir_opc1_2407")
+        bot.click()
+        self.wait(1000)
+        self.enter()
+        self.wait(1000)
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_localizar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_localizar_opc1_2407")
+        bot.click()
+        if not bot.find( "crm_btn_retornar_opc1_2407", matching=0.97, waiting_time=10000):
+            not_found("crm_btn_retornar_opc1_2407")
+        bot.click()
 
 def not_found(label) :
     print(f"Element not found  {label}")

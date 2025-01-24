@@ -7740,6 +7740,7 @@ class Bot(DesktopBot) :
                 self.type_down()
                 self.enter()
                 
+                self.wait(1000)
                                 ####---ICMS SUBS TRIBU---####  
                 
                 if not self.find( "icmssubstrib", matching=0.97, waiting_time=10000):
@@ -7782,9 +7783,9 @@ class Bot(DesktopBot) :
                     x=x+1
                 x=0
                 while x<7:
-                    if not self.find( "modalidadeicmssubtrib", matching=0.97, waiting_time=10000):
-                        self.not_found("modalidadeicmssubtrib")
-                    self.click_relative(1259, 46)
+                    if not bot.find( "fatu_modalidade_rel_cad_situacoes", matching=0.97, waiting_time=10000):
+                        not_found("fatu_modalidade_rel_cad_situacoes")
+                    bot.click_relative(343, 92)
                     self.type_down()
                     self.enter()
                     x=x+1
@@ -7792,6 +7793,15 @@ class Bot(DesktopBot) :
                     self.not_found("percentualreducaobaseicmsst")
                 self.click_relative(175, 23)
                 self.type_keys_with_interval(1,'123')
+                self.wait(1000)
+                if not bot.find( "fatu_cad_situacoes_flecha_esquerda", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_situacoes_flecha_esquerda")
+                bot.click()
+                x = 0
+                while x < 31:
+                    self.click()
+                    x += 1
+                
                 if not self.find( "baseicmsdifst", matching=0.97, waiting_time=10000):
                     self.not_found("baseicmsdifst")
                 self.click_relative(140, 30)
@@ -7799,7 +7809,9 @@ class Bot(DesktopBot) :
                 if not self.find( "aliquotadiferencialst", matching=0.97, waiting_time=10000):
                     self.not_found("aliquotadiferencialst")
                 self.click_relative(142, 30)
-                self.type_keys_with_interval(1,'123')              
+                self.type_keys_with_interval(1,'123') 
+                self.wait(500)
+                self.enter()             
                 
                                 ####---ICMS SUB TRIB RETIDA---####   
                 
@@ -7866,45 +7878,44 @@ class Bot(DesktopBot) :
                     self.not_found("ipirsquantidade")
                 self.click_relative(141, 27)
                 self.type_keys_with_interval(1,'123')
+                
                 x=0
                 while x<14:
-                    if not self.find( "ipisituacaotributaria", matching=0.97, waiting_time=10000):
-                        self.not_found("ipisituacaotributaria")
-                    self.click_relative(1260, 44)
+                    if not bot.find( "fatu_cad_situacoes_situacao_tributaria", matching=0.97, waiting_time=10000):
+                        not_found("fatu_cad_situacoes_situacao_tributaria")
+                    bot.click_relative(297, 27)
                     self.type_down()
                     self.enter()
                     x=x+1
-                if not self.find( "ipibaseicms", matching=0.97, waiting_time=10000):
-                    self.not_found("ipibaseicms")
-                self.click()
-                if not self.find( "ipibaseicmsmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("ipibaseicmsmarcado")
-                self.click()
+
+                self.wait(500)
                 self.enter()
-                if not self.find( "ipibasepiscofins", matching=0.97, waiting_time=10000):
-                    self.not_found("ipibasepiscofins")
-                self.click()
-                if not self.find( "ipibasepiscofinsmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("ipibasepiscofinsmarcado")
-                self.click()
-                if not self.find( "ipibaseicmsdif", matching=0.97, waiting_time=10000):
-                    self.not_found("ipibaseicmsdif")
-                self.click()
-                if not self.find( "ipibaseicmsdifmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("ipibaseicmsdifmarcado")
-                self.click()
-                if not self.find( "fretebasedoipi", matching=0.97, waiting_time=10000):
-                    self.not_found("fretebasedoipi")
-                self.click()
-                if not self.find( "fretebasedoipimarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("fretebasedoipimarcado")
-                self.click()
-                if not self.find( "ipibasesubstituicao", matching=0.97, waiting_time=10000):
-                    self.not_found("ipibasesubstituicao")
-                self.click()
-                if not self.find( "ipibasesubstituicaomarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("ipibasesubstituicaomarcado")
-                self.click()
+                self.space()
+                self.enter()
+                self.space()
+                
+
+                if not bot.find( "fatu_cad_situacoes_flecha_esquerda", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_situacoes_flecha_esquerda")
+                bot.click()
+                x = 0
+                while x < 31:
+                    self.click()
+                    x += 1
+                
+
+                if not bot.find( "fatu_cad_situacoes_frete_base_ipi", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_situacoes_frete_base_ipi")
+                bot.click()
+                if not bot.find( "fatu_cad_situacoes_frete_base_marcado", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_situacoes_frete_base_marcado")
+                bot.click()
+                if not bot.find( "fatu_cad_situacoes_ipi_base_sub", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_situacoes_ipi_base_sub")
+                bot.click()
+                self.wait(1000)
+                self.space()
+                
                 self.enter()
                 if not self.find( "indicevariacaopreco", matching=0.97, waiting_time=10000):
                     self.not_found("indicevariacaopreco")
@@ -7967,7 +7978,7 @@ class Bot(DesktopBot) :
                 self.type_keys_with_interval(1,'te12!@')    
                 
                                 ####---PIS, COFINS, ISS---####
-                                
+                self.wait(1000)       
                 if not self.find( "aba2piscofinsiss", matching=0.97, waiting_time=10000):
                     self.not_found("aba2piscofinsiss")
                 self.click()
@@ -8011,19 +8022,17 @@ class Bot(DesktopBot) :
                     self.type_down()
                     self.enter()
                     x=x+1
-                    
-                if not self.find( "descontarvaloricmsbase", matching=0.97, waiting_time=10000):
-                    self.not_found("descontarvaloricmsbase")
-                self.click()
-                if not self.find( "descontarvaloricmsbasemarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("descontarvaloricmsbasemarcado")
-                self.click()
-                if not self.find( "basesobrelucro", matching=0.97, waiting_time=10000):
-                    self.not_found("basesobrelucro")
-                self.click()
-                if not self.find( "basesobrelucromarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("basesobrelucromarcado")
-                self.click()
+                
+
+                if not bot.find( "fatu_cad_situacoes_descontar_valor_icms", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_situacoes_descontar_valor_icms")
+                bot.click()
+                if not bot.find( "fatu_cad_situacoes_descontar_valor_icms_marcado", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_situacoes_descontar_valor_icms_marcado")
+                bot.click()
+                self.wait(500)
+                self.enter()
+                self.space()
                     
                                 ####---COFINS---####
                                 
@@ -8208,7 +8217,8 @@ class Bot(DesktopBot) :
                 if not self.find( "cancelargnre", matching=0.97, waiting_time=10000):
                     self.not_found("cancelargnre")
                 self.click()
-                    
+                
+                self.wait(1500)
                                 ####---FINALIZACAO SITUACAO---###
                                 
                 if not self.find( "salvarsituacao", matching=0.97, waiting_time=10000):
@@ -8225,9 +8235,9 @@ class Bot(DesktopBot) :
                 self.click_relative(59, 30)
                 self.type_keys_with_interval(1,'0048')
                 self.enter()
-                if not self.find( "nordestesituacao", matching=0.97, waiting_time=10000):
-                    self.not_found("nordestesituacao")
-                self.click()
+                if not bot.find( "fatu_cad_situacoes_achar_nordeste", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_situacoes_achar_nordeste")
+                bot.click()
                 if not bot.find( "fatu_cad_param_fiscal_paises_editar", matching=0.97, waiting_time=10000):
                     not_found("fatu_cad_param_fiscal_paises_editar")
                 bot.click()
@@ -8249,35 +8259,9 @@ class Bot(DesktopBot) :
                     not_found("fatu_cad_param_receituario_retornar")
                 bot.click()
                 
-                if not self.find( "sairsistemapa", matching=0.97, waiting_time=10000):
-                    self.not_found("sairsistemapa")
-                self.click()
-                if not self.find( "simsairsistemapa", matching=0.97, waiting_time=10000):
-                    self.not_found("simsairsistemapa")
-                self.click()
-                self.enter()      
-
-                        #SESSÃO PÁGINA 4(Clientes 8772 - 10606)
-                #######################-----LOGIN-----############################
-            
-                #self.execute(r"C:\Users\Rafael\Desktop\2207\faturamento.exe")
-                self.execute(r"C:\Users\Rafael\Desktop\2207\teste23\23mes07\faturamento.exe")
-                
-                if not self.find( "btn_codigo_usuario", matching=0.97, waiting_time=100000):
-                    self.not_found("btn_codigo_usuario")
-                self.click_relative(47, 12)
-                        
-                self.type_keys_with_interval(1,"999")
-                self.wait(500)
-                self.type_keys_with_interval(1,"tsfmx24")
-                self.enter()
-
-                if not self.find( "btn_login", matching=0.97, waiting_time=10000):
-                    self.not_found("btn_login")
-                self.click()
-                self.enter()
-
-                ###################################################################
+                ######################################################################
+                ############# clientes,fornecedoresetransportadores ##################
+                ######################################################################
 
                 self.wait(1500)
                 if not self.find( "abrircadastros_abacadastro2", matching=0.97, waiting_time=10000):
@@ -8287,18 +8271,7 @@ class Bot(DesktopBot) :
                 if not self.find( "clientes,fornecedoresetransportadores", matching=0.97, waiting_time=10000):
                     self.not_found("clientes,fornecedoresetransportadores")
                 self.click()            
-                if not bot.find( "fatu_cad_param_fiscal_localizar", matching=0.97, waiting_time=10000):
-                    not_found("fatu_cad_param_fiscal_localizar")
-                bot.click()
-                self.wait(7500)            
-                if not bot.find( "fatu_cad_param_fiscal_paises_editar", matching=0.97, waiting_time=10000):
-                    not_found("fatu_cad_param_fiscal_paises_editar")
-                bot.click()
-                self.wait(5000)
-                if not bot.find( "fatu_cad_param_receituario_retornar", matching=0.97, waiting_time=10000):
-                    not_found("fatu_cad_param_receituario_retornar")
-                bot.click()
-                self.wait(3000)
+                self.wait(2000)
                 if not bot.find( "fatu_btn_incluir_opc_1_2411", matching=0.97, waiting_time=10000):
                     not_found("fatu_btn_incluir_opc_1_2411")
                 bot.click()
@@ -8307,7 +8280,9 @@ class Bot(DesktopBot) :
                 
                 self.type_keys_with_interval(1,'te12!@')
                 self.tab()
-                self.type_keys_with_interval(100,'086.580.33902')
+                self.tab()
+                self.wait(500)
+                self.type_keys_with_interval(100,'11517192935')
                 #self.type_right()
                 #self.type_right()
                 self.tab()
@@ -8347,15 +8322,14 @@ class Bot(DesktopBot) :
                 if not self.find( "municipioendprin", matching=0.97, waiting_time=10000):
                     self.not_found("municipioendprin")
                 self.click_relative(403, 86)
+                self.wait(1000)
                 self.backspace()
-                if not self.find( "localizarpaises", matching=0.97, waiting_time=100000):
-                    self.not_found("localizarpaises")
-                self.click()
+                if not bot.find( "fatu_cad_municipios_btn_localizar_2411", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_municipios_btn_localizar_2411")
+                bot.click()
                 self.wait(2000)
-                if not self.find( "cod0001ccft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod0001ccft")
-                self.click()
-                self.type_down()
+                
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
@@ -8416,7 +8390,7 @@ class Bot(DesktopBot) :
                 self.click_relative(13, 45)
                 self.type_keys_with_interval(1,'te12!@')
                 self.enter()
-                self.type_keys_with_interval(1,'te12!@')
+                self.type_keys_with_interval(1,'123')
                 self.enter()
                 self.type_keys_with_interval(1,'te12!@')
                 x=0
@@ -8547,40 +8521,25 @@ class Bot(DesktopBot) :
                 self.click_relative(10, 28)
                 self.type_keys_with_interval(1,'emailtesteteorema123@gmail.com')
                 
-                if not self.find( "botaoemail", matching=0.97, waiting_time=10000):
-                    self.not_found("botaoemail")
-                self.click_relative(426, 47)
-                if not self.find( "addcontaemailcft", matching=0.97, waiting_time=10000):
-                    self.not_found("addcontaemailcft")
-                self.click_relative(424, 6)
-                if not self.find( "fechartelaemailcft", matching=0.97, waiting_time=10000):
-                    self.not_found("fechartelaemailcft")
-                self.click()
+                
                 if not self.find( "emaildocecft", matching=0.97, waiting_time=10000):
                     self.not_found("emaildocecft")
                 self.click_relative(9, 27)
                 self.type_keys_with_interval(1,'emailtesteteorema123@gmail.com')
-                if not self.find( "botaoemail2cft", matching=0.97, waiting_time=10000):
-                    self.not_found("botaoemail2cft")
-                self.click_relative(868, 43)
-                if not self.find( "addcontaemailcft", matching=0.97, waiting_time=10000):
-                    self.not_found("addcontaemailcft")
-                self.click_relative(424, 6)
-                if not self.find( "fechartelaemailcft", matching=0.97, waiting_time=10000):
-                    self.not_found("fechartelaemailcft")
-                self.click()
+
                 if not self.find( "skypecft", matching=0.97, waiting_time=10000):
                     self.not_found("skypecft")
                 self.click_relative(21, 25)           
                 self.type_keys_with_interval(1,'te12!@')
                 self.enter()
+                
                 self.type_keys_with_interval(1,'www.google.com.br')
-                """if not self.find( "abrirsiteinternetexp", matching=0.97, waiting_time=10000):
-                    self.not_found("abrirsiteinternetexp")
-                self.click()
-                if not self.find( "fechargooglecerto", matching=0.97, waiting_time=10000):
-                    self.not_found("fechargooglecerto")
-                self.click_relative(1260, 6)"""            
+                # if not self.find( "abrirsiteinternetexp", matching=0.97, waiting_time=10000):
+                #     self.not_found("abrirsiteinternetexp")
+                # self.click()
+                # if not self.find( "fechargooglecerto", matching=0.97, waiting_time=10000):
+                #     self.not_found("fechargooglecerto")
+                # self.click_relative(1260, 6            
                 if not self.find( "idmarketplace", matching=0.97, waiting_time=10000):
                     self.not_found("idmarketplace")
                 self.click_relative(10, 28)
@@ -8597,150 +8556,150 @@ class Bot(DesktopBot) :
                 #    self.not_found("clientemarcadores")
                 #self.click()
                 #self.space()
-                """
-                if not self.find( "clientemarcadocft", matching=0.97, waiting_time=10000):
-                    self.not_found("clientemarcadocft")
-                self.click()
-                if not self.find( "fornecedorcft", matching=0.97, waiting_time=10000):
-                    self.not_found("fornecedorcft")
-                self.click()
-                if not self.find( "fornecedorcft1", matching=0.97, waiting_time=10000):
-                    self.not_found("fornecedorcft1")
-                self.click()            
-                if not self.find( "fornecedorcftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("fornecedorcftmarcado")
-                self.click()
-                if not self.find( "transportadorcfta1", matching=0.97, waiting_time=10000):
-                    self.not_found("transportadorcfta1")
-                self.click_relative(163, 30)
-                if not self.find( "transportadorcfta1", matching=0.97, waiting_time=10000):
-                    self.not_found("transportadorcfta1")
-                self.click_relative(163, 30)
-                if not self.find( "transportadorcfta1", matching=0.97, waiting_time=10000):
-                    self.not_found("transportadorcfta1")
-                self.click_relative(163, 30)
-                if not self.find( "prospectcft", matching=0.97, waiting_time=10000):
-                    self.not_found("prospectcft")
-                self.click()
-                if not self.find( "prospectcft1", matching=0.97, waiting_time=10000):
-                    self.not_found("prospectcft1")
-                self.click()       
-                if not self.find( "prospectmarcadocft", matching=0.97, waiting_time=10000):
-                    self.not_found("prospectmarcadocft")
-                self.click()
-                if not self.find( "prestadorservicocft", matching=0.97, waiting_time=10000):
-                    self.not_found("prestadorservicocft")
-                self.click()
-                        
-                if not self.find( "prestadorservicocftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("prestadorservicocftmarcado")
-                self.click()
-                if not self.find( "clienteinternocft", matching=0.97, waiting_time=10000):
-                    self.not_found("clienteinternocft")
-                self.click_relative(286, 51)
-                if not self.find( "clienteinternocft", matching=0.97, waiting_time=10000):
-                    self.not_found("clienteinternocft")
-                self.click_relative(286, 51)
                 
-                if not self.find( "concorrentecft", matching=0.97, waiting_time=10000):
-                    self.not_found("concorrentecft")
-                self.click()
-                if not self.find( "concorrentecft1", matching=0.97, waiting_time=10000):
-                    self.not_found("concorrentecft1")
-                self.click()            
-                if not self.find( "concorrentecftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("concorrentecftmarcado")
-                self.click()
-                if not self.find( "consumidorfinalcft1", matching=0.97, waiting_time=10000):
-                    self.not_found("consumidorfinalcft1")
-                self.click()
-                if not self.find( "consumidorfinalcft2", matching=0.97, waiting_time=10000):
-                    self.not_found("consumidorfinalcft2")
-                self.click()           
-                if not self.find( "consumidorfinalcftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("consumidorfinalcftmarcado")
-                self.click()
-                if not self.find( "consumidorfinalcft", matching=0.97, waiting_time=10000):
-                    self.not_found("consumidorfinalcft")
-                self.click()
-                if not self.find( "calculofunrural", matching=0.97, waiting_time=10000):
-                    self.not_found("calculofunrural")
-                self.click()
+                # if not self.find( "clientemarcadocft", matching=0.97, waiting_time=10000):
+                #     self.not_found("clientemarcadocft")
+                # self.click()
+                # if not self.find( "fornecedorcft", matching=0.97, waiting_time=10000):
+                #     self.not_found("fornecedorcft")
+                # self.click()
+                # if not self.find( "fornecedorcft1", matching=0.97, waiting_time=10000):
+                #     self.not_found("fornecedorcft1")
+                # self.click()            
+                # if not self.find( "fornecedorcftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("fornecedorcftmarcado")
+                # self.click()
+                # if not self.find( "transportadorcfta1", matching=0.97, waiting_time=10000):
+                #     self.not_found("transportadorcfta1")
+                # self.click_relative(163, 30)
+                # if not self.find( "transportadorcfta1", matching=0.97, waiting_time=10000):
+                #     self.not_found("transportadorcfta1")
+                # self.click_relative(163, 30)
+                # if not self.find( "transportadorcfta1", matching=0.97, waiting_time=10000):
+                #     self.not_found("transportadorcfta1")
+                # self.click_relative(163, 30)
+                # if not self.find( "prospectcft", matching=0.97, waiting_time=10000):
+                #     self.not_found("prospectcft")
+                # self.click()
+                # if not self.find( "prospectcft1", matching=0.97, waiting_time=10000):
+                #     self.not_found("prospectcft1")
+                # self.click()       
+                # if not self.find( "prospectmarcadocft", matching=0.97, waiting_time=10000):
+                #     self.not_found("prospectmarcadocft")
+                # self.click()
+                # if not self.find( "prestadorservicocft", matching=0.97, waiting_time=10000):
+                #     self.not_found("prestadorservicocft")
+                # self.click()
+                        
+                # if not self.find( "prestadorservicocftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("prestadorservicocftmarcado")
+                # self.click()
+                # if not self.find( "clienteinternocft", matching=0.97, waiting_time=10000):
+                #     self.not_found("clienteinternocft")
+                # self.click_relative(286, 51)
+                # if not self.find( "clienteinternocft", matching=0.97, waiting_time=10000):
+                #     self.not_found("clienteinternocft")
+                # self.click_relative(286, 51)
+                
+                # if not self.find( "concorrentecft", matching=0.97, waiting_time=10000):
+                #     self.not_found("concorrentecft")
+                # self.click()
+                # if not self.find( "concorrentecft1", matching=0.97, waiting_time=10000):
+                #     self.not_found("concorrentecft1")
+                # self.click()            
+                # if not self.find( "concorrentecftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("concorrentecftmarcado")
+                # self.click()
+                # if not self.find( "consumidorfinalcft1", matching=0.97, waiting_time=10000):
+                #     self.not_found("consumidorfinalcft1")
+                # self.click()
+                # if not self.find( "consumidorfinalcft2", matching=0.97, waiting_time=10000):
+                #     self.not_found("consumidorfinalcft2")
+                # self.click()           
+                # if not self.find( "consumidorfinalcftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("consumidorfinalcftmarcado")
+                # self.click()
+                # if not self.find( "consumidorfinalcft", matching=0.97, waiting_time=10000):
+                #     self.not_found("consumidorfinalcft")
+                # self.click()
+                # if not self.find( "calculofunrural", matching=0.97, waiting_time=10000):
+                #     self.not_found("calculofunrural")
+                # self.click()
                             
-                if not self.find( "calculofunruralcftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("calculofunruralcftmarcado")
-                self.click()
-                if not self.find( "calculosenarcft1", matching=0.97, waiting_time=10000):
-                    self.not_found("calculosenarcft1")
-                self.click()
-                if not self.find( "calculosenarcft2", matching=0.97, waiting_time=10000):
-                    self.not_found("calculosenarcft2")
-                self.click()                       
-                if not self.find( "calculosenarcftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("calculosenarcftmarcado")
-                self.click()
-                if not self.find( "calculosenarcft", matching=0.97, waiting_time=10000):
-                    self.not_found("calculosenarcft")
-                self.click()
-                if not self.find( "quotacapitalcft", matching=0.97, waiting_time=10000):
-                    self.not_found("quotacapitalcft")
-                self.click()
-                if not self.find( "quotacapitalcft2", matching=0.97, waiting_time=10000):
-                    self.not_found("quotacapitalcft2")
-                self.click()
+                # if not self.find( "calculofunruralcftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("calculofunruralcftmarcado")
+                # self.click()
+                # if not self.find( "calculosenarcft1", matching=0.97, waiting_time=10000):
+                #     self.not_found("calculosenarcft1")
+                # self.click()
+                # if not self.find( "calculosenarcft2", matching=0.97, waiting_time=10000):
+                #     self.not_found("calculosenarcft2")
+                # self.click()                       
+                # if not self.find( "calculosenarcftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("calculosenarcftmarcado")
+                # self.click()
+                # if not self.find( "calculosenarcft", matching=0.97, waiting_time=10000):
+                #     self.not_found("calculosenarcft")
+                # self.click()
+                # if not self.find( "quotacapitalcft", matching=0.97, waiting_time=10000):
+                #     self.not_found("quotacapitalcft")
+                # self.click()
+                # if not self.find( "quotacapitalcft2", matching=0.97, waiting_time=10000):
+                #     self.not_found("quotacapitalcft2")
+                # self.click()
                 
-                if not self.find( "quotacapitalcftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("quotacapitalcftmarcado")
-                self.click()
-                if not self.find( "consumidorcrmcft", matching=0.97, waiting_time=10000):
-                    self.not_found("consumidorcrmcft")
-                self.click_relative(649, 51)
-                if not self.find( "consumidorcrmcft", matching=0.97, waiting_time=10000):
-                    self.not_found("consumidorcrmcft")
-                self.click_relative(649, 51)
+                # if not self.find( "quotacapitalcftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("quotacapitalcftmarcado")
+                # self.click()
+                # if not self.find( "consumidorcrmcft", matching=0.97, waiting_time=10000):
+                #     self.not_found("consumidorcrmcft")
+                # self.click_relative(649, 51)
+                # if not self.find( "consumidorcrmcft", matching=0.97, waiting_time=10000):
+                #     self.not_found("consumidorcrmcft")
+                # self.click_relative(649, 51)
                         
                 
-                if not self.find( "itemcontroladocft1", matching=0.97, waiting_time=10000):
-                    self.not_found("itemcontroladocft1")
-                self.click()
-                if not self.find( "itemcontroladocftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("itemcontroladocftmarcado")
-                self.click()
-                if not self.find( "itemcontroladocft", matching=0.97, waiting_time=10000):
-                    self.not_found("itemcontroladocft")
-                self.click()
-                if not self.find( "art19cft", matching=0.97, waiting_time=10000):
-                    self.not_found("art19cft")
-                self.click()
-                if not self.find( "art19cftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("art19cftmarcado")
-                self.click()
-                if not self.find( "simplesnacionalcft", matching=0.97, waiting_time=10000):
-                    self.not_found("simplesnacionalcft")
-                self.click()
-                if not self.find( "simplesnacionalcftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("simplesnacionalcftmarcado")
-                self.click()
-                if not self.find( "integrarconcreteiracft", matching=0.97, waiting_time=10000):
-                    self.not_found("integrarconcreteiracft")
-                self.click()
-                if not self.find( "integrarconcreteiracftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("integrarconcreteiracftmarcado")
-                self.click()
-                if not self.find( "seguradorasiglacft1", matching=0.97, waiting_time=10000):
-                    self.not_found("seguradorasiglacft1")
-                self.click()
-                if not self.find( "seguradorasiglacftmarcado", matching=0.97, waiting_time=10000):
-                    self.not_found("seguradorasiglacftmarcado")
-                self.click()
-                if not self.find( "seguradorasiglacft", matching=0.97, waiting_time=10000):
-                    self.not_found("seguradorasiglacft")
-                self.click()
-                if not self.find( "siglaseguradora", matching=0.97, waiting_time=10000):
-                    self.not_found("siglaseguradora")
-                self.click_relative(6, 26)
-                self.type_keys_with_interval(1,'t1!')
-                """
+                # if not self.find( "itemcontroladocft1", matching=0.97, waiting_time=10000):
+                #     self.not_found("itemcontroladocft1")
+                # self.click()
+                # if not self.find( "itemcontroladocftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("itemcontroladocftmarcado")
+                # self.click()
+                # if not self.find( "itemcontroladocft", matching=0.97, waiting_time=10000):
+                #     self.not_found("itemcontroladocft")
+                # self.click()
+                # if not self.find( "art19cft", matching=0.97, waiting_time=10000):
+                #     self.not_found("art19cft")
+                # self.click()
+                # if not self.find( "art19cftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("art19cftmarcado")
+                # self.click()
+                # if not self.find( "simplesnacionalcft", matching=0.97, waiting_time=10000):
+                #     self.not_found("simplesnacionalcft")
+                # self.click()
+                # if not self.find( "simplesnacionalcftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("simplesnacionalcftmarcado")
+                # self.click()
+                # if not self.find( "integrarconcreteiracft", matching=0.97, waiting_time=10000):
+                #     self.not_found("integrarconcreteiracft")
+                # self.click()
+                # if not self.find( "integrarconcreteiracftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("integrarconcreteiracftmarcado")
+                # self.click()
+                # if not self.find( "seguradorasiglacft1", matching=0.97, waiting_time=10000):
+                #     self.not_found("seguradorasiglacft1")
+                # self.click()
+                # if not self.find( "seguradorasiglacftmarcado", matching=0.97, waiting_time=10000):
+                #     self.not_found("seguradorasiglacftmarcado")
+                # self.click()
+                # if not self.find( "seguradorasiglacft", matching=0.97, waiting_time=10000):
+                #     self.not_found("seguradorasiglacft")
+                # self.click()
+                # if not self.find( "siglaseguradora", matching=0.97, waiting_time=10000):
+                #     self.not_found("siglaseguradora")
+                # self.click_relative(6, 26)
+                # self.type_keys_with_interval(1,'t1!')
+                
                 x=0
                 while x<16:
                         self.tab()
@@ -8749,7 +8708,8 @@ class Bot(DesktopBot) :
                         x=x+1
                         
                                 ####---ABA2 AGRUPAMENTO---####
-                                
+                    
+                self.wait(1500)
                 if not self.find( "aba2agrupamentocft", matching=0.97, waiting_time=10000):
                     self.not_found("aba2agrupamentocft")
                 self.click()
@@ -8774,27 +8734,26 @@ class Bot(DesktopBot) :
                 if not self.find( "classificacaocft", matching=0.97, waiting_time=10000):
                     self.not_found("classificacaocft")
                 self.click_relative(69, 25)
-                if not self.find( "cod00184cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00184cft")
-                self.click()
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
                 if not self.find( "codcontabilfixocft", matching=0.97, waiting_time=10000):
                     self.not_found("codcontabilfixocft")
                 self.click_relative(65, 25)
-                if not self.find( "cod00051cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00051cft")
-                self.click()
+                self.wait(1000)
+                self.type_keys_with_interval(100,"00001")
+                if not bot.find( "fatu_cad_municipios_btn_localizar_2411", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_municipios_btn_localizar_2411")
+                bot.click()
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
                 if not self.find( "tabeladeprecositenscft", matching=0.97, waiting_time=10000):
                     self.not_found("tabeladeprecositenscft")
                 self.click_relative(66, 25)
-                if not self.find( "cod00000cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00000cft")
-                self.click()
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
@@ -8805,27 +8764,26 @@ class Bot(DesktopBot) :
                 if not bot.find( "fatu_cad_param_fiscal_localizar", matching=0.97, waiting_time=10000):
                     not_found("fatu_cad_param_fiscal_localizar")
                 bot.click()
-                if not self.find( "cod0081260cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod0081260cft")
-                self.click()
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
                 if not self.find( "ramodeatividadecft", matching=0.97, waiting_time=10000):
                     self.not_found("ramodeatividadecft")
                 self.click_relative(68, 24)
-                if not self.find( "cod00001cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00001cft")
-                self.click()
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
                 if not self.find( "planofinanceirocft", matching=0.97, waiting_time=10000):
                     self.not_found("planofinanceirocft")
                 self.click_relative(83, 26)
-                if not self.find( "cod002001002cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod002001002cft")
-                self.click()
+                self.wait(500)
+                self.type_keys_with_interval(100,"001001001")
+                if not bot.find( "fatu_cad_municipios_btn_localizar_2411", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_municipios_btn_localizar_2411")
+                bot.click()
+
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
@@ -8860,9 +8818,7 @@ class Bot(DesktopBot) :
                 if not self.find( "condicaodepagamento", matching=0.97, waiting_time=10000):
                     self.not_found("condicaodepagamento")
                 self.click_relative(67, 26)
-                if not self.find( "cod0048cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod0048cft")
-                self.click()
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
@@ -8888,9 +8844,11 @@ class Bot(DesktopBot) :
                 if not self.find( "codigocontabilfixocft", matching=0.97, waiting_time=10000):
                     self.not_found("codigocontabilfixocft")
                 self.click_relative(66, 26)
-                if not self.find( "cod00051cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00051cft")
-                self.click()
+                self.wait(500)
+                self.type_keys_with_interval(100,"00051")
+                if not bot.find( "fatu_cad_municipios_btn_localizar_2411", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_municipios_btn_localizar_2411")
+                bot.click()
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
@@ -8921,18 +8879,20 @@ class Bot(DesktopBot) :
                 if not self.find( "codigocontabilclientescft", matching=0.97, waiting_time=10000):
                     self.not_found("codigocontabilclientescft")
                 self.click_relative(63, 27)
-                if not self.find( "cod00051cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00051cft")
-                self.click()
+                self.type_keys_with_interval(100,"00051")
+                if not bot.find( "fatu_cad_municipios_btn_localizar_2411", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_municipios_btn_localizar_2411")
+                bot.click()
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
                 if not self.find( "codigocontabilfornecedorescft", matching=0.97, waiting_time=10000):
                     self.not_found("codigocontabilfornecedorescft")
                 self.click_relative(65, 25)
-                if not self.find( "cod00051cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00051cft")
-                self.click()
+                self.type_keys_with_interval(100,"00051")
+                if not bot.find( "fatu_cad_municipios_btn_localizar_2411", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_municipios_btn_localizar_2411")
+                bot.click()
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
@@ -8979,9 +8939,10 @@ class Bot(DesktopBot) :
                 self.click_relative(-110, 50)
                 self.enter()
                         
-                if not self.find( "cod00051cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00051cft")
-                self.click()
+                self.type_keys_with_interval(100,"00051")
+                if not bot.find( "fatu_cad_municipios_btn_localizar_2411", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_municipios_btn_localizar_2411")
+                bot.click()
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
@@ -8996,9 +8957,10 @@ class Bot(DesktopBot) :
                     self.not_found("codigocontabilfornecedor")
                 self.click_relative(60, 26)
                 self.enter()
-                if not self.find( "cod00051cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod00051cft")
-                self.click()
+                self.type_keys_with_interval(100,"00051")
+                if not bot.find( "fatu_cad_municipios_btn_localizar_2411", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_municipios_btn_localizar_2411")
+                bot.click()
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
@@ -9020,19 +8982,25 @@ class Bot(DesktopBot) :
                 
                                 ####---ABA3 PESSOA FISICA---####
                                 
+                self.wait(1500)
                 if not self.find( "aba3cft", matching=0.97, waiting_time=10000):
                     self.not_found("aba3cft")
                 self.click()
                 self.enter()
                 self.type_keys_with_interval(1,'te12!@')
                 self.enter()
-                self.type_keys_with_interval(100,'01012022')
+                self.type_keys_with_interval(100,'te12!@')
                 self.enter()                 
+                self.wait(500)
+                self.type_keys_with_interval(100,'01012022')
+                self.tab()
+                self.wait(500)
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
-                self.type_keys_with_interval(1,'874')
-                self.enter()
-                self.enter()
+                self.tab()
+                self.type_keys_with_interval(1,'te12!@')
+                self.tab()
+                self.type_keys_with_interval(1,'99147252547')
+                
                 x=0
                 while x<6:
                     if not self.find( "telefoneaba3cft", matching=0.97, waiting_time=10000):
@@ -9052,15 +9020,11 @@ class Bot(DesktopBot) :
                 if not self.find( "casapropriacft", matching=0.97, waiting_time=10000):
                     self.not_found("casapropriacft")
                 self.click()
-                if not self.find( "casapropriacft1", matching=0.97, waiting_time=10000):
-                    self.not_found("casapropriacft1")
-                self.click()
+                
                 if not self.find( "possuiautomovela3cft", matching=0.97, waiting_time=10000):
                     self.not_found("possuiautomovela3cft")
                 self.click_relative(710, 49)
-                if not self.find( "possuiautomovela3cft", matching=0.97, waiting_time=10000):
-                    self.not_found("possuiautomovela3cft")
-                self.click_relative(710, 49)
+                
                 
                 
                 
@@ -9132,10 +9096,7 @@ class Bot(DesktopBot) :
                 #if not self.find( "excluirfotocft", matching=0.97, waiting_time=10000):
                 #    self.not_found("excluirfotocft")
                 #self.click()
-                if not self.find( "outrasrendascft2", matching=0.97, waiting_time=10000):
-                    self.not_found("outrasrendascft2")
-                self.click_relative(11, 28)
-                self.type_keys_with_interval(1,'874')
+                
                 
                                 ####---ABA4 CFT---####
                                 
@@ -9477,9 +9438,9 @@ class Bot(DesktopBot) :
                 #    self.not_found("simexcluircft1")
                 #self.click()
                 self.enter()
-
-                                ####---ABA6 P2---####
                 
+                                ####---ABA6 P2---####
+                self.wait(1500)
                 if not self.find( "aba6p2", matching=0.97, waiting_time=10000):
                     self.not_found("aba6p2")
                 self.click()
@@ -9496,18 +9457,16 @@ class Bot(DesktopBot) :
                 if not self.find( "municipioa6p2cft", matching=0.97, waiting_time=10000):
                     self.not_found("municipioa6p2cft")
                 self.click_relative(99, 4)
-                if not self.find( "cod0525cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod0525cft")
-                self.click()
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
                 self.enter()
                 self.enter()
                 self.type_keys_with_interval(100,'85055370')
-                if not self.find( "a6p2acharcep", matching=0.97, waiting_time=10000):
-                    self.not_found("a6p2acharcep")
-                self.click()
+                if not bot.find( "fatu_cad_clientes_achar_cep", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_clientes_achar_cep")
+                bot.click()
                 if not self.find( "complementoa6p2cft", matching=0.97, waiting_time=10000):
                     self.not_found("complementoa6p2cft")
                 self.click_relative(82, 4)
@@ -9568,9 +9527,10 @@ class Bot(DesktopBot) :
                 #    self.not_found("simexcluircft1")
                 #self.click()
                 self.enter()
-
+                
                                 ####---ABA6 P4---####
-                                
+                self.wait(1500)
+
                 if not self.find( "aba6p4cft", matching=0.97, waiting_time=10000):
                     self.not_found("aba6p4cft")
                 self.click()
@@ -9588,25 +9548,28 @@ class Bot(DesktopBot) :
                     self.type_down()
                     self.enter()
                     x=x+1
+
+                self.tab()
                 self.type_keys_with_interval(100,'08658033902')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(100,'147345348')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(100,'01012000')
-                self.enter()
-                self.enter()
+                self.tab()
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(100,'85055370')
-                if not self.find( "buscarcepa6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("buscarcepa6p4")
-                self.click_relative(132, 4)
+                if not bot.find( "fatu_cad_cliente_achar_cep_buscar", matching=0.97, waiting_time=10000):
+                    not_found("fatu_cad_cliente_achar_cep_buscar")
+                bot.click()
+                self.tab()
                 if not self.find( "crca6p4cft", matching=0.97, waiting_time=10000):
                     self.not_found("crca6p4cft")
                 self.click_relative(60, 3)
@@ -9614,14 +9577,12 @@ class Bot(DesktopBot) :
                 if not self.find( "botaobuscarmunicipioa6p4cft", matching=0.97, waiting_time=10000):
                     self.not_found("botaobuscarmunicipioa6p4cft")
                 self.click_relative(106, 6)
-                if not self.find( "cod0525cft", matching=0.97, waiting_time=10000):
-                    self.not_found("cod0525cft")
-                self.click()
+                
                 if not self.find( "selecionarcft", matching=0.97, waiting_time=10000):
                     self.not_found("selecionarcft")
                 self.click()
-                self.enter()
-                self.enter()
+                self.tab()
+                self.tab()
                 self.type_keys_with_interval(1,'123123123123')
                 x=0
                 while x<8:
@@ -9631,6 +9592,8 @@ class Bot(DesktopBot) :
                     self.type_down()
                     self.enter()
                     x=x+1
+
+                self.tab()
                 self.type_keys_with_interval(1,'123123123123')
                 x=0
                 while x<7:
@@ -9640,82 +9603,78 @@ class Bot(DesktopBot) :
                     self.type_down()
                     self.enter()
                     x=x+1
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(1,'123123123123')
-                self.enter()
+                self.tab()
                 x=0
                 while x<5:
                     self.type_down()
                     x=x+1
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
-                self.enter()
+                self.tab()
+                self.wait(1000)
                 if not self.find( "recebeemaila6p4cft", matching=0.97, waiting_time=10000):
                     self.not_found("recebeemaila6p4cft")
                 self.click_relative(564, 6)
-                if not self.find( "recebemaila6p4cft", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemaila6p4cft")
-                self.click()
-                if not self.find( "recebemaildocecfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemaildocecfta6p4")
-                self.click()
-                if not self.find( "recebemailvendascfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemailvendascfta6p4")
-                self.click()
-                if not self.find( "recebemailcomprascfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemailcomprascfta6p4")
-                self.click()
-                if not self.find( "recebemailfinana6p4cft", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemailfinana6p4cft")
-                self.click()
-                if not self.find( "recebemailrhcfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemailrhcfta6p4")
-                self.click()
-                if not self.find( "recebemailfiscalcfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemailfiscalcfta6p4")
-                self.click()
-                if not self.find( "recebemailcontabilcfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemailcontabilcfta6p4")
-                self.click()
-                self.type_down()
-                if not self.find( "recebemailcontratoa6p4cft", matching=0.97, waiting_time=10000):
-                    self.not_found("recebemailcontratoa6p4cft")
-                self.click()
-                if not self.find( "recontratocfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("recontratocfta6p4")
-                self.click()
-                if not self.find( "recontabilcfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("recontabilcfta6p4")
-                self.click()
-                if not self.find( "refiscalcfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("refiscalcfta6p4")
-                self.click()
-                if not self.find( "rerhcfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("rerhcfta6p4")
-                self.click()
-                if not self.find( "refinanceirocft2", matching=0.97, waiting_time=10000):
-                    self.not_found("refinanceirocft2")
-                self.click()            
-                if not self.find( "recomprascft2", matching=0.97, waiting_time=10000):
-                    self.not_found("recomprascft2")
-                self.click()           
-                if not self.find( "revendascfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("revendascfta6p4")
-                self.click()
-                if not self.find( "redocecfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("redocecfta6p4")
-                self.click()
-                self.type_up()
-                if not self.find( "retodoscfta6p4", matching=0.97, waiting_time=10000):
-                    self.not_found("retodoscfta6p4")
-                self.click()
-                self.enter()
+                self.wait(1000)
+                #if not self.find( "recebemaildocecfta6p4", matching=0.97, waiting_time=10000):
+                #    self.not_found("recebemaildocecfta6p4")
+                #self.click()
+                # if not self.find( "recebemailvendascfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("recebemailvendascfta6p4")
+                # self.click()
+                # if not self.find( "recebemailcomprascfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("recebemailcomprascfta6p4")
+                # self.click()
+                # if not self.find( "recebemailfinana6p4cft", matching=0.97, waiting_time=10000):
+                #     self.not_found("recebemailfinana6p4cft")
+                # self.click()
+                # if not self.find( "recebemailrhcfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("recebemailrhcfta6p4")
+                # self.click()
+                # if not self.find( "recebemailfiscalcfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("recebemailfiscalcfta6p4")
+                # self.click()
+                # if not self.find( "recebemailcontabilcfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("recebemailcontabilcfta6p4")
+                # self.click()
+                # self.type_down()
+                # if not self.find( "recebemailcontratoa6p4cft", matching=0.97, waiting_time=10000):
+                #     self.not_found("recebemailcontratoa6p4cft")
+                # self.click()
+                # if not self.find( "recontratocfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("recontratocfta6p4")
+                # self.click()
+                # if not self.find( "recontabilcfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("recontabilcfta6p4")
+                # self.click()
+                # if not self.find( "refiscalcfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("refiscalcfta6p4")
+                # self.click()
+                # if not self.find( "rerhcfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("rerhcfta6p4")
+                # self.click()
+                # if not self.find( "refinanceirocft2", matching=0.97, waiting_time=10000):
+                #     self.not_found("refinanceirocft2")
+                # self.click()            
+                # if not self.find( "recomprascft2", matching=0.97, waiting_time=10000):
+                #     self.not_found("recomprascft2")
+                # self.click()           
+                # if not self.find( "revendascfta6p4", matching=0.97, waiting_time=10000):
+                #     self.not_found("revendascfta6p4")
+                # self.click()
+                #if not self.find( "redocecfta6p4", matching=0.97, waiting_time=10000):
+                #    self.not_found("redocecfta6p4")
+                #self.click()
+                self.tab()
                 self.type_keys_with_interval(1,'te12!@')
                 if not self.find( "salvara6p4", matching=0.97, waiting_time=10000):
                     self.not_found("salvara6p4")
@@ -9723,10 +9682,10 @@ class Bot(DesktopBot) :
                 if not self.find( "excluira6p4", matching=0.97, waiting_time=10000):
                     self.not_found("excluira6p4")
                 self.click_relative(-226, 32)
-                #if not self.find( "simexcluircft1", matching=0.97, waiting_time=10000):
-                #    self.not_found("simexcluircft1")
-                #self.click()
-                self.enter()
+                if not self.find( "simexcluircft1", matching=0.97, waiting_time=10000):
+                    self.not_found("simexcluircft1")
+                self.click()
+                self.tab()
 
                                 ####---ABA6 P5---####
                                 

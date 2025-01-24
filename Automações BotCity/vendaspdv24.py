@@ -58,7 +58,7 @@ class Bot(DesktopBot) :
         self.enter()
         self.wait(2000)
         self.enter() 
-        """
+        
 ##################################################################
 
 ####---Cadastro Terminal---####
@@ -825,25 +825,25 @@ class Bot(DesktopBot) :
         self.type_right()
         self.type_right()
         self.wait(1000)
-        """ POSSIVEL ERRO, NAO ESTA ABRINDO BOTOES
-        self.find_button( "imprimir_vs_nota_fiscal_item_fin")
+        #  POSSIVEL ERRO, NAO ESTA ABRINDO BOTOES
+        # self.find_button( "imprimir_vs_nota_fiscal_item_fin")
             
-        self.click()
-        self.wait(2000)
+        # self.click()
+        # self.wait(2000)
 
-        self.find_button( "x_verm_fecha_imp_nota")
+        # self.find_button( "x_verm_fecha_imp_nota")
         
-        self.click()
-        self.wait(1000)
+        # self.click()
+        # self.wait(1000)
         
-        self.find_button( "espelho_da_nf_imp_nota")
-        self.click()
-        self.wait(5000)
-        #
-        self.find_button( "23_x_vermelho_fechar_nota" )
-            #("23_x_vermelho_fechar_nota")
-        self.click()
-        """
+        # self.find_button( "espelho_da_nf_imp_nota")
+        # self.click()
+        # self.wait(5000)
+        # #
+        # self.find_button( "23_x_vermelho_fechar_nota" )
+        #     #("23_x_vermelho_fechar_nota")
+        # self.click()
+        # 
         
         self.wait(1000)
         self.find_button( "fin_fim_nota_eletronica_venda")   
@@ -4536,7 +4536,7 @@ class Bot(DesktopBot) :
             #("botao_para_retorn_de_chamadas_7")
         self.click()
         
-        
+        """
         ####################################################################
         ###################### DOC-E #######################################
         ####################################################################

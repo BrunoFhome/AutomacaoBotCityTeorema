@@ -58,7 +58,7 @@ class Bot(DesktopBot) :
         self.enter()
         self.wait(2000)
         self.enter() 
-        
+        """
 ##################################################################
 
 ####---Cadastro Terminal---####
@@ -245,7 +245,7 @@ class Bot(DesktopBot) :
         self.click_relative(12, 35)
         self.wait(1000)
 
-        self.type_keys_with_interval(1,"116774")
+        self.type_keys_with_interval(1,"111548")
         self.enter()
         self.wait(2000)
         #apartir daq, antes de selecionar o item, adicionar mudanças
@@ -825,7 +825,7 @@ class Bot(DesktopBot) :
         self.type_right()
         self.type_right()
         self.wait(1000)
-
+        """ POSSIVEL ERRO, NAO ESTA ABRINDO BOTOES
         self.find_button( "imprimir_vs_nota_fiscal_item_fin")
             
         self.click()
@@ -835,7 +835,7 @@ class Bot(DesktopBot) :
         
         self.click()
         self.wait(1000)
-
+        
         self.find_button( "espelho_da_nf_imp_nota")
         self.click()
         self.wait(5000)
@@ -843,8 +843,8 @@ class Bot(DesktopBot) :
         self.find_button( "23_x_vermelho_fechar_nota" )
             #("23_x_vermelho_fechar_nota")
         self.click()
+        """
         
-
         self.wait(1000)
         self.find_button( "fin_fim_nota_eletronica_venda")   
         self.click()
@@ -1112,7 +1112,7 @@ class Bot(DesktopBot) :
         self.click()
         
         self.wait(1000)
-        self.type_keys_with_interval(1,"116774")
+        self.type_keys_with_interval(1,"111548")
         self.enter()
         self.find_button( "botao_selecionar_item")
             
@@ -1636,7 +1636,7 @@ class Bot(DesktopBot) :
         #self.click()
         
         
-        """
+        
 #######################  F7 FINANCEIRO   ######################
         
 
@@ -2087,7 +2087,7 @@ class Bot(DesktopBot) :
         self.wait(1000)
         self.key_esc()
         self.wait(1000)  
-
+        
         ##############################################################
         ##############################################################
         ########################   F8 SIMULAÇÃO ######################
@@ -2395,6 +2395,7 @@ class Bot(DesktopBot) :
         self.find_button( "filtro_ordem_de_servico_botao" ) 
             #("filtro_ordem_de_servico_botao")
         self.click()
+        
         self.find_button( "relativo_filtro_inicial" ) 
             #("relativo_filtro_inicial")
         self.click_relative(374, 32)

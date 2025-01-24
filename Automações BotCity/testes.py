@@ -166,6 +166,36 @@
         if not bot.find( "crm_btn_confirmar_cadastro_parametros", matching=0.97, waiting_time=10000):
             not_found("crm_btn_confirmar_cadastro_parametros")
         bot.click()
+        if not bot.find( "fatu_cad_cod_operacao_pis_cofins_natureza", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_cod_operacao_pis_cofins_natureza")
+        bot.click_relative(256, 27)
+        if not bot.find( "fatu_cad_cod_operacao_tipo_movimentacao", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_cod_operacao_tipo_movimentacao")
+        bot.click_relative(210, 26)
+        if not bot.find( "fatu_cad_cod_operacao_valor_movimentacao", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_cod_operacao_valor_movimentacao")
+        bot.click_relative(104, 25)
+        if not bot.find( "fatu_cad_cod_movimentacao_ativo_imobilizado", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_cod_movimentacao_ativo_imobilizado")
+        bot.click()
+        if not bot.find( "fatu_cad_cod_gera_receituario", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_cod_gera_receituario")
+        bot.click()
+        if not bot.find( "fatu_cad_descontar_gestao_leite", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_descontar_gestao_leite")
+        bot.click()
+        if not bot.find( "fatu_cad_operacao_venda_compra", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_operacao_venda_compra")
+        bot.click()
+        if not bot.find( "fatu_cad_cod_valida_unit_desconto", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_cod_valida_unit_desconto")
+        bot.click()
+        if not bot.find( "fatu_cad_cod_valor_do_ipi", matching=0.97, waiting_time=10000):
+            not_found("fatu_cad_cod_valor_do_ipi")
+        bot.click()
+        if not bot.find( "fatu_nordeste_situacoes_achar_btn", matching=0.97, waiting_time=10000):
+            not_found("fatu_nordeste_situacoes_achar_btn")
+        bot.click()
         
 
 

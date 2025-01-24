@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        
+        """
         #######################################################
         ############# COMEÇO CONTABIL - COMPLETO ##############
         #######################################################
@@ -2527,7 +2527,7 @@ class Bot(DesktopBot) :
         self.click()
         self.wait(2000)
         
-        
+        """
         #################################################################################
         ############### CADASTROS -> PARAMETROS -> PARAMETROS TRANSPORTES ###############
         #################################################################################
@@ -10873,7 +10873,7 @@ class Bot(DesktopBot) :
         
         
         ###########################################################
-        ###### MOVIMENTOS -> Movimento Conhecimento ( Fiscal ) ######
+        ###### MOVIMENTOS -> Movimento Conhecimento ( Fiscal ) ####
         ###########################################################
         
         
@@ -12491,7 +12491,7 @@ class Bot(DesktopBot) :
         if not self.find( "cont_retorn_opc_23_imposto", matching=0.97, waiting_time=10000):
             not_found("cont_retorn_opc_23_imposto")
         self.click()
-
+        
         #######################################################################################
         #######################################################################################
         ################################# FINAL DE MOVIMENTOS #################################
@@ -13030,11 +13030,11 @@ class Bot(DesktopBot) :
             not_found("cont_retorn_opc_23_imposto")
         self.click()
 
-
+        
         ######################################################################
         ######## RELATORIOS -> CADASTROS -> VENDEDORES E COMPRADORES #########
         ######################################################################
-
+        self.wait(2000)
         if not self.find( "cont_relatorios_menu_principal_2", matching=0.97, waiting_time=10000):
             not_found("cont_relatorios_menu_principal_2")
         self.click()

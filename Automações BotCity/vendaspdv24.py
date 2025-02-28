@@ -35,7 +35,7 @@ class Bot(DesktopBot) :
 
 
     def action(self,execution=None) :
-        """
+        
         #########################################################################
         ###############################---LOGIN---###############################
         #########################################################################
@@ -156,7 +156,8 @@ class Bot(DesktopBot) :
         #########################################################
         ############## PRIMEIRO ABRIR O CAIXA ###################
         #########################################################
-
+        self.wait(1000)
+        self.enter()
         #self.find_button( "caixa_comeco_menu_princi")      
         #self.click()
 
@@ -293,90 +294,92 @@ class Bot(DesktopBot) :
         
         #AQUI ESTA A GRADE DA PARTE DO F2, EM VENDAS
 
-        self.find_button( "grade_botao_vendas_item_1")
+        # self.find_button( "grade_botao_vendas_item_1")
             
-        self.click()
+        # self.click()
         
 
-        self.find_button( "botao_imprimir_grade_analise")
+        # self.find_button( "botao_imprimir_grade_analise")
             
-        self.click()
-        self.find_button( "cancelar_impressao_grade")
+        # self.click()
+        # self.find_button( "cancelar_impressao_grade")
             
-        self.click()
+        # self.click()
         
-        self.find_button( "grade_botao_vendas_item_1")
+        # self.find_button( "grade_botao_vendas_item_1")
             
-        self.click()
+        # self.click()
         
-        self.find_button( "armazenar_e_recuperar_grade")
+        # self.find_button( "armazenar_e_recuperar_grade")
             
-        self.click()
+        # self.click()
         
-        self.type_keys_with_interval(1,"qa12!@")
-        self.tab()
-        self.space()
-        self.wait(3000)
+        # self.type_keys_with_interval(1,"qa12!@")
+        # self.tab()
+        # self.space()
+        # self.wait(4000)
 
-        self.find_button( "grade_botao_vendas_item_1")
-            
-        self.click()
+        # if not self.find( "vendas_clicar_btn_grade_2411", matching=0.97, waiting_time=10000):
+        #     not_found("vendas_clicar_btn_grade_2411")
+        # self.click()
+        # self.wait(4000)
+        # self.click()
+        # self.wait(6000)
+        # self.find_button( "armazenar_e_recuperar_grade")
+        # self.wait(4000)
+        # self.click()
+        # self.wait(4000)
+        # self.find_button( "achar_botao_recuperar_grade")
         
-        self.find_button( "armazenar_e_recuperar_grade")
+        # self.click_relative(41, 25)
+        # self.wait(4000)
+        # self.find_button( "excluir_grade_default")
             
-        self.click()
+        # self.click()
+        # self.wait(4000)
+        # self.find_button( "botao_retornar_grade_relativo_salvar")
+            
+        # self.click_relative(-31, 15)
+        
+        # self.find_button( "grade_botao_vendas_item_1")
+            
+        # self.click()
+        # #self.find_button( "botao_grade_exportar_para_excel")
+        # self.find_button( "23_exportar_para_excel_venda" )
+        #     #("23_exportar_para_excel_venda")
+        # self.click()
+        # self.wait(2000)
 
-        self.find_button( "achar_botao_recuperar_grade")
-           
-        self.click_relative(41, 25)
-        
-        self.find_button( "excluir_grade_default")
-            
-        self.click()
-        
-        self.find_button( "botao_retornar_grade_relativo_salvar")
-            
-        self.click_relative(-31, 15)
-        
-        self.find_button( "grade_botao_vendas_item_1")
-            
-        self.click()
-        #self.find_button( "botao_grade_exportar_para_excel")
-        self.find_button( "23_exportar_para_excel_venda" )
-            #("23_exportar_para_excel_venda")
-        self.click()
-        self.wait(2000)
+        # self.key_esc()
 
-        self.key_esc()
+        # self.find_button( "grade_botao_vendas_item_1")
+            
+        # self.click()
+        # self.find_button( "botao_grade_exportar_para_html")  
+        # self.click()
+        
+        # self.wait(2000)
+        # self.key_esc()
 
-        self.find_button( "grade_botao_vendas_item_1")
+        # self.find_button( "grade_botao_vendas_item_1")
             
-        self.click()
-        self.find_button( "botao_grade_exportar_para_html")  
-        self.click()
+        # self.click()
         
-        self.wait(2000)
-        self.key_esc()
-
-        self.find_button( "grade_botao_vendas_item_1")
+        # self.find_button( "botao_grade_exportar_para_texto")
+        # self.click()
+        # self.wait(2000)
+        # self.key_esc()
+        
+        # self.find_button( "grade_botao_vendas_item_1")
             
-        self.click()
+        # self.click()
         
-        self.find_button( "botao_grade_exportar_para_texto")
-        self.click()
-        self.wait(2000)
-        self.key_esc()
-        
-        self.find_button( "grade_botao_vendas_item_1")
+        # self.find_button( "botao_grade_exportar_para_xml")
             
-        self.click()
+        # self.click()
         
-        self.find_button( "botao_grade_exportar_para_xml")
-            
-        self.click()
-        
-        self.wait(2000)
-        self.key_esc()
+        # self.wait(2000)
+        # self.key_esc()
         
         self.find_button( "botao_selecionar_item")
             
@@ -393,7 +396,7 @@ class Bot(DesktopBot) :
 
 
 
-
+        
         self.find_button( "botao_f9_finaliza")
             
         self.click()
@@ -818,13 +821,13 @@ class Bot(DesktopBot) :
     
         
 
-        self.find_button( "selecao_modo_nfe_rel_norm")
+        #self.find_button( "selecao_modo_nfe_rel_norm")
             
-        self.click_relative(8, 24)
-        self.wait(500)
-        self.type_right()
-        self.type_right()
-        self.wait(1000)
+        #self.click_relative(8, 24)
+        #self.wait(500)
+        #self.type_right()
+        #self.type_right()
+        #self.wait(1000)
         #  POSSIVEL ERRO, NAO ESTA ABRINDO BOTOES
         # self.find_button( "imprimir_vs_nota_fiscal_item_fin")
             
@@ -3144,6 +3147,7 @@ class Bot(DesktopBot) :
         self.enter()
         self.tab()
         self.tab()
+        self.tab()
         self.enter()
         self.wait(3000)
         self.enter()
@@ -3198,13 +3202,14 @@ class Bot(DesktopBot) :
             #("salvar_esta_os")
         self.click()
         self.wait(1000)
-        self.enter()
+        
         self.wait(1000)
         self.enter()
         self.wait(1000)
 ##AQUI VOU COMECAR A PROGRAMAR A PARTE DE ORCAMENTO DENTRO DE OS-> INCLUIR. 
         
         
+
         self.find_button( "clicar_em_incluir_adiantamento" ) 
             #("clicar_em_incluir_adiantamento")
         self.click_relative(8, -17)
@@ -4238,9 +4243,9 @@ class Bot(DesktopBot) :
             #("abrir_chamado_chamadas_botao")
         self.click()
         self.wait(2000)
-        self.find_button( "botao_buscar_chamado_incluir_chamados" ) 
+        #self.find_button( "botao_buscar_chamado_incluir_chamados" ) 
             #("botao_buscar_chamado_incluir_chamados")
-        self.click()
+        #self.click()
         #self.find_button( "botao_pesquisar_chamados_incluir" ) 
             #("botao_pesquisar_chamados_incluir")
         #self.click()
@@ -4536,7 +4541,7 @@ class Bot(DesktopBot) :
             #("botao_para_retorn_de_chamadas_7")
         self.click()
         
-        """
+        
         ####################################################################
         ###################### DOC-E #######################################
         ####################################################################
